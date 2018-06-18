@@ -552,11 +552,27 @@ section {
         width: 72px; }
       .form-found-item-date input:nth-last-child(3) {
         width: 32px; }
+.form-found-item-date.form-found-item-date--d-m-y {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+}
+.form-found-item-date.form-found-item-date--d-m-y span {width: auto;}
+.form-found-item-date.form-found-item-date--d-m-y input:nth-child(1){width: 60px;}
+.form-found-item-date.form-found-item-date--d-m-y input:nth-child(2){width: 60px;}
+.form-found-item-date.form-found-item-date--d-m-y input:nth-child(3){width: 60px;}
+
 .form-found-item.form-equal-width span{
+  -ms-flex-preferred-size: 250px;
   flex-basis: 250px;
 }
 .form-found-item.form-equal-width .form-checkbox-list,
 .form-found-item.form-equal-width input{
+  -ms-flex-preferred-size: 250px;
   flex-basis: 250px;
 }
 .form-data {

@@ -186,10 +186,6 @@ $(function() {
                 });
             }
         });
-
-
-        console.log(validate);
-        console.log(!validate.in_array(false));
     }
 
     $('.form-double input[type="text"]').on('focus', function () {
