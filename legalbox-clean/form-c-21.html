@@ -1,0 +1,24 @@
+<div class="form-found">
+	<p class="text-title">Осуществляется ли передача персональных данных пользователя за рубеж:</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc47078475" name="GcIADu" checked="">
+			<label for="fc47078475">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc02398130" name="GcIADu">
+			<label for="fc02398130">Нет</label>
+			<script>
+                $('input:radio[name=GcIADu]').change(function() {
+
+                    $('#ask-country').toggle('display');
+
+                });
+			</script>
+		</div>
+	</div>
+	<div class="form-found-item" id="ask-country">
+		<span>Укажите страну</span>
+		<input class="form-input" id="country" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+	</div>
+</div>

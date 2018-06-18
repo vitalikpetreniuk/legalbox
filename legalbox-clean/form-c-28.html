@@ -1,0 +1,20 @@
+<div class="form-found">
+	<p class="text-title">Производилась ли государственная регистрация Программы для ЭВМ?</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc71736301" name="M1sBLL">
+			<label for="fc71736301">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc96376984" name="M1sBLL" checked="">
+			<label for="fc96376984">Нет</label>
+			<script>
+                $('input:radio[name=M1sBLL]').change(function() {
+
+                    $('#gos-reg').toggle('display');
+
+                });
+			</script>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,157 @@
+
+	<div class="form-found">
+													<p class="text-title">Укажите Ваш ИНН</p>
+													<div class="form-inn">
+														<input id="inn" class="form-input form-input-big input-inn" type="text" placeholder = '132808730606'>
+													</div>
+													<div class="form-found form-first" id="legal-person">
+														<div class="form-found-list">
+															<div class="form-found-item">
+																<span>Наименование</span>
+																<input class="form-input" id="company_name" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item">
+																<span>ОГРН</span>
+																<input class="form-input" id="ogrn" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item">
+																<span>КПП</span>
+																<input class="form-input" id="kpp" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item">
+																<span>Место нахождения</span>
+																<input class="form-input" id="adress" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item">
+																<span>Фактический адрес местонахождения совпадает с юридическим?</span>
+																<div class="form-checkbox-list">
+																	<div class="form-checkbox-item">
+																		<input type="radio" id="fc3" name="flqT7gE" checked="">
+																		<label for="fc3">Да</label>
+
+
+
+																	</div>
+																	<div class="form-checkbox-item">
+																		<input type="radio" id="fc4" name="flqT7gE">
+																		<label for="fc4">Нет</label>
+																		<script>
+                                                                            $('input:radio[name=flqT7gE]').change(function() {
+
+                                                                                $('#actual-address-form').toggle('display');
+
+                                                                            });
+																		</script>
+																	</div>
+																</div>
+															</div>
+															<div class="form-found-item" id="actual-address-form" style="display:none">
+																<span>Укажите фактический адрес местонахождения</span>
+																<input class="form-input" id="adressfact" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+
+
+														</div>
+													</div>
+													<div class="form-found form-first" id="entrepreneur">
+														<div class="form-found-list">
+															<div class="form-found-item">
+																<span>ФИО</span>
+																<input class="form-input" type="text" id="fio" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item">
+																<span>ОГРНИП</span>
+																<input class="form-input" type="text" id="ogrnip" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item">
+																<span>№ свидетельства о государственной регистрации</span>
+																<input class="form-input" type="text" id="gos_reg_number" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item form-found-item-date">
+																<span>Дата государственной регистрации</span>
+																<input class="form-input" type="text" id="gos_reg_day" placeholder="_ _">
+																<input class="form-input" type="text" id="gos_reg_month" placeholder="_ _">
+																<input class="form-input" type="text" id="gos_reg_year" placeholder="_ _">
+															</div>
+														</div>
+													</div>
+												</div>
+	<script>
+                            $(document).ready(function() {
+
+                                $('#inn').on('input', function () {
+//											    alert(this.value.length);
+                                    //if (this.value.length==10) alert('Inn litso'); else
+                                    var settings = {
+                                        "async": true,
+                                        "crossDomain": true,
+                                        "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${$('#inn').val()}`,
+                                        "method": "GET",
+                                        "headers": {
+                                            "content-type": "application/json",
+                                            "authorization": "Token 849e43c0e60aaf7787190b4edcaa24c8f2892b9e",
+                                            "accept": "application/json",
+                                            "cache-control": "no-cache",
+                                            "postman-token": "b801735a-ec52-89de-c4d4-6231078adbee"
+                                        },
+                                        "processData": false,
+                                        "data": "{ \"query\": \"7719402047\" }"
+                                    };
+                                    if (this.value.length == 10) {
+                                        //open the form , and autofill it
+
+
+                                        $.ajax(settings).done(function (response) {
+//													    alert(response.length);
+//													    alert(response[0]["value"]);
+                                            if (response["suggestions"].length == 0) {
+                                                $('#company_name').val("");
+                                                $('#ogrn').val("");
+                                                $('#kpp').val("");
+                                                $('#adress').val("");
+
+                                                alert('Неправильный ИНН');
+                                                return;
+                                            }
+                                            var responseJson = response["suggestions"][0];
+                                            $('#company_name').val(responseJson["value"]);
+                                            $('#ogrn').val(responseJson["data"]["ogrn"]);
+                                            $('#kpp').val(responseJson["data"]["kpp"]);
+                                            $('#adress').val(responseJson["data"]["address"]["value"]);
+
+
+                                            console.log(JSON.stringify(response));
+                                        });
+                                        $('#legal-person').fadeIn();
+                                    } else {
+                                        //hide form for legal-person
+                                        $('#legal-person').fadeOut();
+                                    }
+                                    if (this.value.length == 12) {
+
+                                        //same thing: open form, autofill it for entrepreneur
+
+                                        $.ajax(settings).done(function (response) {
+//													    alert(response.length);
+//													    alert(response[0]["value"]);
+                                            if (response["suggestions"].length == 0) {
+                                                $('#fio').val("");
+                                                $('#ogrnip').val("");
+                                                alert('Неправильный ИНН');
+                                                return;
+                                            }
+
+                                            var responseJson = response["suggestions"][0];
+                                            $('#fio').val(responseJson["value"]);
+                                            $('#ogrnip').val(responseJson["data"]["ogrn"]);
+
+                                        });
+                                        $('#entrepreneur').fadeIn();
+                                    } else {
+                                        // otherwise we're not dealing with entrepreneur, hide everything
+                                        $('#entrepreneur').fadeOut();
+                                    }
+
+                                });
+                            });
+						</script>

@@ -1,0 +1,46 @@
+<div class="form-found">
+	<p class="text-title">Передаете ли вы персональные данные работников контрагентов третьим лицам</p>
+	<div class="form-checkbox-list form-checkbox-list-main">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111401" name="name47" checked>
+			<label for="fc11111401">Да, в другие организации</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111402" name="name47">
+			<label for="fc11111402">Да, в государственные органы</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111403" name="name47">
+			<label for="fc11111403">Не передаю</label>
+		</div>
+	</div>
+</div>
+<div class="form-found form-first">
+	<p>Укажите ИНН компании, в которую вы передаете персональные данные</p>
+	<div class="form-inn">
+		<input id="fc11111404" class="form-input form-input-big" type="text" placeholder="111222333444">
+	</div>
+</div>
+<div class="form-found form-hidden form-second">
+	<p>Укажите официальное название государственного органа, в который вы передаете персональные данные</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="text" class="form-input" id="fc11111405">
+		</div>
+	</div>
+</div>
+
+<script>
+    $('.form-checkbox-list-main input').on('change', function () {
+        if($('#fc11111401').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+        }else if($('#fc11111402').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').removeClass('form-hidden');
+        }else{
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+        }
+    });
+</script>

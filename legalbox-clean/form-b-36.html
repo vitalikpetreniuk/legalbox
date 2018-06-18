@@ -1,0 +1,31 @@
+<div class="form-found">
+	<p class="text-title">Осуществляется ли передача персональных данных работников контрагентов за рубеж</p>
+	<div class="form-checkbox-list form-checkbox-list-main">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111406" name="name48" checked>
+			<label for="fc11111406">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111407" name="name48">
+			<label for="fc11111407">Нет</label>
+		</div>
+	</div>
+</div>
+<div class="form-found form-first">
+	<p>Укажите страну(ы)</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="text" class="form-input" id="fc11111408">
+		</div>
+	</div>
+</div>
+
+<script>
+    $('.form-checkbox-list-main input').on('change', function () {
+        if($('#fc11111406').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+        }else{
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+        }
+    });
+</script>
