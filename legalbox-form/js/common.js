@@ -149,7 +149,7 @@ $(function() {
         });
 
         $('.form-found-list:not(.form-hidden)').each(function () {
-            if($('.form-copy').length != 0) {
+            if($(this).find('.form-copy').length != 0) {
                 $(this).find('.form-copy').each(function () {
                     if ($('.form-copy').length == 1) {
                         $(this).find('input[type="text"]').each(function () {

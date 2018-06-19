@@ -47,6 +47,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 100;
+  box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.2);
   background: #fff; }
 
 .header-in {
@@ -967,4 +968,27 @@ footer {
   font-size: 1.6rem;
   margin: 12px 0 0;
 }
+.logotext {
+  font-size: 10px;
+  min-width: 151px;
+  padding-left: 15px;
+  margin-left: 15px;
+  border-left: 1px solid #e4e8ea;
+  color: #203945;
+  font-weight: 700;
+}
+.logo-top a, .logo-top img {
+  /* display: block; */
+  display: flex;
+  height: 52px;
+  align-items: center;
+  width: 100%;
+}
 
+.menu-block-logo a {
+  display: flex;
+  align-items: center;
+}
+.menu-block-logo img {
+  width: 80px;
+}
