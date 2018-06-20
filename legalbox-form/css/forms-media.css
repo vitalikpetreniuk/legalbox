@@ -52,7 +52,15 @@
   }
 }
 
+@media (max-width: 1063px){
+    .form-found-item-date.form-found-item-date--d-m-y{
+        margin-right: 20px;
+    }
+}
 @media (max-width: 991px) {
+    .form-found-item-date.form-found-item-date--d-m-y select:not(:last-child){
+        margin-bottom: 25px;
+    }
   .top-menu {
     display: none; }
   .menu-toggle {
