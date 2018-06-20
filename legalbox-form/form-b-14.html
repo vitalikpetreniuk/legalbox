@@ -149,6 +149,7 @@
 														</div>
 													</div>
 												</div>
+												<a href="#" class="add-form bttn">Добавить компанию</a>
 											</div>
 										</div>
 									</form>
@@ -157,14 +158,32 @@
                                             if($('#fc11111221').is(':checked')){
                                                 $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
                                                 $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+                                                $('.add-form.bttn').removeClass('form-hidden');
                                             }else if($('#fc11111222').is(':checked')){
                                                 $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
                                                 $(this).closest('.question-in-slider').find('.form-second').removeClass('form-hidden');
+                                                $('.add-form.bttn').addClass('form-hidden');
+                                                $('.editional-input').hide();
                                             }else{
                                                 $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
                                                 $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+                                                $('.add-form.bttn').addClass('form-hidden');
+                                                $('.editional-input').hide();
                                             }
                                         });
+                                        var new_id = 1;
+                                        $('.add-form').on('click', function (e) {
+                                            e.preventDefault();
+                                            new_id += 1;
+                                            $(this).siblings('.form-found.form-first').append(
+												'<div class="form-found form-first editional-input">' +
+                                                	'<p>Укажите ИНН дополнительной компании, в которую вы передаете персональные данные</p>' +
+                                            		'<div class="form-inn">' +
+                                                		'<input id="inn111111' + new_id + '" class="form-input form-input-big input-inn" type="text" placeholder="111222333444">' +
+                                                	'</div>' +
+                                                '</div>');
+
+                                        })
 									</script>
 								</div>
 							</div>

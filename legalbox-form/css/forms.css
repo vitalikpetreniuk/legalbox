@@ -483,6 +483,9 @@ section {
   font-size: 14px;
   height: 18px;
   color: #4C636F; }
+select.form-input:not(:last-child) {
+  margin-right: 6px;
+}
   .form-input::-webkit-input-placeholder {
     color: #4C636F; }
   .form-input::-moz-placeholder {
@@ -991,4 +994,8 @@ footer {
 }
 .menu-block-logo img {
   width: 80px;
+}
+.add-form.bttn{
+  padding: 6px 30px;
+  font-weight: 600;
 }
