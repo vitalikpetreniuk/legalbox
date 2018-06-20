@@ -103,7 +103,7 @@ function checkForm(div) {
                             validate.push(false);
                         }
                     } else {
-                        if($.isNumeric(input.val()) && input.val().length >= 8 &&  input.val().length <= 12){
+                        if($.isNumeric(input.val()) && (input.val().length == 10 ||  input.val().length == 12)){
                             validate.push(true);
                         } else {
                             validate.push(false);
@@ -124,14 +124,15 @@ function checkForm(div) {
                     }
                 });
             }
-
         });
 
         div.find('.form-found-list:not(.form-hidden)').each(function () {
-            if($(this).find('.form-copy').length != 0) {
-                $(this).find('.form-copy').each(function () {
-                    if ($(this).find('.form-copy').length == 1) {
-                        $(this).find('input[type="text"]').each(function () {
+            var item = $(this);
+
+            if(item.find('.form-copy').length != 0) {
+                item.find('.form-copy').each(function () {
+                    if (item.find('.form-copy').length == 1) {
+                        $(this).find('input').each(function () {
                             if ($(this).val() == '') {
                                 validate.push(false);
                             } else {
@@ -140,7 +141,7 @@ function checkForm(div) {
                         });
                     } else {
                         if (!$(this).is(':last-child')) {
-                            $(this).find('input[type="text"]').each(function () {
+                            $(this).find('input').each(function () {
                                 if ($(this).val() == '') {
                                     validate.push(false);
                                 } else {
@@ -151,10 +152,9 @@ function checkForm(div) {
                     }
                 });
             } else {
-                $(this).find('.form-found-item:not(.form-hidden)').each(function () {
+                item.find('.form-found-item:not(.form-hidden)').each(function () {
                     var input = $(this).find('input');
                     var inputType = input.attr('type');
-
                     if(!input.hasClass('input-inn')){
                         if(input.val() != ''){
                             validate.push(true);
@@ -167,6 +167,5 @@ function checkForm(div) {
         });
     })
 
-    // console.log(validate);
-    // console.log(!validate.in_array(false));
+    return !validate.in_array(false);
 }

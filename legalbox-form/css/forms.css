@@ -957,10 +957,19 @@ footer {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+.buttons-bottom{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
 .form-end-document--list .form-end-document{
    width: calc((100% - 220px)/4);
    margin: 25px;
- }
+    padding-bottom: 90px;
+    position: relative;
+}
 .form-end-document--list .form-end-document img{
   width: 70%;
 }
@@ -999,3 +1008,36 @@ footer {
   padding: 6px 30px;
   font-weight: 600;
 }
+.del-item{
+  position: absolute;
+  left: 200px;
+  bottom: 3px;
+  background: transparent;
+  border: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 3px;
+  border: 1px solid #881a51;
+}
+.form-inn + .del-item{
+  left: 310px;
+  bottom: 8px;
+}
+.editional-input{
+  position: relative;
+}
+.del-item::before, .del-item::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 1px;
+  background: #881a51;
+}
+.del-item::before{
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.del-item::after{
+   transform: translate(-50%, -50%) rotate(45deg);
+ }

@@ -165,9 +165,14 @@
                                                 '<input type="text" class="form-input" id="ra1111111' + new_id + '">' +
                                                 '</div>' +
                                                 '</div>' +
+                                                '<button class="del-item"></button>'+
                                                 '</div>');
 
-                                        })
+                                        });
+                                        $('body').on('click','.del-item', function (e) {
+                                            e.preventDefault();
+                                            $(this).parent().hide();
+                                        });
 									</script>
 								</div>
 							</div>
