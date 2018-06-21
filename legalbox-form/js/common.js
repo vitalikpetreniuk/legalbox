@@ -26,6 +26,17 @@ $(function() {
         $(this).closest('.form-double').find('input').prop('checked', true);
     });
 
+    //==========Pop-Up-Validity-Form===============//
+    if($('.pop-up__validity').length){
+        setTimeout(function() {
+            $('.pop-up__validity').addClass('active');
+        }, 3000);
+    }
+    $('.pop-up__close').on('click', function () {
+        $(this).parents($('.pop-up__validity')).removeClass('active');
+    });
+    //==========Pop-Up-Validity-Form===============//
+
 });
 
 Array.prototype.in_array = function(p_val) {
@@ -204,8 +215,7 @@ function checkForm(div) {
                 });
             }
         });
-    })
-
+    });
     // console.log(validate);
     return !validate.in_array(false);
 }

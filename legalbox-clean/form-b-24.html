@@ -12,15 +12,16 @@
 	</div>
 </div>
 <div class="form-found form-first">
-	<p>Название программы(ам) с указанием версии</p>
+	<p class="text-title">Название программы(ам) с указанием версии</p>
 	<div class="form-checkbox-list">
 		<div class="form-checkbox-item">
 			<input type="text" id="fc11111289" class="form-input">
 		</div>
 	</div>
 </div>
+<a href="#" class="add-form bttn">Добавить программу</a>
 <div class="form-found form-first">
-	<p>Передаются ли данные соискателей по внутренней (локальной) сети компании</p>
+	<p class="text-title">Передаются ли данные соискателей по внутренней (локальной) сети компании</p>
 	<div class="form-checkbox-list">
 		<div class="form-checkbox-item">
 			<input type="radio" id="fc11111290" name="name31" checked>
@@ -33,7 +34,7 @@
 	</div>
 </div>
 <div class="form-found form-first">
-	<p>Передаются ли данные соискателей по сети Интернет</p>
+	<p class="text-title">Передаются ли данные соискателей по сети Интернет</p>
 	<div class="form-checkbox-list">
 		<div class="form-checkbox-item">
 			<input type="radio" id="fc11111292" name="name32" checked>
@@ -46,7 +47,7 @@
 	</div>
 </div>
 <div class="form-found form-first">
-	<p>Персональные данные соискателей хранятся</p>
+	<p class="text-title">Персональные данные соискателей хранятся</p>
 	<div class="form-checkbox-list">
 		<div class="form-checkbox-item">
 			<input type="radio" id="fc11111294" name="name33" checked>
@@ -60,7 +61,7 @@
 </div>
 <div class="form-first">
 	<div class="form-found form-second">
-		<p>Укажите адрес местонахождения собственного сервера</p>
+		<p class="text-title">Укажите адрес местонахождения собственного сервера</p>
 		<div class="form-checkbox-list">
 			<div class="form-checkbox-item">
 				<input type="text" class="form-input" id="fc11111296">
@@ -68,7 +69,7 @@
 		</div>
 	</div>
 	<div class="form-found form-hidden form-third">
-		<p>Укажите ИНН компании, предоставляющей сервер вашей компании</p>
+		<p class="text-title">Укажите ИНН компании, предоставляющей сервер вашей компании</p>
 		<div class="form-inn">
 			<input id="fc11111297" class="form-input form-input-big input-inn" type="text" placeholder="111222333444">
 		</div>
@@ -79,8 +80,11 @@
     $('.form-checkbox-list-main input').on('change', function () {
         if($('#fc11111287').is(':checked')){
             $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+            $('.add-form.bttn').removeClass('form-hidden');
         }else{
             $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $('.add-form.bttn').addClass('form-hidden');
+            $('.editional-input').hide();
         }
     });
     $('.form-first input').on('change', function () {
@@ -91,5 +95,22 @@
             $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
             $(this).closest('.question-in-slider').find('.form-third').removeClass('form-hidden');
         }
+    });
+    var new_id = 1;
+    $('.add-form').on('click', function (e) {
+        e.preventDefault();
+        new_id += 1;
+        $(this).siblings('.form-found:nth-child(2)').append(
+            '<div class="form-found form-first editional-input">' +
+            '<p>Название и версия программы</p>' +
+            '<div>' +
+            '<input id="pm241111' + new_id + '" class="form-input" type="text" name = "pm241111' + new_id + '">' +
+            '</div>' +
+            '<button class="del-item"></button>'+
+            '</div>');
+    });
+    $('body').on('click','.del-item', function (e) {
+        e.preventDefault();
+        $(this).parent().hide();
     });
 </script>

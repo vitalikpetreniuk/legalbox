@@ -12,15 +12,16 @@
 	</div>
 </div>
 <div class="form-found form-first">
-	<p>Название программы(ам) с указанием версии</p>
+	<p class="text-title">Название программы(ам) с указанием версии</p>
 	<div class="form-checkbox-list">
 		<div class="form-checkbox-item">
 			<input type="text" id="fc11111226" class="form-input">
 		</div>
 	</div>
 </div>
+<a href="#" class="add-form bttn">Добавить программу</a>
 <div class="form-found form-first">
-	<p>Передаются ли данные сотрудников (гпх) по внутренней (локальной) сети компании</p>
+	<p class="text-title">Передаются ли данные сотрудников (гпх) по внутренней (локальной) сети компании</p>
 	<div class="form-checkbox-list">
 		<div class="form-checkbox-item">
 			<input type="radio" id="fc11111227" name="name21" checked>
@@ -33,7 +34,7 @@
 	</div>
 </div>
 <div class="form-found form-first">
-	<p>Передаются ли данные сотрудников (гпх) по сети Интернет</p>
+	<p class="text-title">Передаются ли данные сотрудников (гпх) по сети Интернет</p>
 	<div class="form-checkbox-list">
 		<div class="form-checkbox-item">
 			<input type="radio" id="fc11111229" name="name22" checked>
@@ -46,7 +47,7 @@
 	</div>
 </div>
 <div class="form-found form-first">
-	<p>Персональные данные сотрудников (гпх) хранятся</p>
+	<p class="text-title">Персональные данные сотрудников (гпх) хранятся</p>
 	<div class="form-checkbox-list">
 		<div class="form-checkbox-item">
 			<input type="radio" id="fc11111231" name="name23" checked>
@@ -60,7 +61,7 @@
 </div>
 <div class="form-first">
 	<div class="form-found form-second">
-		<p>Укажите адрес местонахождения собственного сервера</p>
+		<p class="text-title">Укажите адрес местонахождения собственного сервера</p>
 		<div class="form-checkbox-list">
 			<div class="form-checkbox-item">
 				<input type="text" class="form-input" id="fc11111233">
@@ -68,7 +69,7 @@
 		</div>
 	</div>
 	<div class="form-found form-hidden form-third">
-		<p>Укажите ИНН компании, предоставляющей сервер вашей компании</p>
+		<p class="text-title">Укажите ИНН компании, предоставляющей сервер вашей компании</p>
 		<div class="form-inn">
 			<input id="fc11111234" class="form-input form-input-big input-inn" type="text" placeholder="111222333444">
 		</div>
@@ -78,18 +79,38 @@
 <script>
     $('.form-checkbox-list-main input').on('change', function () {
         if($('#fc11111224').is(':checked')){
-            $('.form-first').removeClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+            $('.add-form.bttn').removeClass('form-hidden');
         }else{
-            $('.form-first').addClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $('.add-form.bttn').addClass('form-hidden');
+            $('.editional-input').hide();
         }
     });
     $('.form-first input').on('change', function () {
         if($('#fc11111231').is(':checked')){
-            $('.form-second').removeClass('form-hidden');
-            $('.form-third').addClass('form-hidden');
+            $$(this).closest('.question-in-slider').find('.form-second').removeClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-third').addClass('form-hidden');
         }else if($('#fc11111232').is(':checked')){
-            $('.form-second').addClass('form-hidden');
-            $('.form-third').removeClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-third').removeClass('form-hidden');
         }
+    });
+    var new_id = 1;
+    $('.add-form').on('click', function (e) {
+        e.preventDefault();
+        new_id += 1;
+        $(this).siblings('.form-found:nth-child(2)').append(
+            '<div class="form-found form-first editional-input">' +
+            '<p>Название и версия программы</p>' +
+            '<div>' +
+            '<input id="pm171111' + new_id + '" class="form-input" type="text" name = "pm171111' + new_id + '">' +
+            '</div>' +
+            '<button class="del-item"></button>'+
+            '</div>');
+    });
+    $('body').on('click','.del-item', function (e) {
+        e.preventDefault();
+        $(this).parent().hide();
     });
 </script>
