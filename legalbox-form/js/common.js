@@ -142,7 +142,6 @@ function checkForm(div) {
 
             if(!$(this).hasClass('form-one')){
                 if(!input.parents('.form-checkbox-item').hasClass('form-double') && (inputType != 'radio' && inputType != 'checkbox')){
-                    console.log('text');
                     if(!input.hasClass('input-inn')){
                         if(input.val() != ''){
                             validate.push(true);
