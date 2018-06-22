@@ -6,7 +6,7 @@
 
 </div>
 <div class="form-found form-hidden" id="legal-person">
-	<div class="form-found-list">
+	<div class="form-found-list form-hidden">
 		<div class="form-found-item">
 			<span>Наименование</span>
 			<input class="form-input" id="company_name" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
@@ -44,7 +44,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="form-found-item" id="actual-address-form" style="display:none">
+		<div class="form-found-item form hidden" id="actual-address-form" style="display:none">
 			<span>Укажите фактический адрес местонахождения</span>
 			<input class="form-input" id="adressfact" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
 		</div>
@@ -52,8 +52,8 @@
 
 	</div>
 </div>
-<div class="form-found form hidden" id="entrepreneur">
-	<div class="form-found-list">
+<div class="form-found form-hidden" id="entrepreneur">
+	<div class="form-found-list form-hidden">
 		<div class="form-found-item">
 			<span>ФИО</span>
 			<input class="form-input" type="text" id="fio" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
@@ -75,10 +75,9 @@
 		</div>
 
 	</div>
-
 </div>
-<div class="form-found-list">
-	<p>Укажите контакты службы клиентской поддержки:</p>
+<div class="form-found-list form-hidden">
+	<p class="text-title">Укажите контакты службы клиентской поддержки:</p>
 	<div class="form-found-item">
 		<span>Телефон:</span>
 		<input class="form-input" id="support_number" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
@@ -87,13 +86,12 @@
 		<span>Электронная почта:</span>
 		<input class="form-input" id="corresp_address" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
 	</div>
-
 </div>
 <script>
     $(document).ready(function() {
 
-        $('#inn').on('input', function() {
-            //											    alert(this.value.length);
+        $('#inn').on('input', function () {
+//                                              alert(this.value.length);
             //if (this.value.length==10) alert('Inn litso'); else
             var settings = {
                 "async": true,
@@ -113,9 +111,10 @@
             if (this.value.length == 10) {
                 //open the form , and autofill it
 
-                $.ajax(settings).done(function(response) {
-                    //													    alert(response.length);
-                    //													    alert(response[0]["value"]);
+
+                $.ajax(settings).done(function (response) {
+//                                                      alert(response.length);
+//                                                      alert(response[0]["value"]);
                     if (response["suggestions"].length == 0) {
                         $('#company_name').val("");
                         $('#ogrn').val("");
@@ -131,6 +130,7 @@
                     $('#kpp').val(responseJson["data"]["kpp"]);
                     $('#adress').val(responseJson["data"]["address"]["value"]);
 
+
                     console.log(JSON.stringify(response));
                 });
                 $('#legal-person').fadeIn();
@@ -142,9 +142,9 @@
 
                 //same thing: open form, autofill it for entrepreneur
 
-                $.ajax(settings).done(function(response) {
-                    //													    alert(response.length);
-                    //													    alert(response[0]["value"]);
+                $.ajax(settings).done(function (response) {
+//                                                      alert(response.length);
+//                                                      alert(response[0]["value"]);
                     if (response["suggestions"].length == 0) {
                         $('#fio').val("");
                         $('#ogrnip').val("");

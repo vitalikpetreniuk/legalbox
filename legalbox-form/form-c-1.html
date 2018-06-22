@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="css/forms.css">
 	<link rel="stylesheet" href="css/forms-media.css">
 	<!--styles end-->
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
 
@@ -119,7 +119,7 @@
 													<div class="form-inn">
 														<input id="inn" class="form-input form-input-big input-inn" type="text" placeholder = '132808730606'>
 													</div>
-													<div class="form-found form-first" id="legal-person">
+													<div class="form-found form-first form-hidden" id="legal-person">
 														<div class="form-found-list">
 															<div class="form-found-item">
 																<span>Наименование</span>
@@ -160,7 +160,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="form-found-item" id="actual-address-form" style="display:none">
+															<div class="form-found-item form-hidden" id="actual-address-form" style="display:none">
 																<span>Укажите фактический адрес местонахождения</span>
 																<input class="form-input" id="adressfact" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
 															</div>
@@ -168,7 +168,7 @@
 
 														</div>
 													</div>
-													<div class="form-found form-first" id="entrepreneur">
+													<div class="form-found form-first form-hidden" id="entrepreneur">
 														<div class="form-found-list">
 															<div class="form-found-item">
 																<span>ФИО</span>
@@ -275,7 +275,7 @@
                             $(document).ready(function() {
 
                                 $('#inn').on('input', function () {
-//											    alert(this.value.length);
+//                                              alert(this.value.length);
                                     //if (this.value.length==10) alert('Inn litso'); else
                                     var settings = {
                                         "async": true,
@@ -297,8 +297,8 @@
 
 
                                         $.ajax(settings).done(function (response) {
-//													    alert(response.length);
-//													    alert(response[0]["value"]);
+//                                                      alert(response.length);
+//                                                      alert(response[0]["value"]);
                                             if (response["suggestions"].length == 0) {
                                                 $('#company_name').val("");
                                                 $('#ogrn').val("");
@@ -327,8 +327,8 @@
                                         //same thing: open form, autofill it for entrepreneur
 
                                         $.ajax(settings).done(function (response) {
-//													    alert(response.length);
-//													    alert(response[0]["value"]);
+//                                                      alert(response.length);
+//                                                      alert(response[0]["value"]);
                                             if (response["suggestions"].length == 0) {
                                                 $('#fio').val("");
                                                 $('#ogrnip').val("");
@@ -444,7 +444,6 @@
 
 
 	<!-- scripts -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollbar.min.js"></script>
 	<script src="js/common.js"></script>

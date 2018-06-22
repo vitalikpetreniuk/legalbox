@@ -4,7 +4,6 @@
 		<input id="fc0000077" class="form-input form-input-big input-inn" type="text" placeholder = '132808730606'>
 	</div>
 </div>
-<br><!-- sample for Entrepreneur - 132808730606 , for legal-person  - 5262321353 -->
 <div class="form-found" id="legal-person" >
 	<div class="form-found-list">
 		<div class="form-found-item">
@@ -155,7 +154,7 @@
     $(document).ready(function() {
 
         $('#inn').on('input', function () {
-//											    alert(this.value.length);
+//                                              alert(this.value.length);
             //if (this.value.length==10) alert('Inn litso'); else
             var settings = {
                 "async": true,
@@ -177,8 +176,8 @@
 
 
                 $.ajax(settings).done(function (response) {
-//													    alert(response.length);
-//													    alert(response[0]["value"]);
+//                                                      alert(response.length);
+//                                                      alert(response[0]["value"]);
                     if (response["suggestions"].length == 0) {
                         $('#company_name').val("");
                         $('#ogrn').val("");
@@ -207,8 +206,8 @@
                 //same thing: open form, autofill it for entrepreneur
 
                 $.ajax(settings).done(function (response) {
-//													    alert(response.length);
-//													    alert(response[0]["value"]);
+//                                                      alert(response.length);
+//                                                      alert(response[0]["value"]);
                     if (response["suggestions"].length == 0) {
                         $('#fio').val("");
                         $('#ogrnip').val("");
