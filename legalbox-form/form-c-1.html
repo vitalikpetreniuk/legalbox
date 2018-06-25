@@ -117,7 +117,7 @@
 												<div class="form-found">
 													<p class="text-title">Укажите Ваш ИНН</p>
 													<div class="form-inn">
-														<input id="inn" class="form-input form-input-big input-inn" type="text" placeholder = '132808730606'>
+														<input id="inn" class="form-input form-input-big input-inn" type="text" placeholder='' value="">
 													</div>
 													<div class="form-found form-first form-hidden" id="legal-person">
 														<div class="form-found-list form-hidden">
@@ -137,34 +137,6 @@
 																<span>Место нахождения</span>
 																<input class="form-input" id="adress" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
 															</div>
-															<div class="form-found-item">
-																<span>Фактический адрес местонахождения совпадает с юридическим?</span>
-																<div class="form-checkbox-list">
-																	<div class="form-checkbox-item">
-																		<input type="radio" id="fc3" name="flqT7gE" checked="">
-																		<label for="fc3">Да</label>
-
-
-
-																	</div>
-																	<div class="form-checkbox-item">
-																		<input type="radio" id="fc4" name="flqT7gE">
-																		<label for="fc4">Нет</label>
-																		<script>
-                                                                            $('input:radio[name=flqT7gE]').change(function() {
-
-                                                                                $('#actual-address-form').toggle('display');
-
-                                                                            });
-																		</script>
-																	</div>
-																</div>
-															</div>
-															<div class="form-found-item form-hidden" id="actual-address-form" style="display:none">
-																<span>Укажите фактический адрес местонахождения</span>
-																<input class="form-input" id="adressfact" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
-															</div>
-
 
 														</div>
 													</div>
@@ -184,7 +156,7 @@
 															</div>
 															<div class="form-found-item form-found-item-date">
 																<span>Дата государственной регистрации</span>
-																<select class="form-input" type="text" id="gos_reg_day" name = "gos_reg_day" >
+																<select class="form-input" type="text" id="gos_reg_day" name="gos_reg_day">
 																	<option>01</option>
 																	<option>02</option>
 																	<option>03</option>
@@ -216,7 +188,7 @@
 																	<option>30</option>
 																	<option>31</option>
 																</select>
-																<select class="form-input" type="text" id="gos_reg_month" name = "gos_reg_month" >
+																<select class="form-input" type="text" id="gos_reg_month" name="gos_reg_month">
 																	<option>январь</option>
 																	<option>февраль</option>
 																	<option>март</option>
@@ -230,7 +202,7 @@
 																	<option>ноябрь</option>
 																	<option>декабрь</option>
 																</select>
-																<select class="form-input" type="text" id="gos_reg_year" name = "gos_reg_year" >
+																<select class="form-input" type="text" id="gos_reg_year" name="gos_reg_year">
 																	<option>2018</option>
 																	<option>2017</option>
 																	<option>2016</option>
@@ -264,6 +236,22 @@
 															</div>
 														</div>
 													</div>
+													<div class="form-found form-first form-hidden" id="rightsowner" >
+														<p class="text-title">Обладателем прав на сайт и размещенный на сайте контент является:</p>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item form-double">
+																<input type="radio" id="fc11111456" name="name57">
+																<label for="fc11111456" id="oooOrIp">
+																	<input type="text" id="fc11111457" class="form-input">
+																</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fc1715373" name="name57">
+																<label for="fc1715373">Иное лицо</label>
+															</div>
+														</div>
+													</div>
+													<div></div>
 												</div>
 											</div>
 										</div>
@@ -274,8 +262,8 @@
 						<script>
                             $(document).ready(function() {
 
-                                $('#inn').on('input', function () {
-//                                              alert(this.value.length);
+                                $('#inn').on('input', function() {
+                                    //                                              alert(this.value.length);
                                     //if (this.value.length==10) alert('Inn litso'); else
                                     var settings = {
                                         "async": true,
@@ -295,56 +283,72 @@
                                     if (this.value.length == 10) {
                                         //open the form , and autofill it
 
-
-                                        $.ajax(settings).done(function (response) {
-//                                                      alert(response.length);
-//                                                      alert(response[0]["value"]);
+                                        $.ajax(settings).done(function(response) {
+                                            //                                                      alert(response.length);
+                                            //                                                      alert(response[0]["value"]);
                                             if (response["suggestions"].length == 0) {
                                                 $('#company_name').val("");
                                                 $('#ogrn').val("");
                                                 $('#kpp').val("");
                                                 $('#adress').val("");
+                                                $("#fc11111457").val("");
 
                                                 alert('Неправильный ИНН');
                                                 return;
                                             }
                                             var responseJson = response["suggestions"][0];
                                             $('#company_name').val(responseJson["value"]);
+                                            $("#fc11111457").val(responseJson["value"]);
                                             $('#ogrn').val(responseJson["data"]["ogrn"]);
                                             $('#kpp').val(responseJson["data"]["kpp"]);
                                             $('#adress').val(responseJson["data"]["address"]["value"]);
 
-
                                             console.log(JSON.stringify(response));
                                         });
-                                        $('#legal-person').fadeIn();
+                                        $('#legal-person').removeClass('form-hidden');
+                                        $('#legal-person .form-found-list').removeClass('form-hidden');
+                                        //$("#oooOrIp").text("ООО");
+                                        $('#rightsowner').removeClass('form-hidden');
                                     } else {
                                         //hide form for legal-person
-                                        $('#legal-person').fadeOut();
+                                        $('#legal-person').addClass('form-hidden');
+                                        $('#legal-person .form-found-list').addClass('form-hidden');
                                     }
                                     if (this.value.length == 12) {
 
                                         //same thing: open form, autofill it for entrepreneur
 
-                                        $.ajax(settings).done(function (response) {
-//                                                      alert(response.length);
-//                                                      alert(response[0]["value"]);
+                                        $.ajax(settings).done(function(response) {
+                                            //                                                      alert(response.length);
+                                            //                                                      alert(response[0]["value"]);
                                             if (response["suggestions"].length == 0) {
                                                 $('#fio').val("");
                                                 $('#ogrnip').val("");
+                                                $("#fc11111457").val("");
                                                 alert('Неправильный ИНН');
                                                 return;
                                             }
 
                                             var responseJson = response["suggestions"][0];
                                             $('#fio').val(responseJson["value"]);
+                                            $("#fc11111457").val(responseJson["value"]);
                                             $('#ogrnip').val(responseJson["data"]["ogrn"]);
 
                                         });
-                                        $('#entrepreneur').fadeIn();
+                                        $('#entrepreneur').removeClass('form-hidden');
+                                        $('#entrepreneur .form-found-list').removeClass('form-hidden');
+                                        //$("#oooOrIp").text("ИП");
+                                        $('#rightsowner').removeClass('form-hidden');
+
                                     } else {
                                         // otherwise we're not dealing with entrepreneur, hide everything
-                                        $('#entrepreneur').fadeOut();
+                                        $('#entrepreneur').addClass('form-hidden');
+                                        $('#entrepreneur .form-found-list').addClass('form-hidden');
+
+                                    }
+
+                                    if ((this.value.length != 10) && (this.value.length != 12)) {
+                                        $('#rightsowner').addClass('form-hidden');
                                     }
 
                                 });

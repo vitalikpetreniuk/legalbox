@@ -131,13 +131,14 @@
 															<script>
                                                                 $('input:radio[name=M1sBLL]').change(function() {
 
-                                                                    $('#gos-reg').toggle('display');
+//                                                                    $('#gos-reg').toggle('display');
+                                                                    $('#gos-reg').toggleClass('form-hidden');
 
                                                                 });
 															</script>
 														</div>
 													</div>
-													<div class="form-found" id="gos-reg" style="display:none;">
+													<div class="form-found form-hidden" id="gos-reg">
 														<span>Укажите номер и дату свидетельства:</span>
 														<div class="form-found-item">
 															<span>Свидетельство №</span>

@@ -27,11 +27,6 @@ $(function() {
     });
 
     //==========Pop-Up-Validity-Form===============//
-    if($('.pop-up__validity').length){
-        setTimeout(function() {
-            $('.pop-up__validity').addClass('active');
-        }, 3000);
-    }
     $('.pop-up__close').on('click', function () {
         $(this).parents($('.pop-up__validity')).removeClass('active');
     });
