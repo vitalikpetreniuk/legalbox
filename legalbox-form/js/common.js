@@ -32,6 +32,26 @@ $(function() {
     });
     //==========Pop-Up-Validity-Form===============//
 
+
+    $("input[type='radio'], input[type='checkbox']").on('click', function () {
+        var parent = $(this).parents('.form-checkbox-list');
+        var inputType = $(this).attr('type');
+
+        if(inputType == 'radio'){
+            parent.find("input[type='radio']").removeClass('input-error');
+        } else if(inputType == 'checkbox') {
+            parent.find("input[type='checkbox']").removeClass('input-error');
+        }
+
+    });
+
+    $("input").on('keydown', function () {
+        var inputType = $(this).attr('type');
+        if(inputType != 'radio' && inputType != 'checkbox'){
+            $(this).removeClass('input-error');
+        }
+    });
+
 });
 
 Array.prototype.in_array = function(p_val) {
@@ -87,6 +107,7 @@ function checkForm(div) {
             if($(this).find('input[type="radio"]').length != 0){
                 if(!validateRd.in_array(true) || !notFilledRd){
                     validate.push(false);
+                    $(this).find('input[type="radio"]').addClass('input-error');
                 } else {
                     validate.push(true);
                 }
@@ -125,6 +146,7 @@ function checkForm(div) {
             if($(this).find('input[type="checkbox"]').length != 0){
                 if(!validateCh.in_array(true) || !notFilledCh){
                     validate.push(false);
+                    $(this).find('input[type="checkbox"]').addClass('input-error');
                 } else {
                     validate.push(true);
                 }
@@ -133,37 +155,47 @@ function checkForm(div) {
 
         form_found.each(function () {
             var input = $(this).find('input');
-            var inputType = input.attr('type');
 
             if(!$(this).hasClass('form-one')){
-                if(!input.parents('.form-checkbox-item').hasClass('form-double') && (inputType != 'radio' && inputType != 'checkbox')){
-                    if(!input.hasClass('input-inn')){
-                        if(input.val() != ''){
-                            validate.push(true);
+                input.each(function () {
+                    var inputType = $(this).attr('type');
+
+                    if(!$(this).parents('.form-checkbox-item').hasClass('form-double') && (inputType != 'radio' && inputType != 'checkbox')){
+                        if(!$(this).hasClass('input-inn')){
+                            if($(this).val() != ''){
+                                validate.push(true);
+                            } else {
+                                validate.push(false);
+                                $(this).addClass('input-error');
+                            }
                         } else {
-                            validate.push(false);
-                        }
-                    } else {
-                        if($.isNumeric(input.val()) && (input.val().length == 10 ||  input.val().length == 12)){
-                            validate.push(true);
-                        } else {
-                            validate.push(false);
+                            if($.isNumeric($(this).val()) && ($(this).val().length == 10 ||  $(this).val().length == 12)){
+                                validate.push(true);
+                            } else {
+                                validate.push(false);
+                                $(this).addClass('input-error');
+                            }
                         }
                     }
-                }
+                })
             } else {
                 // console.log('text');
                 $(this).find('.form-found-item:not(.form-hidden)').each(function () {
                     var input = $(this).find('input');
-                    var inputType = input.attr('type');
 
-                    if(!input.hasClass('input-inn')){
-                        if(input.val() != ''){
-                            validate.push(true);
-                        } else {
-                            validate.push(false);
+                    input.each(function () {
+                        var inputType = $(this).attr('type');
+
+                        if(!$(this).hasClass('input-inn')){
+                            if($(this).val() != ''){
+                                validate.push(true);
+                            } else {
+                                validate.push(false);
+                                $(this).addClass('input-error');
+                            }
                         }
-                    }
+                    })
+
                 });
             }
         });
@@ -178,6 +210,7 @@ function checkForm(div) {
                         $(this).find('input').each(function () {
                             if ($(this).val() == '') {
                                 validate.push(false);
+                                $(this).addClass('input-error');
                             } else {
                                 validate.push(true);
                             }
@@ -187,6 +220,7 @@ function checkForm(div) {
                             $(this).find('input').each(function () {
                                 if ($(this).val() == '') {
                                     validate.push(false);
+                                    $(this).addClass('input-error');
                                 } else {
                                     validate.push(true);
                                 }
@@ -197,15 +231,19 @@ function checkForm(div) {
             } else {
                 item.find('.form-found-item:not(.form-hidden)').each(function () {
                     var input = $(this).find('input');
-                    var inputType = input.attr('type');
-                    // console.log('text');
-                    if(!input.hasClass('input-inn')){
-                        if(input.val() != ''){
-                            validate.push(true);
-                        } else {
-                            validate.push(false);
+
+                    input.each(function () {
+                        var inputType = $(this).attr('type');
+
+                        if(!$(this).hasClass('input-inn')){
+                            if($(this).val() != ''){
+                                validate.push(true);
+                            } else {
+                                validate.push(false);
+                                $(this).addClass('input-error');
+                            }
                         }
-                    }
+                    });
                 });
             }
         });

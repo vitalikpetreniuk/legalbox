@@ -1088,3 +1088,9 @@ label > .form-input{
 .form-checkbox-item.form-double + .add-form.bttn{
   margin-top: 30px;
 }
+.form-checkbox-item input[type='checkbox'].input-error + label::before, .form-checkbox-item input[type='radio'].input-error + label::before{
+  border: 2px solid  #881A51;
+}
+.form-input.input-error{
+  border-bottom: 2px solid #881A51;
+}
