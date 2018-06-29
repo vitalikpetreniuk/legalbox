@@ -251,3 +251,37 @@ function checkForm(div) {
     // console.log(validate);
     return !validate.in_array(false);
 }
+
+
+function documentsJson(form) {
+    var documents = [];
+    var i = 1;
+
+    form.find('.form-copy').each(function () {
+        var document = $(this).find('.form-document').val();
+        var place = $(this).find('.form-place').val();
+
+        if (form.find('.form-copy').length == 1) {
+            var this_doc = new Object();
+
+            this_doc.document = document;
+            this_doc.place = place;
+
+            documents.push(this_doc);
+        } else {
+            if (!$(this).is(':last-child')) {
+                var this_doc = new Object();
+
+                this_doc.document = document;
+                this_doc.place = place;
+
+                documents.push(this_doc);
+            }
+        }
+
+//
+    });
+
+    // alert(JSON.stringify(documents));
+    return JSON.stringify(documents);
+}

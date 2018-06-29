@@ -11,7 +11,7 @@
 		</div>
 	</div>
 </div>
-<div class="form-found-list form-first">
+<div id="form100008" class="form-found-list form-first">
 	<p class="text-title">Перечислите такие документы и место их хранения</p>
 	<div class="form-copy">
 		<div class="form-found-item">
@@ -38,7 +38,9 @@
     var random_id;
     var form_clone;
     var input = 1;
-    $('body').on('input','.form-copy input', function () {
+
+    var forms8 = $('#form100008');
+    $('body').on('input','#form100008 .form-copy input', function () {
         var document = $(this).parents('.form-copy').find('.form-document').val();
         var place = $(this).parents('.form-copy').find('.form-place').val();
         var parent = $(this).parents('.form-copy');
@@ -51,16 +53,16 @@
             number = Math.random();
             random_id = number.toString(36).substr(2, 9);
 
-            form_clone = $('.form-copy:last-child').clone();
+            form_clone = forms8.find('.form-copy:last-child').clone();
             form_clone.find('.form-input.form-document').attr('id', 'doc_'+random_id);
             form_clone.find('.form-input.form-place').attr('id', 'pl_'+random_id);
-            form_clone.insertAfter('.form-copy:last-child');
-            $('.form-copy:last-child input').val('');
+            form_clone.insertAfter('#form100008 .form-copy:last-child');
+            forms8.find('.form-copy:last-child input').val('');
         }else if(document.length == 0 && place.length == 0){
             console.log('empty');
-            var length = $('.form-copy').length;
+            var length = forms8.find('.form-copy').length;
             if(length > 1){
-                $('.form-copy:last-child').remove();
+                forms8.find('.form-copy:last-child').remove();
             }
             input = 1;
         }
