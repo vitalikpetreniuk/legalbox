@@ -1,4 +1,12 @@
+var regions = [];
+
 $(function() {
+
+    $.getJSON( "js/cities.json", function(json){
+        $.each(json.regions, function(i, item){
+            regions.push(item);
+        });
+    });
 
     $('.menu-toggle').on('click', function () {
         $('.menu-block').addClass('active');
@@ -16,6 +24,11 @@ $(function() {
         e.preventDefault();
 
         var validation = checkForm($('.question-in-slider'));
+        if($('.question-in-slider .input-inn').length){
+            var region = findINN($('.input-inn').val());
+
+            console.log(region);
+        }
 
         console.log(validation);
     });
@@ -53,6 +66,24 @@ $(function() {
     });
 
 });
+
+function findINN(value){
+
+    var name;
+
+    $.each(regions, function(i, item){
+        var code = value.substring(0, item.code.length);
+
+        if(parseInt(code) == parseInt(item.code)){
+            name  = item.name;
+
+            return false;
+        }
+    });
+
+    return name;
+
+}
 
 Array.prototype.in_array = function(p_val) {
     for(var i = 0, l = this.length; i < l; i++)	{
