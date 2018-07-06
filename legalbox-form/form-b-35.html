@@ -120,7 +120,7 @@
 											<div class="question-in-slider">
 												<div class="form-found">
 													<p class="text-title">Передаете ли вы персональные данные работников контрагентов третьим лицам</p>
-													<div class="form-checkbox-list form-checkbox-list-main">
+													<div class="form-checkbox-list" id="fclm0016">
 														<div class="form-checkbox-item">
 															<input type="radio" id="fc11111401" name="name47" checked>
 															<label for="fc11111401">Да, в другие организации</label>
@@ -154,7 +154,7 @@
 										</div>
 									</form>
 									<script>
-                                        $('.form-checkbox-list-main input').on('change', function () {
+                                        $('#fclm0016 input').on('change', function () {
                                             if($('#fc11111401').is(':checked')){
                                                 $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
                                                 $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');

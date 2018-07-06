@@ -1,12 +1,12 @@
 <div class="form-found">
 	<p class="text-title"> Осуществляется ли рекламная (информационная) рассылка пользователям сайта?</p>
-	<div class="form-checkbox-list form-checkbox-list-main">
+	<div class="form-checkbox-list" id="fclm0031">
 		<div class="form-checkbox-item">
-			<input type="radio" id="adv111101" name="adv111101">
+			<input type="radio" id="adv111101" name="KVXZWE">
 			<label for="adv111101">Да</label>
 		</div>
 		<div class="form-checkbox-item">
-			<input type="radio" id="adv111102" name="adv111101">
+			<input type="radio" id="adv111102" name="KVXZWE">
 			<label for="adv111102">Нет</label>
 		</div>
 	</div>
@@ -63,8 +63,9 @@
 		</div>
 	</div>
 </div>
+
 <script>
-    $('.form-checkbox-list-main input').on('change', function () {
+    $('#fclm0031 input').on('change', function () {
         if($('#adv111101').is(':checked')){
             $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
         }else{

@@ -120,7 +120,7 @@
 											<div class="question-in-slider">
 												<div class="form-found">
 													<p class="text-title"> Осуществляется ли рекламная (информационная) рассылка пользователям сайта?</p>
-													<div class="form-checkbox-list form-checkbox-list-main">
+													<div class="form-checkbox-list" id="fclm0032">
 														<div class="form-checkbox-item">
 															<input type="radio" id="adv111101" name="adv111101">
 															<label for="adv111101">Да</label>
@@ -187,7 +187,7 @@
 										</div>
 									</form>
 									<script>
-                                        $('.form-checkbox-list-main input').on('change', function () {
+                                        $('#fclm0032 input').on('change', function () {
                                             if($('#adv111101').is(':checked')){
                                                 $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
                                             }else{

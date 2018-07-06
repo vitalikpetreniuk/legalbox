@@ -1,6 +1,6 @@
 <div class="form-found">
 	<p class="text-title">Осуществляется ли передача персональных данных работников контрагентов за рубеж</p>
-	<div class="form-checkbox-list form-checkbox-list-main">
+	<div class="form-checkbox-list" id="fclm0017">
 		<div class="form-checkbox-item">
 			<input type="radio" id="fc11111406" name="name48" checked>
 			<label for="fc11111406">Да</label>
@@ -22,7 +22,7 @@
 <a href="#" class="add-form bttn">Добавить страну</a>
 
 <script>
-    $('.form-checkbox-list-main input').on('change', function () {
+    $('#fclm0017 input').on('change', function () {
         if($('#fc11111406').is(':checked')){
             $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
             $('.add-form.bttn').removeClass('form-hidden');
@@ -40,7 +40,7 @@
             '<p>Укажите страну</p>' +
             '<div class="form-checkbox-list">' +
             '<div class="form-checkbox-item">' +
-            '<input type="text" class="form-input" id="ra3611111' + new_id + '"  name = "ra3611111'+ new_id+'">' +
+            '<input type="text" class="form-input" id="ra3611111' + new_id + '" name = "ra3611111'+ new_id+'">' +
             '</div>' +
             '</div>' +
             '<button class="del-item"></button>'+

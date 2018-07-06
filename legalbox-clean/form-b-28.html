@@ -1,6 +1,6 @@
 <div class="form-found">
 	<p class="text-title">Передаете ли вы персональные данные клиентов (физических лиц) третьим лицам</p>
-	<div class="form-checkbox-list form-checkbox-list-main">
+	<div class="form-checkbox-list" id="fclm0012">
 		<div class="form-checkbox-item">
 			<input type="radio" id="fc11111338" name="name37" checked>
 			<label for="fc11111338">Да, в другие организации</label>
@@ -32,7 +32,7 @@
 </div>
 
 <script>
-    $('.form-checkbox-list-main input').on('change', function () {
+    $('#fclm0012 input').on('change', function () {
         if($('#fc11111338').is(':checked')){
             $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
             $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
@@ -58,7 +58,7 @@
             '<p>Укажите ИНН дополнительной компании, в которую вы передаете персональные данные</p>' +
             '<div class="form-inn">' +
             '<input id="inn281111' + new_id + '" class="form-input form-input-big input-inn" type="text" placeholder="111222333444" name = "inn281111' + new_id + '">' +
-			'</div>' +
+            '</div>' +
             '<button class="del-item"></button>'+
             '</div>');
 

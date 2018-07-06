@@ -1,6 +1,6 @@
 <div class="form-found">
 	<p class="text-title">Имеются ли официальные документы компании, в которых содержатся персональные данные соискателей</p>
-	<div class="form-checkbox-list form-checkbox-list-main">
+	<div class="form-checkbox-list" id="fclm0010">
 		<div class="form-checkbox-item">
 			<input type="radio" id="fc11111283" name="name29" checked>
 			<label for="fc11111283">Да</label>
@@ -26,7 +26,7 @@
 </div>
 
 <script>
-    $('.form-checkbox-list-main input').on('change', function () {
+    $('#fclm0010 input').on('change', function () {
         if($('#fc11111283').is(':checked')){
             $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
         }else{

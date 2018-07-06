@@ -120,7 +120,7 @@
 											<div class="question-in-slider">
 												<div class="form-found">
 													<p class="text-title">Содержатся ли компьютерных программах компании персональные данные клиентов (физических лиц)</p>
-													<div class="form-checkbox-list form-checkbox-list-main">
+													<div class="form-checkbox-list" id="fclm0015">
 														<div class="form-checkbox-item">
 															<input type="radio" id="fc11111350" name="name40" checked>
 															<label for="fc11111350">Да</label>
@@ -199,7 +199,7 @@
 										</div>
 									</form>
 									<script>
-                                        $('.form-checkbox-list-main input').on('change', function () {
+                                        $('#fclm0015 input').on('change', function () {
                                             if($('#fc11111350').is(':checked')){
                                                 $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
                                                 $('.add-form.bttn').removeClass('form-hidden');

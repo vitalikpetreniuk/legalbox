@@ -120,7 +120,7 @@
 											<div class="question-in-slider">
 												<div class="form-found">
 													<p class="text-title">Осуществляется ли передача персональных данных работников за рубеж</p>
-													<div class="form-checkbox-list form-checkbox-list-main">
+													<div class="form-checkbox-list" id="fclm0029">
 														<div class="form-checkbox-item">
 															<input type="radio" id="fc11111149" name="name7" checked="">
 															<label for="fc11111149">Да</label>
@@ -144,7 +144,7 @@
 										</div>
 									</form>
 									<script>
-                                        $('.form-checkbox-list-main input').on('change', function () {
+                                        $('#fclm0029 input').on('change', function () {
                                             if($('#fc11111149').is(':checked')){
                                                 $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
                                                 $('.add-form').removeClass('form-hidden');
