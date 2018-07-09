@@ -528,15 +528,6 @@ select.form-input:not(:last-child) {
   width: 72px; }
 .form-found-item-date input:nth-last-child(3) {
   width: 32px; }
-.form-found-item-date.form-found-item-date--d-m-y {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-right: 96px;
-}
 .form-found-item-date.form-found-item-date--d-m-y span {width: auto;}
 .form-found-item-date.form-found-item-date--d-m-y input:nth-child(1){width: 60px;}
 .form-found-item-date.form-found-item-date--d-m-y input:nth-child(2){width: 60px;}
