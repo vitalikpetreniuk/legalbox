@@ -975,7 +975,12 @@ label > .form-input{
   width: 300px;
 }
 .editional-input{
+  padding-top: 20px;
+  margin-bottom: 10px;
   position: relative;
+}
+.editional-input .form-checkbox-list{
+  margin-bottom: 0;
 }
 .del-item::before, .del-item::after{
   content: '';
@@ -1076,12 +1081,14 @@ label > .form-input{
 }
 
 .form-checkbox-item.form-double + .editional-input,
+.form-checkbox-item.form-double label + .editional-input,
 .form-checkbox-item.form-double + .add-form.bttn{
   margin-top: 30px;
 }
 .form-checkbox-item input[type='checkbox'].input-error + label::before, .form-checkbox-item input[type='radio'].input-error + label::before{
   border: 2px solid  #881A51;
 }
+
 .form-input.input-error{
   border-bottom: 2px solid #881A51;
 }

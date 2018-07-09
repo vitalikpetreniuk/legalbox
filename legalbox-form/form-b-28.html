@@ -141,7 +141,7 @@
 														<input id="fc11111341" class="form-input form-input-big input-inn" type="text" placeholder="111222333444">
 													</div>
 												</div>
-												<a href="#" class="add-form bttn">Добавить компанию</a>
+												<a href="#" id = "add9" class="add-form bttn">Добавить компанию</a>
 												<div class="form-found form-hidden form-second">
 													<p class="text-title">Укажите официальное название государственного органа, в который вы передаете персональные данные</p>
 													<div class="form-checkbox-list">
@@ -172,7 +172,7 @@
                                             }
                                         });
                                         var new_id = 1;
-                                        $('.add-form').on('click', function (e) {
+                                        $('#add9').on('click', function (e) {
                                             e.preventDefault();
                                             new_id += 1;
                                             $(this).siblings('.form-found.form-first').append(

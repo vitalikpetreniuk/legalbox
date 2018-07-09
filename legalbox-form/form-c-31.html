@@ -133,7 +133,7 @@
 														<input type="radio" id="fc95593445" name="Pmzd8B">
 														<label for="fc95593445">Иная территория <input class="form-input" type="text"/> </label>
 													</div>
-													<a href="#" class="add-form bttn form-hidden">Добавить компанию</a>
+													<a href="#" id = "add17" class="add-form bttn form-hidden">Добавить территорию</a>
 													<script>
                                                         $('.form-found').on('change', function () {
                                                             if ($('#fc95593445').is(':checked')) {
@@ -147,12 +147,11 @@
                                                             }
                                                         });
                                                         var new_id = 1;
-                                                        $('.add-form').on('click', function (e) {
+                                                        $('#add17').on('click', function (e) {
                                                             e.preventDefault();
                                                             new_id += 1;
                                                             $(this).siblings('.form-checkbox-item.form-double').append(
                                                                 '<div class="form-found form-first editional-input">' +
-                                                                '<p>Добавить территорию</p>' +
                                                                 '<div class="form-inn">' +
                                                                 '<input type="text" class="form-input" id="ra1511111' + new_id + '"  name = "ra1511111' + new_id + '">' +
                                                                 '</div>' +

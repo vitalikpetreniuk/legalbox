@@ -139,7 +139,7 @@
 														</div>
 													</div>
 												</div>
-												<a href="#" class="add-form bttn">Добавить программу</a>
+												<a href="#" id = "add5" class="add-form bttn">Добавить программу</a>
 												<div class="form-found form-first">
 													<p class="text-title">Передаются ли данные сотрудников (гпх) по внутренней (локальной) сети компании</p>
 													<div class="form-checkbox-list">
@@ -219,7 +219,7 @@
 											}
                                         });
                                         var new_id = 1;
-                                        $('.add-form').on('click', function (e) {
+                                        $('#add5').on('click', function (e) {
                                             e.preventDefault();
                                             new_id += 1;
                                             $(this).siblings('.form-found:nth-child(2)').append(
