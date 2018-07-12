@@ -356,17 +356,17 @@ section {
 .form-step-nav span {
   position: absolute; }
 .form-step-nav span:first-child {
-  font-size: 24px;
+  font-size: 21px;
   line-height: 30px;
   font-weight: 700;
   right: 50px;
   top: 29px; }
 .form-step-nav span:last-child {
   opacity: .5;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 25px;
   font-weight: 600;
-  left: 50px;
+  left: 52px;
   top: 49px; }
 .form-step-nav span:last-child:before {
   content: '/';
@@ -374,7 +374,7 @@ section {
   position: absolute;
   left: -8px;
   top: -10px;
-  font-size: 32px; }
+  font-size: 30px; }
 .form-step-cont h2, .form-step-cont .text-title {
   font-weight: 300;
   font-size: 24px;
