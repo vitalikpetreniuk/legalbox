@@ -126,28 +126,33 @@
 															<label for="fc71736301">Да</label>
 														</div>
 														<div class="form-checkbox-item">
-															<input type="radio" id="fc96376984" name="M1sBLL" checked="">
+															<input type="radio" id="fc96376984" name="M1sBLL">
 															<label for="fc96376984">Нет</label>
 															<script>
-                                                                $('input:radio[name=M1sBLL]').change(function() {
+																$('input:radio[name=M1sBLL]').change(function() {
 
-//                                                                    $('#gos-reg').toggle('display');
-                                                                    $('#gos-reg').toggleClass('form-hidden');
-
-                                                                });
+																	//                                                                    $('#gos-reg').toggle('display');
+																	if ($('#fc71736301').is(':checked')) {
+																		$('#gos-reg').removeClass('form-hidden');
+																	}
+																	else{
+																		$('#gos-reg').addClass('form-hidden');
+																	}
+																});
 															</script>
 														</div>
 													</div>
-													<div class="form-found form-hidden" id="gos-reg">
-														<span>Укажите номер и дату свидетельства:</span>
+												</div>
+												<div class="form-found form-first form-hidden" id="gos-reg">
+														<p class="text-title">Укажите номер и дату свидетельства:</p>
 														<div class="form-found-item">
 															<span>Свидетельство №</span>
-															<input class="form-input" type="text" pattern="\d+" id="gos_reg_number" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															<input class="form-input" type="text" pattern="\d+" id="gos_reg_number_evm" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
 														</div>
 														<div class="form-found-item form-found-item-date form-found-item-date--d-m-y ">
-															<span>от число:</span>
+															<span>от:</span>
 															<div class="select-container">
-																<select class="form-input" type="text" id="gos_reg_day" name = "gos_reg_day" >
+																<select class="form-input" type="text" id="gos_reg_day_evm" name = "gos_reg_day" >
 																	<option>01</option>
 																	<option>02</option>
 																	<option>03</option>
@@ -179,21 +184,21 @@
 																	<option>30</option>
 																	<option>31</option>
 																</select>
-																<select class="form-input" type="text" id="gos_reg_month" name = "gos_reg_month" >
-																	<option>январь</option>
-																	<option>февраль</option>
-																	<option>март</option>
-																	<option>апрель</option>
-																	<option>май</option>
-																	<option>июнь</option>
-																	<option>июль</option>
-																	<option>август</option>
-																	<option>сентябрь</option>
-																	<option>октябрь</option>
-																	<option>ноябрь</option>
-																	<option>декабрь</option>
+																<select class="form-input" type="text" id="gos_reg_month_evm" name = "gos_reg_month" >
+																	<option>января</option>
+																	<option>февраля</option>
+																	<option>марта</option>
+																	<option>апреля</option>
+																	<option>мая</option>
+																	<option>июня</option>
+																	<option>июля</option>
+																	<option>августа</option>
+																	<option>сентября</option>
+																	<option>октября</option>
+																	<option>ноября</option>
+																	<option>декабря</option>
 																</select>
-																<select class="form-input" type="text" id="gos_reg_year" name = "gos_reg_year" >
+																<select class="form-input" type="text" id="gos_reg_year_evm" name = "gos_reg_year" >
 																	<option>2018</option>
 																	<option>2017</option>
 																	<option>2016</option>
@@ -229,7 +234,6 @@
 														</div>
 
 													</div>
-												</div>
 											</div>
 										</div>
 									</form>
