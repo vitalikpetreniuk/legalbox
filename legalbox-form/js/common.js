@@ -187,7 +187,7 @@ function checkForm(div) {
         form_found.each(function () {
             var input = $(this).find('input');
 
-            if(!$(this).hasClass('form-one')){
+            if(!$(this).hasClass('form-one') && !input.parents('.form-found-item').hasClass('form-hidden')){
                 input.each(function () {
                     var inputType = $(this).attr('type');
 
