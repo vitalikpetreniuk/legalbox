@@ -37,6 +37,7 @@ $(function() {
 
     $('.form-double input[type="text"]').on('focus', function () {
         $(this).closest('.form-double').find('input').prop('checked', true);
+        $(this).closest('.form-double').siblings('.add-form.bttn').removeClass('form-hidden');
     });
 
     //==========Pop-Up-Validity-Form===============//

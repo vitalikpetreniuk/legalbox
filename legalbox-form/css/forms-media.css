@@ -370,13 +370,20 @@
         width: 100%;
         border-radius: 0;
     }
+  .form-inn + .del-item,
     .del-item{
         left: auto;
         right: 0;
     }
+  .form-inn .form-input,
     .form-double .form-input,
     .form-found-item  .form-input,
     .form-input {
         width: 100%;
     }
+  .form-found-item.form-equal-width .form-checkbox-list, .form-found-item.form-equal-width input {
+    min-width: auto;
+    width: 100%;
+    flex-basis: 100%;
+  }
 }

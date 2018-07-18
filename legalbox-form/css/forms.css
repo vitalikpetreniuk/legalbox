@@ -694,15 +694,15 @@ select.form-input:not(:last-child) {
 }
 
 .form-copy {
-  margin-bottom: 32px;
-    margin-top: 32px;
+  margin-bottom: 30px;
+    margin-top: 30px;
     position: relative;
 
 }
-.form-copy .del-item{
-    left: auto;
+.form-copy .del-item {
     bottom: auto;
     top: -6px;
+    left: auto;
     right: 0;
 }
 .form-copy:last-child {
@@ -992,10 +992,9 @@ label > .form-input{
     width: 290px;
 }
 .editional-input{
-  padding-top: 20px;
-  margin-bottom: 10px;
-    margin-top: 10px;
-  position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
 }
 .editional-input .form-checkbox-list{
   margin-bottom: 0;
@@ -1098,11 +1097,12 @@ label > .form-input{
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.form-checkbox-item.form-double + .editional-input,
-.form-checkbox-item.form-double label + .editional-input,
-.form-checkbox-item.form-double + .add-form.bttn{
-  margin-top: 30px;
-}
+/*.form-checkbox-item.form-double + .editional-input,*/
+/*.form-checkbox-item.form-double label + .editional-input,*/
+/*.form-checkbox-item.form-double + .add-form.bttn{*/
+    /*margin-top: 30px;*/
+    /*margin-bottom: 30px;*/
+/*}*/
 .form-checkbox-item input[type='checkbox'].input-error + label::before, .form-checkbox-item input[type='radio'].input-error + label::before{
   border: 2px solid  #881A51;
 }

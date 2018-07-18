@@ -225,7 +225,7 @@
 															<input type="checkbox" id="fd11111141" name="fdname5">
 															<label for="fd11111141">Осуществление деятельности в соответствии с учредительными документами</label>
 														</div>
-														<div class="form-checkbox-item form-double " id = "fd0304">
+														<div class="form-checkbox-item form-double " id = "fd03004">
 															<input type="checkbox" id="fd11111142" name="fdname5">
 															<label for="fd11111142">Иная цель</label>
 															<input type="text" class="form-input" id="fd11111143">
@@ -295,7 +295,7 @@
 															<input type="checkbox" id="fd11111180" name="fdname14">
 															<label for="fd11111180">СНИЛС</label>
 														</div>
-														<div class="form-checkbox-item form-double" id = "fd0305">
+														<div class="form-checkbox-item form-double" id = "fd03005">
 															<input type="checkbox" id="fd11111181" name="fdname15" class="form-modal-open">
 															<label for="fd11111181">Иные ПДн</label>
 															<input type="text" id="fd11111182" class="form-input">
@@ -303,39 +303,51 @@
 														<a href="#" id = "fdadd05" class="add-form bttn form-hidden">Добавить ПДн</a>
 													</div>
 													<script>
-                                                        $('#fd0305').on('change', function () {
+                                                        $('#fd03005').on('change', function () {
                                                             $(this).siblings('.add-form.bttn').toggleClass('form-hidden');
                                                             $(this).find('.goal-input').remove();
                                                         });
-                                                        $('#fd0304').on('change', function () {
+                                                        $('#fd03004').on('change', function () {
                                                             $(this).siblings('.add-form.bttn').toggleClass('form-hidden');
                                                             $(this).find('.goal-input').remove();
                                                         });
                                                         $('body').on('click','.goal-input .del-item', function (e) {
                                                             e.preventDefault();
                                                             $(this).parent().remove();
+                                                            if($('#fd03004 .goal-input').length < 9){
+                                                                $('#fdadd04').removeClass('form-hidden');
+                                                            }
+                                                            if($('#fd03005 .goal-input').length < 9){
+                                                                $('#fdadd05').removeClass('form-hidden');
+                                                            }
                                                         });
                                                         $('#fdadd04').on('click', function (e){
                                                             e.preventDefault();
                                                             new_id += 1;
-                                                            if($('#fd0304 .goal-input').length < 10){
+                                                            if($('#fd03004 .goal-input').length < 10){
                                                                 $(this).siblings('.form-double').append(
                                                                     '<div class="form-found editional-input goal-input">' +
                                                                     '<input id="fd031115' + new_id + '" class="form-input" type="text"  name = "fdname5">' +
                                                                     '<button class="del-item"></button>'+
                                                                     '</div>');
                                                             }
+                                                            if($('#fd03004 .goal-input').length === 9){
+                                                                $(this).addClass('form-hidden');
+                                                            }
                                                         });
                                                         $('#fdadd05').on('click', function (e){
                                                             console.log('hi!');
                                                             e.preventDefault();
                                                             new_id += 1;
-                                                            if($('#fd0305 .goal-input').length < 10){
+                                                            if($('#fd03005 .goal-input').length < 9){
                                                                 $(this).siblings('.form-double').append(
                                                                     '<div class="form-found editional-input goal-input">' +
                                                                     '<input id="fd031116' + new_id + '" class="form-input" type="text"  name = "fdname14">' +
                                                                     '<button class="del-item"></button>'+
                                                                     '</div>');
+                                                            }
+                                                            if($('#fd03005 .goal-input').length === 9){
+                                                                $(this).addClass('form-hidden');
                                                             }
                                                         });
 													</script>
@@ -357,7 +369,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="form-found form-first form-hidden">
+													<div class="form-found form-first form-hidden" id="fd03111111">
 														<p class="text-title">Укажите ИНН компании, в которую вы передаете персональные данные</p>
 														<div class="form-inn">
 															<input id="fd11111147" class="form-input form-input-big input-inn input-inn" type="text" placeholder="111222333444">
@@ -394,7 +406,7 @@
                                                         $('#fdadd1').on('click', function (e) {
                                                             e.preventDefault();
                                                             new_id += 1;
-                                                            $(this).siblings('.form-found.form-first').append(
+                                                            $('#fd03111111').append(
                                                                 '<div class="form-found form-first editional-input">' +
                                                                 '<div class="form-inn">' +
                                                                 '<input id="fd031111' + new_id + '" class="form-input form-input-big input-inn" type="text" placeholder="111222333444"  name = "fd031111' + new_id + '">' +
@@ -479,7 +491,7 @@
 													</div>
 													<div class="form-found form-first form-hidden">
 														<p class="text-title">Название программы(ам) с указанием версии</p>
-														<div class="form-checkbox-list">
+														<div class="form-checkbox-list form-double">
 															<div class="form-checkbox-item">
 																<input type="text" id="fd11111233" class="form-input">
 															</div>
@@ -569,7 +581,7 @@
                                                             $(this).siblings('.form-checkbox-list').append(
                                                                 '<div class="form-found form-first editional-input">' +
                                                                 '<div>' +
-                                                                '<input id="fd031114' + new_id + '" class="form-input" type="text" name = "fd031114'+ new_id+'">' +
+                                                                '<input id="fd031114' + new_id + '" class="form-input goal-input" type="text" name = "fd031114'+ new_id+'">' +
                                                                 '</div>' +
                                                                 '<button class="del-item"></button>'+
                                                                 '</div>');
