@@ -30,15 +30,19 @@
 			<input type="checkbox" id="fc54282880" name="4PRZ0D">
 			<label for="fc54282880">Публикация на сайте, информации о клиентах, работниках</label>
 		</div>
-		<div class="form-checkbox-item form-double">
+		<div class="form-checkbox-item form-double" id="fc150001">
 			<input type="checkbox" id="fc02070153" name="4PRZ0D">
 			<label for="fc02070153">Иная цель <input type="text" class="form-input" id="another_goal_personal_data_text" name="4PRZ0D"> </label>
 		</div>
 		<a href="#" id = "fcadd15" class="add-form bttn form-hidden">Добавить цель</a>
 		<script>
-            $('.form-double').on('change', function () {
-                $(this).siblings('.add-form.bttn').toggleClass('form-hidden');
-                $(this).find('.goal-input').remove();
+            $('#fc150001 input').on('change', function () {
+                if($('#fc02070153').is(':checked')){
+                    $(this).parents('.form-double').siblings('.add-form.bttn').removeClass('form-hidden');
+                }else {
+                    $(this).parents('.form-double').siblings('.add-form.bttn').addClass('form-hidden');
+                    $(this).siblings('.goal-input').remove();
+                }
             });
             $('body').on('click','.goal-input .del-item', function (e) {
                 e.preventDefault();
@@ -48,7 +52,7 @@
             $('#fcadd15').on('click', function (e){
                 e.preventDefault();
                 new_id += 1;
-                if($('.goal-input').length < 10){
+                if($('#fc150001 .goal-input').length < 10){
                     $(this).siblings('.form-double').append(
                         '<div class="form-found editional-input goal-input">' +
                         '<input id="fc151110' + new_id + '" class="form-input" type="text"  name = "4PRZ0D">' +
