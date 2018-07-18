@@ -316,3 +316,18 @@ function documentsJson(form) {
     // alert(JSON.stringify(documents));
     return JSON.stringify(documents);
 }
+
+function goalsJson(form) {
+    var goals = [];
+    var i = 1;
+
+    form.find('.form-input').each(function () {
+        var goal = $(this).val();
+
+        goals.push(goal);
+//
+    });
+
+    // alert(JSON.stringify(goals));
+    return JSON.stringify(goals);
+}
