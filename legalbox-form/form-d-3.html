@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form-d-3</title>
+
+	<!--styles-->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/jquery.scrollbar.css">
+	<link rel="stylesheet" href="css/forms.css">
+	<link rel="stylesheet" href="css/forms-media.css">
+	<!--styles end-->
+
+	<!--jQuery library-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!--jQuery library end -->
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div class="menu-block">
+        <div class="container">
+            <div class="menu-block-header">
+                <div class="menu-block-logo"><a href="#"><img src="img/logo-footer.svg" alt="logo"></a></div>
+                <div class="menu-block-close">
+                    <button type="button"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="menu-block-body">
+                <ul>
+                    <li>
+                        <a href="#">Микросервисы</a>
+                    </li>
+                    <li>
+                        <a href="#">Цены</a>
+                    </li>
+                    <li>
+                        <a href="#">Блог</a>
+                    </li>
+                    <li>
+                        <a href="#">О нас</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-block-footer">
+                <div class="text-center">
+                    <div class="login-button"><a href="#" class="bttn bttn-secondary">Вход / Регистрация</a></div>
+                </div>
+                <div class="socials">
+                    <a href="#"><img src="img/telegram.png" alt="telegram"></a>
+                    <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+	<header>
+		<div class="container">
+			<div class="header-in">
+				<div class="logo-top">
+					<a href="#"><img src="img/logo-top.svg" alt="logo"></a>
+				</div>
+				<div class="menu-toggle">
+					<button type="button"><span></span></button>
+				</div>
+				<div class="header-block">
+					<div class="top-menu">
+						<ul>
+							<li>
+								<a href="#">Микросервисы</a>
+							</li>
+							<li>
+								<a href="#">Цены</a>
+							</li>
+							<li>
+								<a href="#">Блог</a>
+							</li>
+							<li>
+								<a href="#">О нас</a>
+							</li>
+							<li>
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="login-button">
+						<a href="#" class="bttn bttn-secondary">Вход / Регистрация</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="body-block">
+		<section class="section-form">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-offset-2 col-lg-8 col-xs-12">
+						<h1>Пользовательское соглашение</h1>
+						<p class="section-form-top-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="section-form-mid">
+				<div class="container">
+					<div class="row row-flex">
+						<div class="col-md-8 col-form-b">
+							<div class="form-step form-step-offset">
+								<div class="form-step-nav">
+									<span>01</span><span>09</span>
+								</div>
+								<div class="form-step-cont">
+									<form>
+										<div class="sliding-questions">
+											<div class="question-in-slider">
+												<div class="form-found">
+													<p class="text-title">Обрабатываете ли вы данные работников</p>
+													<div class="form-checkbox-list " id="fdlm0063">
+														<div class="form-checkbox-item">
+															<input type="radio" id="fd03564436" name="fd030uuS">
+															<label for="fd03564436">Да</label>
+															<script>
+                                                                $('#fdlm0063 input').on('change', function () {
+                                                                    if($('#fd03564436').is(':checked')){
+                                                                        $('#wokers-of-the-site').removeClass('form-hidden');
+                                                                    }
+                                                                });
+															</script>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="radio" id="fd54379541" name="fd030uuS">
+															<label for="fd54379541">Нет</label>
+															<script>
+                                                                $('#fdlm0063 input').on('change', function () {
+                                                                    if($('#fd54379541').is(':checked')){
+                                                                        $('#wokers-of-the-site').addClass('form-hidden');
+                                                                    }
+                                                                });
+															</script>
+														</div>
+													</div>
+												</div>
+												<div class="form-found-list form-hidden" id="wokers-of-the-site" >
+													<!--19-->
+													<p class="text-title">Цели получения персональных данных работников</p>
+													<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111123" name="name5">
+																<label for="fd11111123">Заключение и исполнение договоров</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111124" name="fdname5">
+																<label for="fd11111124">Информирование о новых товарах, услугах</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111125" name="fdname5">
+																<label for="fd11111125">Подготовка индивидуальных предложений</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111126" name="fdname5">
+																<label for="fd11111126">Ведения рекламной деятельности</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111127" name="fdname5">
+																<label for="fd11111127">Ведение бухгалтерского учёта</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111128" name="fdname5">
+																<label for="fd11111128">Формирование кадрового резерва</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111129" name="fdname5">
+																<label for="fd11111129">Отчисление страховых взносов в ПФР, ФСС, ФОМС и иные органы</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111130" name="fdname5">
+																<label for="fd11111130">Отчисление страховых взносов в НПФ</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111131" name="fdname5">
+																<label for="fd11111131">Заполнение первичной статистики в соответствии с ТК РФ и НК РФ</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111132" name="fdname5">
+																<label for="fd11111132">Организация кадрового учета и кадрового производства </label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111133" name="fdname5">
+																<label for="fd11111133">Соблюдение норм по охране труда, личной безопасности и сохранности имущества</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111134" name="fdname5">
+																<label for="fd11111134">Контролирование количество и качество выполняемой работы</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111135" name="fdname5">
+																<label for="fd11111135">Выплата льгот</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111136" name="fdname5">
+																<label for="fd11111136">Оформление зарплатных карт</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111137" name="fdname5">
+																<label for="fd11111137">Страхование по программе ДМС</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111138" name="fdname5">
+																<label for="fd11111138">Обеспечение пропускного режима</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111139" name="fdname5">
+																<label for="fd11111139">Организация обучения работников</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111140" name="fdname5">
+																<label for="fd11111140">Публикация на сайте, во внутренних справочниках, адресных книгах организации</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd11111141" name="fdname5">
+																<label for="fd11111141">Осуществление деятельности в соответствии с учредительными документами</label>
+															</div>
+															<div class="form-checkbox-item form-double">
+																<input type="checkbox" id="fd11111142" name="fdname5">
+																<label for="fd11111142">Иная цель</label>
+																<input type="text" class="form-input" id="fd11111143">
+															</div>
+														<a href="#" id = "fdadd04" class="add-form bttn form-hidden">Добавить цель</a>
+													</div>
+													<!--20-->
+													<p class="text-title">Виды обрабатываемых персональных данных работников</p>
+													<div class="form-checkbox-list">
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111166" name="fdname14">
+															<label for="fd11111166">Фамилия, имя, отчество</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111167" name="fdname14">
+															<label for="fd11111167">Дата, месяц, год рождения</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111168" name="fdname14">
+															<label for="fd11111168">Место рождения</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111169" name="fdname14">
+															<label for="fd11111169">Адрес места жительства</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111170" name="fdname14">
+															<label for="fd11111170">Образование</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111171" name="fdname14">
+															<label for="fd11111171">Профессия</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111172" name="fdname14">
+															<label for="fd11111172">Паспортные данные</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111173" name="fdname14">
+															<label for="fd11111173">Контактный телефон</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111174" name="fdname14">
+															<label for="fd11111174">Адрес электронной почты</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111175" name="fdname14">
+															<label for="fd11111175">Гражданство</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111176" name="fdname14">
+															<label for="fd11111176">Сведения о близких родственниках</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111177" name="fdname14">
+															<label for="fd11111177">Доходы</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111178" name="fdname14">
+															<label for="fd11111178">Должность</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111179" name="fdname14">
+															<label for="fd11111179">ИНН</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fd11111180" name="fdname14">
+															<label for="fd11111180">СНИЛС</label>
+														</div>
+														<div class="form-checkbox-item form-double">
+															<input type="checkbox" id="fd11111181" name="fdname15" class="form-modal-open">
+															<label for="fd11111181">Иные ПДн</label>
+															<input type="text" id="fd11111182" class="form-input">
+														</div>
+														<a href="#" id = "fdadd05" class="add-form bttn form-hidden">Добавить ПДн</a>
+													</div>
+													<script>
+                                                        $('.form-double').on('change', function () {
+                                                            $(this).siblings('.add-form.bttn').toggleClass('form-hidden');
+                                                            $(this).find('.goal-input').remove();
+                                                        });
+                                                        $('body').on('click','.goal-input .del-item', function (e) {
+                                                            e.preventDefault();
+                                                            $(this).parent().remove();
+                                                        });
+                                                        $('#fdadd04').on('click', function (e){
+                                                            e.preventDefault();
+                                                            new_id += 1;
+                                                            if($('.goal-input').length < 10){
+                                                                $(this).siblings('.form-double').append(
+                                                                    '<div class="form-found editional-input goal-input">' +
+                                                                    '<input id="fd031115' + new_id + '" class="form-input" type="text"  name = "fdname5">' +
+                                                                    '<button class="del-item"></button>'+
+                                                                    '</div>');
+                                                            }
+                                                        });
+                                                        $('#fdadd05').on('click', function (e){
+                                                            console.log('hi!');
+                                                            e.preventDefault();
+                                                            new_id += 1;
+                                                            if($('.goal-input').length < 10){
+                                                                $(this).siblings('.form-double').append(
+                                                                    '<div class="form-found editional-input goal-input">' +
+                                                                    '<input id="fd031116' + new_id + '" class="form-input" type="text"  name = "fdname14">' +
+                                                                    '<button class="del-item"></button>'+
+                                                                    '</div>');
+                                                            }
+                                                        });
+													</script>
+													<!--21.22.23-->
+													<div class="form-found">
+														<p class="text-title">Передаете ли вы персональные данные работников третьим лицам</p>
+														<div class="form-checkbox-list" id="fdlm0028">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111144" name="name6">
+																<label for="fd11111144">Да, в другие организации</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111145" name="name6">
+																<label for="fd11111145">Да, в государственные органы</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111146" name="name6">
+																<label for="fd11111146">Не передаю</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-found form-first form-hidden">
+														<p class="text-title">Укажите ИНН компании, в которую вы передаете персональные данные</p>
+														<div class="form-inn">
+															<input id="fd11111147" class="form-input form-input-big input-inn input-inn" type="text" placeholder="111222333444">
+														</div>
+													</div>
+													<a href="#" id = "fdadd1" class="add-form bttn form-hidden">Добавить компанию</a>
+													<div class="form-found form-hidden form-second">
+														<p class="text-title">Укажите официальное название государственного органа, в который вы передаете персональные данные</p>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="text" class="form-input" id="fd11111148">
+															</div>
+														</div>
+													</div>
+													<script>
+                                                        $('#fdlm0028 input').on('change', function () {
+                                                            if($('#fd11111144').is(':checked')){
+                                                                $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+                                                                $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+                                                                $('.add-form.bttn').removeClass('form-hidden');
+                                                            }else if($('#fd11111145').is(':checked')){
+                                                                $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+                                                                $(this).closest('.question-in-slider').find('.form-second').removeClass('form-hidden');
+                                                                $('.add-form.bttn').addClass('form-hidden');
+                                                                $('.editional-input').hide();
+                                                            }else{
+                                                                $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+                                                                $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+                                                                $('.add-form.bttn').addClass('form-hidden');
+                                                                $('.editional-input').hide();
+                                                            }
+                                                        });
+                                                        var new_id = 1;
+                                                        $('#fdadd1').on('click', function (e) {
+                                                            e.preventDefault();
+                                                            new_id += 1;
+                                                            $(this).siblings('.form-found.form-first').append(
+                                                                '<div class="form-found form-first editional-input">' +
+                                                                '<div class="form-inn">' +
+                                                                '<input id="fd031111' + new_id + '" class="form-input form-input-big input-inn" type="text" placeholder="111222333444"  name = "fd031111' + new_id + '">' +
+                                                                '</div>' +
+                                                                '<button class="del-item"></button>'+
+                                                                '</div>');
+
+                                                        });
+                                                        $('body').on('click','.del-item', function (e) {
+                                                            e.preventDefault();
+                                                            $(this).parent().hide();
+                                                        });
+													</script>
+													<!--26.27-->
+													<div class="form-found">
+														<p class="text-title">Имеются ли официальные документы компании, в которых содержатся персональные данные работников контрагентов</p>
+														<div class="form-checkbox-list" id="fdlm0018">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111409" name="fdname49" >
+																<label for="fd11111409">Да</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111410" name="fdname49">
+																<label for="fd11111410">Нет</label>
+															</div>
+														</div>
+													</div>
+
+													<div id="fd100009" class="additional-fields form-hidden">
+														<p class="text-title">Перечислите такие документы и место их хранения</p>
+														<div class="form-checkbox-list">
+															<div class="form-found-item form-equal-width form-align-start ">
+																<span>Документ:</span>
+																<input class="form-input form-document" type="text" id="fd11111411">
+															</div>
+															<div class="form-found-item form-equal-width form-align-start">
+																<span>Место хранения (кабинет№):</span>
+																<input class="form-input form-place" type="text" id="fd11111412">
+															</div>
+														</div>
+														<a href="#" id = "fdadd02" class="add-form bttn">Добавить документ</a>
+													</div>
+													<script>
+                                                        $('#fdlm0018 input').on('change', function () {
+                                                            if($('#fd11111409').is(':checked')){
+                                                                $('#fd11111409').parents('.form-found').siblings('#fd100009').removeClass('form-hidden');
+                                                            }else{
+                                                                $('#fd11111410').parents('.form-found').siblings('#fd100009').addClass('form-hidden');
+                                                                $('.form-copy').hide();
+                                                            }
+                                                        });
+                                                        $('#fdadd02').on('click', function (e) {
+                                                            e.preventDefault();
+                                                            new_id += 1;
+                                                            $(this).siblings('.form-checkbox-list').append(
+                                                                '<div class="form-copy">'+
+                                                                '<div class="form-found-item form-equal-width form-align-start ">'+
+                                                                '<span>Документ:</span>'+
+                                                                '<input class="form-input form-document" type="text" id="fd031112' + new_id +'" name = "fd031112'+ new_id+'">'+
+                                                                '</div>'+
+                                                                '<div class="form-found-item form-equal-width form-align-start">'+
+                                                                '<span>Место хранения (кабинет№):</span>'+                                                            																	'<input class="form-input form-place" type="text" id="fd031113'+ new_id + '" name = "fd031113'+ new_id+'">'+
+                                                                '</div>'+
+                                                                '<button class="del-item"></button>' +
+                                                                '</div>');
+                                                        });
+													</script>
+
+													<!--28.29.30.31.32.33.34-->
+													<div class="form-found">
+														<p class="text-title">Содержатся ли компьютерных программах компании персональные данные работников</p>
+														<div class="form-checkbox-list" id="fdlm0003">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111156" name="fdname9">
+																<label for="fd11111156">Да</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111157" name="fdname9">
+																<label for="fd11111157">Нет</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-found form-first form-hidden">
+														<p class="text-title">Название программы(ам) с указанием версии</p>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="text" id="fd11111233" class="form-input">
+															</div>
+														</div>
+														<a href="#" id = "fdadd03" class="add-form bttn">Добавить программу</a>
+													</div>
+													<div class="form-found form-first  form-hidden">
+														<p class="text-title">Передаются ли данные работников по внутренней (локальной) сети компании</p>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111158" name="name10">
+																<label for="fd11111158">Да</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111159" name="name10">
+																<label for="fd11111159">Нет</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-found form-first form-hidden">
+														<p class="text-title">Передаются ли данные работников по сети Интернет</p>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111160" name="name11">
+																<label for="fd11111160">Да</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111161" name="name11">
+																<label for="fd11111161">Нет</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-found form-first form-hidden">
+														<p class="text-title">Персональные данные работников хранятся</p>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111162" name="fdname12">
+																<label for="fd11111162">В собственном сервере</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd11111163" name="fdname12">
+																<label for="fd11111163">В арендованном сервере</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-first form-hidden">
+														<div class="form-found form-second form-hidden">
+															<p class="text-title">Укажите адрес местонахождения собственного сервера</p>
+															<div class="form-checkbox-list">
+																<div class="form-checkbox-item">
+																	<input type="text"  name="fdname120" class="form-input" id="fd11111164">
+																</div>
+															</div>
+														</div>
+														<div class="form-found form-hidden form-third">
+															<p class="text-title">Укажите ИНН компании, предоставляющей сервер вашей компании</p>
+															<div class="form-inn">
+																<input id="fd11111165" name="fdname121" class="form-input form-input-big" type="text" placeholder="111222333444">
+															</div>
+														</div>
+													</div>
+													<script>
+                                                        $('#fdlm0003 input').on('change', function () {
+                                                            if($('#fd11111156').is(':checked')){
+                                                                $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+                                                                $('.add-form.bttn').removeClass('form-hidden');
+                                                            }else{
+                                                                $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+                                                                $('.add-form.bttn').addClass('form-hidden');
+                                                                $('.editional-input').hide();
+                                                            }
+                                                        });
+                                                        $('.form-first input').on('change', function () {
+                                                            if($('#fd11111162').is(':checked')){
+                                                                $(this).closest('.question-in-slider').find('.form-second').removeClass('form-hidden');
+                                                                $(this).closest('.question-in-slider').find('.form-third').addClass('form-hidden');
+
+                                                            }else if($('#fd11111163').is(':checked')){
+                                                                $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+                                                                $(this).closest('.question-in-slider').find('.form-third').removeClass('form-hidden');
+                                                            }
+                                                        });
+                                                        var new_id = 1;
+                                                        $('#fdadd03').on('click', function (e) {
+                                                            e.preventDefault();
+                                                            new_id += 1;
+                                                            $(this).siblings('.form-checkbox-list').append(
+                                                                '<div class="form-found form-first editional-input">' +
+                                                                '<div>' +
+                                                                '<input id="fd031114' + new_id + '" class="form-input" type="text" name = "fd031114'+ new_id+'">' +
+                                                                '</div>' +
+                                                                '<button class="del-item"></button>'+
+                                                                '</div>');
+                                                        });
+													</script>
+												</div>
+
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-form-s hidden-xs">
+							<div class="form-data">
+								<div class="form-data-header">
+									Ваши данные:<i class="fa fa-long-arrow-alt-down"></i>
+								</div>
+								<div class="form-data-body">
+									<div class="form-data-list">
+										<div class="form-data-item">
+											<div class="form-data-item-in">
+												<div>Тип сайта:</div>
+												<div>Информационный сайт</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 col-md-8 col-xs-12">
+						<div class="section-form-bottom"><a href="#" class="back">Назад</a><a href="#" class="bttn">Далее</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="parallax-s parallax-1"><img src="img/parallax-1.svg" alt="img"></div>
+			<div class="parallax-s parallax-2"><img src="img/parallax-2.svg" alt="img"></div>
+			<div class="parallax-s parallax-3"><img src="img/parallax-1.svg" alt="img"></div>
+		</section>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="footer-in">
+				<div class="footer-logo">
+					<a href="#"><img src="img/logo-footer.svg" alt="logo"></a>
+				</div>
+				<div class="footer-menu">
+					<ul>
+						<li>
+							<a href="#">Микросервисы</a>
+						</li>
+						<li>
+							<a href="#">Цены</a>
+						</li>
+						<li>
+							<a href="#">Блог</a>
+						</li>
+						<li>
+							<a href="#">О нас</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-block">
+					<div class="contacts-list">
+						<div class="contacts-item">
+							<div class="contacts-title">Телефон</div>
+							<div class="contacts-cont"><a href="tel:74959244333">+7 (495) 924-43-33</a></div>
+						</div>
+						<div class="contacts-item">
+							<div class="contacts-title">Электронная почта</div>
+							<div class="contacts-cont"><a href="mailto:hello@legal-box.ru ">hello@legal-box.ru</a></div>
+						</div>
+						<div class="contacts-item">
+							<div class="contacts-title">Telegram</div>
+							<div class="contacts-cont"><a href="https://t.me/Legal_Box">t.me/Legal_Box </a></div>
+						</div>
+						<div class="contacts-item">
+							<div class="contacts-title">Адрес</div>
+							<div class="contacts-cont">Москва, ул. Большая Дмитровка 9с7</div>
+						</div>
+					</div>
+					<div class="footer-block-in">
+						<div class="work-time">
+							Мы работаем каждый день
+							<b>с 10:00 до 20:00</b>
+						</div>
+						<div class="socials">
+							<a href="#"><img src="img/telegram.png" alt="telegram"></a>
+							<a href="#"><img src="img/facebook.png" alt="facebook"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="parallax-s parallax-11"><img src="img/parallax-2.svg" alt="img"></div>
+	</footer>
+
+
+	<!-- scripts -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollbar.min.js"></script>
+	<script src="js/common.js"></script>
+	<!-- scripts end -->
+
+</body>
+</html>

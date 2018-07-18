@@ -541,6 +541,7 @@ select.form-input:not(:last-child) {
 .form-found-item.form-equal-width input{
   -ms-flex-preferred-size: 250px;
   flex-basis: 250px;
+  min-width: 300px;
 }
 .form-data {
   -webkit-box-shadow: 0 3px 40px 1px rgba(0, 0, 0, 0.1);
@@ -693,7 +694,17 @@ select.form-input:not(:last-child) {
 }
 
 .form-copy {
-  margin-bottom: 32px; }
+  margin-bottom: 32px;
+    margin-top: 32px;
+    position: relative;
+
+}
+.form-copy .del-item{
+    left: auto;
+    bottom: auto;
+    top: -6px;
+    right: 0;
+}
 .form-copy:last-child {
   margin-bottom: 0; }
 
@@ -952,18 +963,21 @@ footer a:hover, footer a:focus {
 .add-form.bttn{
   padding: 6px 30px;
   font-weight: 600;
+    margin-bottom: 22px;
 }
 .add-form.bttn + .form-found{
   margin-top: 22px;
 }
+.form-checkbox-item + .add-form.bttn{
+  margin-top: 20px;
+}
 .del-item{
   position: absolute;
-  left: calc(100% - 200px + 15px);
-  bottom: 3px;
+  left: 303px;
+  bottom: 6px;
   background: transparent;
-  border: none;
-  width: 17px;
-  height: 17px;
+  width: 16px;
+  height: 16px;
   border-radius: 3px;
   border: 1px solid #881a51;
 }
@@ -974,9 +988,13 @@ footer a:hover, footer a:focus {
 label > .form-input{
   width: 300px;
 }
+.form-double .form-input{
+    width: 290px;
+}
 .editional-input{
   padding-top: 20px;
   margin-bottom: 10px;
+    margin-top: 10px;
   position: relative;
 }
 .editional-input .form-checkbox-list{
@@ -1091,4 +1109,53 @@ label > .form-input{
 
 .form-input.input-error{
   border-bottom: 2px solid #881A51;
+}
+
+.form-step-cont .additional-fields .text-title{
+  height: auto;
+  min-height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-found-item{
+  position: relative;
+}
+.tooltip{
+  display: none;
+  width: 90%;
+  margin: auto;
+  max-width: 310px;
+  height: auto;
+  background: #e4e8ea;
+  padding: 20px;
+  position: absolute;
+  bottom: 180%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  -webkit-box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  color: #881a51;
+}
+.tooltip:before{
+  content: '';
+  width: 0;
+  height: 0;
+  border-right: 30px solid transparent;
+  border-left: 30px solid transparent;
+  border-top: 15px solid  #e4e8ea;
+  border-bottom: 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip p{
+  font-size: 10px;
+  margin-bottom: 12px;
+}
+.form-found-item:hover > .tooltip{
+  display: block;
 }

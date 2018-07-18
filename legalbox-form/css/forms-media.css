@@ -181,11 +181,11 @@
   .form-step-nav span:first-child {
     font-size: 16px;
     line-height: 20px;
-    right: 30px;
+    right: 34px;
     top: 20px; }
   .form-step-nav span:last-child {
     font-size: 14px;
-    left: 41px;
+    left: 36px;
     top: 33px;
     line-height: 18px; }
   .form-step-nav span:last-child:before {
@@ -366,12 +366,17 @@
   }
 }
 @media (max-width: 420px) {
-  .pop-up__inner{
-    width: 100%;
-    border-radius: 0;
-  }
-  .form-found-item  .form-input,
-  .form-input {
-    width: 100%;
-  }
+    .pop-up__inner{
+        width: 100%;
+        border-radius: 0;
+    }
+    .del-item{
+        left: auto;
+        right: 0;
+    }
+    .form-double .form-input,
+    .form-found-item  .form-input,
+    .form-input {
+        width: 100%;
+    }
 }

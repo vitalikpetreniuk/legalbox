@@ -225,6 +225,29 @@
 															<label for="fc459">Иные <input type="text" class="form-input" id="another_data_about_user_text"> </label>
 
 														</div>
+														<a href="#" id = "fcadd17" class="add-form bttn form-hidden">Добавить цель</a>
+														<script>
+                                                            $('.form-double').on('change', function () {
+                                                                $(this).siblings('.add-form.bttn').toggleClass('form-hidden');
+                                                                $(this).find('.goal-input').remove();
+                                                            });
+                                                            $('body').on('click','.goal-input .del-item', function (e) {
+                                                                e.preventDefault();
+                                                                $(this).parent().remove();
+                                                            });
+                                                            var new_id = 0;
+                                                            $('#fcadd17').on('click', function (e){
+                                                                e.preventDefault();
+                                                                new_id += 1;
+                                                                if($('.goal-input').length < 10){
+                                                                    $(this).siblings('.form-double').append(
+                                                                        '<div class="form-found editional-input goal-input">' +
+                                                                        '<input id="fc171110' + new_id + '" class="form-input" type="text"  name = "ZX9tvR">' +
+                                                                        '<button class="del-item"></button>'+
+                                                                        '</div>');
+                                                                }
+                                                            });
+														</script>
 
 													</div>
 												</div>
