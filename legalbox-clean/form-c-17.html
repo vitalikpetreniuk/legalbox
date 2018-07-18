@@ -126,17 +126,23 @@
             $('body').on('click','.goal-input .del-item', function (e) {
                 e.preventDefault();
                 $(this).parent().remove();
+                if($('#fc170002 .goal-input').length < 9){
+                    $('#fcadd17').removeClass('form-hidden');
+                }
             });
             var new_id = 0;
             $('#fcadd17').on('click', function (e){
                 e.preventDefault();
                 new_id += 1;
-                if($('#fc170002 .goal-input').length < 10){
+                if($('#fc170002 .goal-input').length < 9){
                     $(this).siblings('.form-double').append(
                         '<div class="form-found editional-input goal-input">' +
                         '<input id="fc171110' + new_id + '" class="form-input" type="text"  name = "ZX9tvR">' +
                         '<button class="del-item"></button>'+
                         '</div>');
+                }
+                if($('#fc170002 .goal-input').length === 9){
+                    $(this).addClass('form-hidden');
                 }
             });
 		</script>

@@ -303,7 +303,11 @@
 														<a href="#" id = "fdadd05" class="add-form bttn form-hidden">Добавить ПДн</a>
 													</div>
 													<script>
-                                                        $('.form-double').on('change', function () {
+                                                        $('#fd0305').on('change', function () {
+                                                            $(this).siblings('.add-form.bttn').toggleClass('form-hidden');
+                                                            $(this).find('.goal-input').remove();
+                                                        });
+                                                        $('#fd0304').on('change', function () {
                                                             $(this).siblings('.add-form.bttn').toggleClass('form-hidden');
                                                             $(this).find('.goal-input').remove();
                                                         });
