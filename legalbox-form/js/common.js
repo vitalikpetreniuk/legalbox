@@ -1,7 +1,14 @@
 var regions = [];
 
 $(function() {
-
+    $('.help-tip').on('click', function () {
+        if($(this).find('p').is(':visible')){
+            $(this).find('p').fadeOut();
+        }else{
+            $('.help-tip').find('p').fadeOut();
+            $(this).find('p').fadeToggle();
+        }
+    });
     $.getJSON( "js/cities.json", function(json){
         $.each(json.regions, function(i, item){
             regions.push(item);

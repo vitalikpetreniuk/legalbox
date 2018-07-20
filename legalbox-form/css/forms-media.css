@@ -162,6 +162,33 @@
 }
 
 @media (max-width: 767px) {
+  .form-step-cont .help-tip p {
+    width: 270px;
+    left: auto;
+    right: 0;
+    top: 30px;
+    font-size: 11px;
+  }
+  .help-tip p:before {
+    border-right-color: transparent;
+    border-bottom-color: #00897b;
+    right: 7px;
+    top: auto;
+    bottom: 100%;
+  }
+  .help-tip.blue p:before {
+    border-right-color: transparent;
+    border-bottom-color: #0455a4;
+  }
+  .help-tip.burgundy p:before {
+    border-right-color: transparent;
+    border-bottom-color: #881a51;
+  }
+  .help-tip.yellow p:before {
+    border-right-color: transparent;
+    border-bottom-color: #faa629;
+  }
+
   .section-form {
     padding: 16px 0; }
   .section-form .container {
