@@ -116,8 +116,8 @@
 											<div class="question-in-slider">
 												<div class="form-found">
 													<p class="text-title">Укажите Ваш ИНН</p>
-													<div class="form-inn">
-														<input id="inn" class="form-input form-input-big input-inn" type="text" placeholder='' value="">
+													<div class="form-fd01inn">
+														<input id="fd01inn" class="form-input form-input-big input-inn" type="text" placeholder='' value="">
 													</div>
 												</div>
 												<div class="form-found form-first form-hidden" id="legal-person">
@@ -138,19 +138,23 @@
 															<span>Место нахождения</span>
 															<input class="form-input" id="adress" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
 														</div>
-														<div class="form-found-item">
+														<div class="form-found-item" id="fd010001">
 															<span>Фактический адрес местонахождения совпадает с юридическим?</span>
 															<div class="form-checkbox-list">
 																<div class="form-checkbox-item">
-																	<input type="radio" id="fc3" name="flqT7gE" checked="">
-																	<label for="fc3">Да</label>
+																	<input type="radio" id="fd0100011" name="fdqT7gE">
+																	<label for="fd0100011">Да</label>
 																</div>
 																<div class="form-checkbox-item">
-																	<input type="radio" id="fc4" name="flqT7gE">
-																	<label for="fc4">Нет</label>
+																	<input type="radio" id="fd0100012" name="fdqT7gE">
+																	<label for="fd0100012">Нет</label>
 																	<script>
-                                                                        $('input:radio[name=flqT7gE]').change(function() {
-                                                                            $('#actual-address-form').toggleClass('form-hidden');
+                                                                        $('#fd010001 input').on('change', function () {
+                                                                            if($('#fd0100012').is(':checked')){
+                                                                                $('#actual-address-form').removeClass('form-hidden');
+                                                                            }else  if($('#fd0100011').is(':checked')){
+                                                                                $('#actual-address-form').addClass('form-hidden');
+                                                                            }
                                                                         });
 																	</script>
 																</div>
@@ -256,6 +260,10 @@
 																<option>1990</option>
 															</select>
 														</div>
+														<div class="form-found-item" id="ip-address-form">
+															<span>Укажите адрес осуществления вашей деятельности</span>
+															<input class="form-input" id="ip-adressfact" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+														</div>
 													</div>
 												</div>
 											</div>
@@ -267,13 +275,14 @@
 						<script>
                             $(document).ready(function() {
 
-                                $('#inn').on('input', function() {
+                                $('#fd01inn').on('input', function() {
+
                                     //                                              alert(this.value.length);
                                     //if (this.value.length==10) alert('Inn litso'); else
                                     var settings = {
                                         "async": true,
                                         "crossDomain": true,
-                                        "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${$('#inn').val()}`,
+                                        "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${$('#fd01inn').val()}`,
                                         "method": "GET",
                                         "headers": {
                                             "content-type": "application/json",
@@ -357,6 +366,7 @@
                                     }
 
                                 });
+
                             });
 						</script>
 						<div class="col-md-4 col-form-s hidden-xs">

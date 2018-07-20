@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&subset=cyrillic,cyrillic-ext,latin-ext");
 @media (max-width: 1179px) {
+    #fd08lm0001 .dok_list,
+    #fd08add1{
+      margin-left: 188px;
+    }
+    #fd08lm0001 .dok_list .form-input {
+      width: 100%;
+    }
+  .editional-input.dok_list .del-item{
+    right: 0;
+  }
   .parallax-1 {
     left: -178px; }
   .parallax-2 {
@@ -47,6 +57,11 @@
   .form-end-document--list .section-form-bottom {
     padding-top: 20px;
   }
+
+  .form-copy .del-item {
+    left: 303px;
+    right: auto;
+  }
 }
 
 @media (max-width: 1063px){
@@ -55,6 +70,17 @@
   }
 }
 @media (max-width: 991px) {
+  #fd08lm0001 .dok_list,
+  #fd08add1{
+    margin-left: 0;
+  }
+  #fd08lm0001 .dok_list .form-input {
+    width: 320px;
+  }
+  .editional-input.dok_list .del-item {
+    left: 303px;
+    right: auto;
+  }
   .form-found-item-date.form-found-item-date--d-m-y select:not(:last-child){
     margin-bottom: 25px;
   }
@@ -366,10 +392,17 @@
   }
 }
 @media (max-width: 420px) {
+  #fd08lm0001 .dok_list .form-input {
+    width: 100%;
+  }
     .pop-up__inner{
         width: 100%;
         border-radius: 0;
     }
+  .editional-input.dok_list .del-item{
+    left: auto;
+    right: 0;
+  }
   .form-inn + .del-item,
     .del-item{
         left: auto;

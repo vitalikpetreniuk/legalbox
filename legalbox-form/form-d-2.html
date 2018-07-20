@@ -119,25 +119,20 @@
 										<div class="sliding-questions">
 											<div class="question-in-slider">
 												<div class="form-found">
-													<p class="text-title">Обрабатываете ли вы данные пользователей сайта</p>
-													<div class="form-checkbox-list " id="fdlm0060">
+													<p class="text-title">Обрабатываете ли вы данные  пользователей вашего сайта</p>
+													<div class="form-checkbox-list " id="fd020063">
 														<div class="form-checkbox-item">
-															<input type="radio" id="fd87564436" name="fdez0uuS">
-															<label for="fd87564436">Да</label>
-															<script>
-                                                                $('#fdlm0060 input').on('change', function () {
-                                                                    if($('#fd87564436').is(':checked')){
-                                                                        $('#users-of-the-site').removeClass('form-hidden');
-                                                                    }
-                                                                });
-															</script>
+															<input type="radio" id="fd02564436" name="fd020uuS">
+															<label for="fd02564436">Да</label>
 														</div>
 														<div class="form-checkbox-item">
-															<input type="radio" id="fd54379541" name="fdez0uuS">
-															<label for="fd54379541">Нет</label>
+															<input type="radio" id="fd02379541" name="fd020uuS">
+															<label for="fd02379541">Нет</label>
 															<script>
-                                                                $('#fdlm0060 input').on('change', function () {
-                                                                    if($('#fd54379541').is(':checked')){
+                                                                $('#fd020063 input').on('change', function () {
+                                                                    if($('#fd02564436').is(':checked')){
+                                                                        $('#users-of-the-site').removeClass('form-hidden');
+                                                                    }else  if($('#fd02379541').is(':checked')){
                                                                         $('#users-of-the-site').addClass('form-hidden');
                                                                     }
                                                                 });
@@ -146,310 +141,411 @@
 													</div>
 												</div>
 												<div class="form-found-list form-hidden" id="users-of-the-site" >
-													<div class="form-found-item form-equal-width">
-														<span>Укажите адрес сайта:</span>
-														<input class="form-input" type="text" id="fdwebsiteAddress" placeholder="_ _ _ _ _ _">
+													<div class="form-found">
+														<p class="text-title">Укажите адрес сайта:</p>
+														<input class="form-input" type="text" id="fd02websiteAddress" placeholder="_ _ _ _ _ _">
 													</div>
-													<div class="form-found-item form-equal-width form-align-start">
-														<span>Количество пользователей вашего сайта, чьи персональные хранятся у вас (за все время):</span>
+													<div class="form-found">
+														<p class="text-title">Количество пользователей вашего сайта, чьи персональные хранятся у вас (за все время)</p>
 														<div class="form-checkbox-list">
 															<div class="form-checkbox-item">
-																<input type="radio" id="fd70967434" name="fdPzHPq3">
-																<label for="fd70967434">Больше 100 000 человек</label>
+																<input type="radio" id="fd02111166" name="fd02name13" checked="">
+																<label for="fd02111166">Больше 100 000 человек</label>
 															</div>
 															<div class="form-checkbox-item">
-																<input type="radio" id="fd83897756" name="fdPzHPq3">
-																<label for="fd83897756">Меньше 100 000 человек</label>
+																<input type="radio" id="fd02511167" name="fd02name13">
+																<label for="fd02511167">Меньше 100 000 человек</label>
 															</div>
 														</div>
 													</div>
-													<div class="form-found-item form-equal-width form-align-start">
-														<span>Цели получения персональных данных пользователей:</span>
+													<div class="form-found">
+														<p class="text-title">Цели получения персональных данных пользователей</p>
 														<div class="form-checkbox-list">
 															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd41829479" name="fd4PRZ0D" >
-																<label for="fd41829479">Заключение и исполнение договоров</label>
-															</div>
-															<!-- zakl_isp_dog -->
-															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd36435752" name="fd4PRZ0D">
-																<label for="fd36435752">Информирование о новых товарах, услугах</label>
+																<input type="checkbox" id="fd02511183" name="fd02name15">
+																<label for="fd02511183">Заключение и исполнение договоров</label>
 															</div>
 															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd07414744" name="fd4PRZ0D">
-																<label for="fd07414744">Подготовка индивидуальных предложений</label>
+																<input type="checkbox" id="fd02511184" name="fd02name15">
+																<label for="fd02511184">Информирование о новых товарах, услугах</label>
 															</div>
 															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd00263589" name="fd4PRZ0D">
-																<label for="fd00263589">Ведения рекламной деятельности</label>
+																<input type="checkbox" id="fd02511185" name="fd02name15">
+																<label for="fd02511185">Подготовка индивидуальных предложений</label>
 															</div>
 															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd64539070" name="fd4PRZ0D">
-																<label for="fd64539070">Предоставление пользователям доступа к специальной информациии</label>
+																<input type="checkbox" id="fd02511186" name="fd02name15">
+																<label for="fd02511186">Ведения рекламной деятельности</label>
 															</div>
 															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd64650014" name="fd4PRZ0D">
-																<label for="fd64650014">Обработка заявок на сайте</label>
+																<input type="checkbox" id="fd02511187" name="fd02name15">
+																<label for="fd02511187">Предоставление пользователям доступа к специальной информации</label>
 															</div>
 															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd54282880" name="fd4PRZ0D">
-																<label for="fd54282880">Публикация на сайте, информации о клиентах, работниках</label>
+																<input type="checkbox" id="fd02511188" name="fd02name15">
+																<label for="fd02511188">Обработка заявок на сайте</label>
+															</div>
+															<div class="form-checkbox-item form-double" id="fd020092">
+																<input type="checkbox" id="fd02511202" name="fd02name15">
+																<label for="fd02511202">Иная цель</label>
+																<input type="text" id="fd02511203" class="form-input">
+															</div>
+															<a href="#" id = "fd02add09" class="add-form bttn form-hidden">Добавить цель</a>
+
+														</div>
+														<script>
+                                                            $('#fd020092 input').on('change', function () {
+                                                                if($('#fd02511202').is(':checked')){
+                                                                    $('#fd02add09').removeClass('form-hidden');
+                                                                }else {
+                                                                    $('#fd02add09').addClass('form-hidden');
+                                                                    $('#fd020092').find('.editional-input').remove();
+                                                                }
+                                                            });
+                                                            $('body').on('click','.goal-input .del-item', function (e) {
+                                                                e.preventDefault();
+                                                                $(this).parent().remove();
+                                                                if($('#fd020092 .goal-input').length < 9){
+                                                                    $('#fd02add09').removeClass('form-hidden');
+                                                                }
+                                                            });
+                                                            var new_id = 0;
+                                                            $('#fd02add09').on('click', function (e){
+                                                                e.preventDefault();
+                                                                new_id += 1;
+                                                                if($('#fd020092 .goal-input').length < 9){
+                                                                    $(this).siblings('.form-double').append(
+                                                                        '<div class="editional-input goal-input">' +
+                                                                        '<input id="fd02a115' + new_id + '" class="form-input" type="text"  name = "fd02name5">' +
+                                                                        '<button class="del-item"></button>'+
+                                                                        '</div>');
+                                                                }
+                                                                if($('#fd020092 .goal-input').length === 9){
+                                                                    $(this).addClass('form-hidden');
+                                                                }
+                                                            });
+														</script>
+													</div>
+													<div class="form-found">
+														<p class="text-title">Пользователь дает свое согласие на обработку его данных следующим путем</p>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd02711183" name="fd027name15">
+																<label for="fd02711183">Проставления «галочки»</label>
 															</div>
 															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd02070153" name="fd4PRZ0D">
-																<label for="fd02070153">Иная цель</label><br><br>
-																<div class="form-found-item">
-																	<input type="text" class="form-input" id="fd1_another_goal_personal_data_text" name="fd4PRZ0D">
+																<input type="checkbox" id="fd02711184" name="fd027name15">
+																<label for="fd02711184">Ввода смс-кода, направленного на мобильный телефон</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd02711185" name="fd027name15">
+																<label for="fd02711185"> Прохождения по ссылке, направленной на почту </label>
+															</div>
+
+															<div class="form-checkbox-item form-double" id="fd02701">
+																<input type="checkbox" id="fd02711202" name="fd027name15">
+																<label for="fd02711202">Другим способом</label>
+																<input type="text" id="fd02711203" class="form-input">
+															</div>
+															<a href="#" id = "fd02add07" class="add-form bttn form-hidden">Добавить способ</a>
+
+														</div>
+														<script>
+
+                                                            $('#fd02701 input').on('change', function () {
+                                                                if($('#fd02711202').is(':checked')){
+                                                                    $('#fd02add07').removeClass('form-hidden');
+                                                                }else {
+                                                                    $('#fd02add07').addClass('form-hidden');
+                                                                    $('#fd02701').find('.editional-input').remove();
+                                                                }
+                                                            });
+                                                            $('body').on('click','.goal-input .del-item', function (e) {
+                                                                e.preventDefault();
+                                                                $(this).parent().remove();
+                                                                if($('#fd02701 .goal-input').length < 9){
+                                                                    $('#fd02add07').removeClass('form-hidden');
+                                                                }
+                                                            });
+
+
+                                                            var new_id = 0;
+                                                            $('#fd02add07').on('click', function (e){
+                                                                e.preventDefault();
+                                                                new_id += 1;
+                                                                if($('#fd02701 .goal-input').length < 9){
+                                                                    $(this).siblings('.form-double').append(
+                                                                        '<div class="editional-input goal-input">' +
+                                                                        '<input id="fd02a116' + new_id + '" class="form-input" type="text"  name = "fd02name5">' +
+                                                                        '<button class="del-item"></button>'+
+                                                                        '</div>');
+                                                                }
+                                                                if($('#fd02701 .goal-input').length === 9){
+                                                                    $(this).addClass('form-hidden');
+                                                                }
+                                                            });
+														</script>
+													</div>
+													<div class="form-found">
+														<p class="text-title">Виды обрабатываемых персональных данных пользователей</p>
+														<div class="form-checkbox-list form-checkbox-list-main">
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd02511204" name="fd02name16">
+																<label for="fd02511204">Фамилия, имя, отчество</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd02511205" name="fd02name16">
+																<label for="fd02511205">Год рождения</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd02511206" name="fd02name16">
+																<label for="fd02511206">Адрес места жительства</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd02511207" name="fd02name16">
+																<label for="fd02511207">Контактный телефон</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fd02511208" name="fd02name16">
+																<label for="fd02511208">Адрес электронной почты</label>
+															</div>
+															<div class="form-checkbox-item form-double" id="fd02002">
+																<input type="checkbox" id="fd02511219" name="fd02name16" class="form-modal-open">
+																<label for="fd02511219">Иные ПДн</label>
+																<input type="text" id="fd02511220" class="form-input">
+															</div>
+															<a href="#" id = "fd02add02" class="add-form bttn form-hidden">Добавить данные</a>
+														</div>
+														<script>
+
+                                                            $('#fd02002 input').on('change', function () {
+                                                                if($('#fd02511219').is(':checked')){
+                                                                    $('#fd02add02').removeClass('form-hidden');
+                                                                }else {
+                                                                    $('#fd02add02').addClass('form-hidden');
+                                                                    $('#fd02002').find('.editional-input').remove();
+                                                                }
+                                                            });
+                                                            $('body').on('click','.goal-input .del-item', function (e) {
+                                                                e.preventDefault();
+                                                                $(this).parent().remove();
+                                                                if($('#fd02002 .goal-input').length < 9){
+                                                                    $('#fd02add02').removeClass('form-hidden');
+                                                                }
+                                                            });
+                                                            $('#fd02add02').on('click', function (e){
+                                                                e.preventDefault();
+                                                                new_id += 1;
+                                                                if($('#fd02002 .goal-input').length < 9){
+                                                                    $(this).siblings('.form-double').append(
+                                                                        '<div class="form-found editional-input goal-input">' +
+                                                                        '<input id="fd02a112' + new_id + '" class="form-input" type="text"  name = "fd02name16">' +
+                                                                        '<button class="del-item"></button>'+
+                                                                        '</div>');
+                                                                }
+                                                                if($('#fd02002 .goal-input').length === 9){
+                                                                    $(this).addClass('form-hidden');
+                                                                }
+                                                            });
+														</script>
+													</div>
+
+													<div class="form-found">
+														<p class="text-title">Осуществляется ли передача персональных данных пользователь за рубеж</p>
+														<div class="form-checkbox-list" id="fd02lm0005">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd02111226" name="fd02name18">
+																<label for="fd02111226">Да</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd02111227" name="fd02name18">
+																<label for="fd02111227">Нет</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-found form-first form-hidden">
+														<p class="text-title">Укажите страну(ы)</p>
+														<div class="form-checkbox-list form-double">
+															<div class="form-checkbox-item">
+																<input type="text" class="form-input" id="fd02111228" name="fd02n1111">
+															</div>
+														</div>
+													</div>
+													<a href="#" id = "fd02add4" class="add-form bttn form-hidden">Добавить страну</a>
+													<script>
+                                                            $('#fd02lm0005 input').on('change', function () {
+                                                                if($('#fd02111226').is(':checked')){
+                                                                    $('#fd02111228').closest('.form-found').removeClass('form-hidden');
+                                                                    $('#fd02add4').removeClass('form-hidden');
+                                                                }else if($('#fd02111227').is(':checked')){
+                                                                    $('#fd02111228').closest('.form-found').addClass('form-hidden');
+                                                                    $('#fd02add4').addClass('form-hidden');
+                                                                    $('#fd02111228').parents('.form-double').find('.editional-input').remove();
+                                                                }
+                                                            });
+                                                            var new_id = 1;
+                                                            $('#fd02add4').on('click', function (e) {
+                                                                e.preventDefault();
+                                                                new_id += 1;
+                                                                $('#fd02111228').closest('.form-found').find('.form-checkbox-list')
+																	.append('<div class="editional-input">' +
+                                                                    '<div class="form-checkbox-item">' +
+                                                                    '<input type="text" class="form-input" id="fd02a511' + new_id + '"  name = "fd02n1111"' +
+                                                                    '</div>' +
+                                                                    '<button class="del-item"></button>'+
+                                                                    '</div>');
+                                                            });
+														</script>
+
+													<div id="fd02lm0010" class="form-found form-hidden form-first">
+														<p class="text-title">Передаются ли данные соискателей по сети Интернет</p>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd02111229" name="fd02name22">
+																<label for="fd02111229">Да</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd02111230" name="fd02name22">
+																<label for="fd02111229">Нет</label>
+															</div>
+														</div>
+													</div>
+													<div id="fd02lm0011" class="form-found form-hidden form-first">
+														<p class="text-title">Персональные данные пользователей хранятся</p>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd02111231" name="fd02name23">
+																<label for="fd02111231">В собственном сервере</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd02111232" name="fd02name23">
+																<label for="fd02111232">В арендованном сервере</label>
+															</div>
+														</div>
+													</div>
+													<div id="fd02lm0012" class="form-first">
+														<div class="form-found form-second form-hidden">
+															<p class="text-title">Укажите адрес местонахождения собственного сервера</p>
+															<div class="form-checkbox-list">
+																<div class="form-checkbox-item">
+																	<input type="text" class="form-input" id="fd02511233">
 																</div>
 															</div>
 														</div>
-													</div>
-													<div class="form-found-item form-equal-width form-align-start">
-														<span>Пользователь дает свое согласие на обработку его данных следующим путем:</span>
-														<div class="form-checkbox-list">
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd44278210" name="fdTjtwYG" >
-																<label for="fd44278210">Проставления «галочки»</label>
-															</div>
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd37768763" name="fdTjtwYG">
-																<label for="fd37768763">Ввода смс-кода, направленного на мобильный телефон</label>
-															</div>
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd49047949" name="fdTjtwYG">
-																<label for="fd49047949">Прохождения по ссылке, направленной на почту</label>
-															</div>
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd30549879" name="fdTjtwYG">
-																<label for="fd30549879">Иным образом </label><br><br>
-															</div>
-															<div class="form-found-item">
-																<input type="text" class="form-input" id="fd2_another_goal_data_obrab_text">
+														<div class="form-found form-hidden form-third">
+															<p class="text-title">Укажите ИНН компании, предоставляющей сервер вашей компании</p>
+															<div class="form-inn">
+																<input id="fd02511234" class="form-input form-input-big input-inn" type="text" placeholder="111222333444">
 															</div>
 														</div>
-													</div>
-													<div class="form-found-item form-equal-width form-align-start">
-														<span>Виды обрабатываемых персональных данных пользователей</span>
-														<div class="form-checkbox-list">
-															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd34" name="fdZX9tvR" >
-																<label for="fd34">Фамилия</label>
-															</div>
-															<!-- zakl_isp_dog -->
-															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd35" name="fdZX9tvR">
-																<label for="fd35">Имя</label>
-															</div>
-															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd37" name="fdZX9tvR">
-																<label for="fd37">Дата рождения</label>
-															</div>
-															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd39" name="fdZX9tvR">
-																<label for="fd39">Контактный телефон</label>
-															</div>
-															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd40" name="fdZX9tvR">
-																<label for="fd40">Адрес электронной почты</label>
-															</div>
-															<div class="form-checkbox-item">
-																<input type="checkbox" id="fd459" name="fdZX9tvR">
-																<label for="fd459">Иные ПДн</label><br><br>
-
-															</div>
-															<div class="form-found-item">
-																<input type="text" class="form-input" id="fd3_another_goal_personal_data_text">
-																<!--<div class="tooltip">-->
-																	<!--<p>Персональными данными признается любая информация:</p>-->
-																	<!--<ul>-->
-																		<!--<li>Отчество;</li>-->
-																		<!--<li>Дата рождения;</li>-->
-																		<!--<li>Месяц рождения;</li>-->
-																		<!--<li>Место рождения;</li>-->
-																		<!--<li>Пол;</li>-->
-																		<!--<li>Фотокопии паспортных данных;</li>-->
-																		<!--<li>Серия номер документов, удостоверяющих личность;</li>-->
-																		<!--<li>Логин и пароль, которые используются для доступа к Интернет-ресурсам Компании;</li>-->
-																		<!--<li>Идентификатор пользователя, хранимый в cookie;</li>-->
-																		<!--<li>Состояние здоровья;</li>-->
-																		<!--<li>Национальная принадлежность;</li>-->
-																		<!--<li>Расовая принадлежность;</li>-->
-																		<!--<li>Политические взгляды;</li>-->
-																		<!--<li>Философские убеждения;</li>-->
-																		<!--<li>Состояние интимной жизни;</li>-->
-																		<!--<li>Цветное цифровое фотографическое изображение лица владельца заграничного паспорта, содержащееся на электронном носителем информации данного документа</li>-->
-																		<!--<li>Фотографическое изображение и иные сведения, используемые для обеспечения однократного и/или многократного прохода на охраняемую территорию и установления личности гражданина</li>-->
-																		<!--<li>Аудиозапись телефонного разговора</li>-->
-
-																	<!--</ul>-->
-																<!--</div>-->
-															</div>
-
-														</div>
-													</div>
-
-													<div class="form-found-item form-equal-width form-align-start">
-														<span>Осуществляется ли передача персональных данных пользователя за рубеж:</span>
-														<div class="form-checkbox-list">
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd47078475" name="fdGcIADu" >
-																<label for="fd47078475">Да</label>
-															</div>
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd02398130" name="fdGcIADu" checked = ''>
-																<label for="fd02398130">Нет</label>
-																<script>
-                                                                    $('#fd47078475').change(function() {
-                                                                        if($('#fd47078475').is(':checked')){
-                                                                            $('#ask-country').removeClass('form-hidden');
-                                                                            $('#fdadd16').removeClass('form-hidden');
-                                                                        }
-                                                                    });
-                                                                    $('#fd02398130').change(function() {
-                                                                        if($('#fd02398130').is(':checked')){
-                                                                            $('#ask-country').addClass('form-hidden');
-                                                                            $('#fdadd16').addClass('form-hidden');
-                                                                            $('.editional-input').hide();
-                                                                        }
-                                                                    });
-																</script>
-															</div>
-														</div>
-													</div>
-													<div id = "ask-country" class="form-found-item form-equal-width form-align-start form-hidden">
-														<span>Укажите страну(ы)</span>
-														<div class="form-checkbox-list">
-															<div class="form-checkbox-item">
-																<input type="text" class="form-input" id="fd11111228">
-															</div>
-															<a href="#" id = "fdadd16" class="add-form bttn">Добавить страну</a>
-														</div>
-													</div>
-
-													<div class="form-found-item form-equal-width form-align-start">
-														<span>Персональные данные пользователей хранятся</span>
-														<div class="form-checkbox-list" id="fdlm0002">
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd11111113" name="fdname2" checked = ''>
-																<label for="fd11111113">В собственном сервере</label>
-															</div>
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd11111114" name="fdname2">
-																<label for="fd11111114">В арендованном сервере</label>
-															</div>
-															<script>
-                                                                $('#fdlm0002 input').on('change', function () {
-                                                                    if($('#fd11111113').is(':checked')){
-                                                                        $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
-                                                                        $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
-                                                                    }else{
-                                                                        $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
-                                                                        $(this).closest('.question-in-slider').find('.form-second').removeClass('form-hidden');
-                                                                    }
-                                                                });
-															</script>
-														</div>
-													</div>
-													<div class="form-found-item form-equal-width form-align-start form-first">
-														<span>Укажите адрес местонахождения собственного сервера</span>
-														<div class="form-checkbox-list">
-															<div class="form-checkbox-item">
-																<input type="text" class="form-input" id="fd11111115">
-															</div>
-														</div>
-													</div>
-													<div class="form-found-item form-equal-width form-align-start form-second form-hidden">
-														<span>Укажите ИНН компании, предоставляющей сервер вашей компании</span>
-														<div class="form-checkbox-list">
-															<div class="form-checkbox-item">
-																<div class="form-inn">
-																	<input id="fd11111116" class="form-input form-input-big input-inn" type="text" placeholder="111222333444">
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<div class="form-found-item form-equal-width form-align-start">
-														<span>Передаются ли данные пользователей по внутренней (локальной) сети</span>
-														<div class="form-checkbox-list">
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd11111117" name="fdname3" >
-																<label for="fd11111117">Да</label>
-															</div>
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd11111118" name="fdname3">
-																<label for="fd11111118">Нет</label>
-															</div>
-														</div>
-													</div>
-													<div class="form-found-item form-equal-width form-align-start">
-														<span>Имеются ли официальные документы компании, в которых содержатся персональные данные пользователей сайта</span>
-														<div class="form-checkbox-list" id="fdlm0020">
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd11111119" name="fdname4" >
-																<label for="fd11111119">Да</label>
-															</div>
-															<div class="form-checkbox-item">
-																<input type="radio" id="fd11111120" name="fdname4">
-																<label for="fd11111120">Нет</label>
-															</div>
-														</div>
-													</div>
-													<div id="form100001" class="additional-fields form-hidden">
-														<p class="text-title">Перечислите такие документы и место их хранения</p>
-														<div class="form-checkbox-list">
-															<div class="form-found-item form-equal-width form-align-start ">
-																<span>Документ:</span>
-																<input class="form-input form-document" type="text" id="fd11111121">
-															</div>
-															<div class="form-found-item form-equal-width form-align-start">
-																<span>Место хранения (кабинет№):</span>
-																<input class="form-input form-place" type="text" id="fd11111122">
-															</div>
-														</div>
-														<a href="#" id = "fdadd02" class="add-form bttn">Добавить документ</a>
 													</div>
 													<script>
-                                                        $('#fdlm0020 input').on('change', function () {
-                                                            if($('#fd11111119').is(':checked')){
-                                                                $('#fd11111119').parents('.form-found-item ').siblings('#form100001').removeClass('form-hidden');
-                                                            }else{
-                                                                $('#fd11111119').parents('.form-found-item ').siblings('#form100001').addClass('form-hidden');
-                                                                $('.form-copy').hide();
+                                                        $('#fd02lm0008 input').on('change', function () {
+                                                            if($('#fd02111224').is(':checked')){
+                                                                $('#fd02511226').closest('.form-found').removeClass('form-hidden');
+                                                                $('#fd02lm0009').removeClass('form-hidden');
+                                                                $('#fd02lm0010').removeClass('form-hidden');
+                                                                $('#fd02lm0011').removeClass('form-hidden');
+                                                                $('#fd02lm0012').removeClass('form-hidden');
+
+                                                            }else if ($('#fd02111225').is(':checked')) {
+                                                                $('#fd02511226').closest('.form-found').addClass('form-hidden');
+                                                                $('#fd02lm0009').addClass('form-hidden');
+                                                                $('#fd02lm0010').addClass('form-hidden');
+                                                                $('#fd02lm0011').addClass('form-hidden');
+                                                                $('#fd02lm0012').addClass('form-hidden');
+
+                                                                $('#fd02511226').closest('.form-found').find('.editional-input').remove();
+                                                            }
+                                                        });
+                                                        $('#fd02lm0011  input').on('change', function () {
+                                                            if($('#fd02111231').is(':checked')){
+                                                                $('#fd02lm0012').find('.form-second').removeClass('form-hidden');
+                                                                $('#fd02lm0012').find('.form-third').addClass('form-hidden');
+                                                            }else if($('#fd02111232').is(':checked')){
+                                                                $('#fd02lm0012').find('.form-second').addClass('form-hidden');
+                                                                $('#fd02lm0012').find('.form-third').removeClass('form-hidden');
                                                             }
                                                         });
                                                         var new_id = 1;
-                                                        $('#fdadd16').on('click', function (e) {
+                                                        $('#fd02add6').on('click', function (e) {
                                                             e.preventDefault();
                                                             new_id += 1;
-                                                            $(this).siblings('.form-checkbox-item').append('<div class="form-found  editional-input">' +
-                                                                '<div class="form-checkbox-list">' +
-                                                                '<div class="form-checkbox-item">' +
-                                                                '<input type="text" class="form-input" id="fd1111' + new_id + '" name = "fd1111'+ new_id+'">' +
-                                                                '</div>' +
-                                                                '</div>' +
+                                                            $(this).siblings('.form-double').append(
+                                                                '<div class="editional-input">' +
+                                                                '<input id="fd02a711' + new_id + '" class="form-input" type="text" name = "fd02a711' + new_id + '">' +
                                                                 '<button class="del-item"></button>'+
                                                                 '</div>');
+                                                        });
+													</script>
 
+													<div id="fd02lm0009" class="form-found form-hidden form-first " >
+														<p class="text-title">Передаются ли данные пользователей по внутренней (локальной) сети</p>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd02511227" name="fd02name21">
+																<label for="fd02511227">Да</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd02511228" name="fd02name21">
+																<label for="fd02511228">Нет</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-found">
+														<p class="text-title">Имеются ли официальные документы компании, в которых содержатся персональные данные пользователей сайта</p>
+														<div class="form-checkbox-list" id="fd02lm0006">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd02511229" name="fd02name19">
+																<label for="fd02511229">Да</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fd02511230" name="fd02name19">
+																<label for="fd02511230">Нет</label>
+															</div>
+														</div>
+													</div>
+													<div id="fd02lm0007" class="form-found-list form-first form-hidden" >
+														<p class="text-title">Перечислите такие документы и место их хранения</p>
+														<div class="form-copy">
+															<div class="form-found-item">
+																<span>Документ:</span>
+																<input class="form-input form-document" type="text" id="fd02511231">
+															</div>
+															<div class="form-found-item">
+																<span>Место хранения (кабинет№):</span>
+																<input class="form-input form-place" type="text" id="fd02511232">
+															</div>
+														</div>
+														<a href="#" id = "fd02add5" class="add-form bttn">Добавить документ</a>
+													</div>
+													<script>
+                                                        $('#fd02lm0006 input').on('change', function () {
+                                                            if($('#fd02511229').is(':checked')){
+                                                                $('#fd02lm0007').removeClass('form-hidden');
+                                                            }else{
+                                                                $('#fd02lm0007').addClass('form-hidden');
+                                                                $('#fd02lm0007').find('.editional-input').remove();
+                                                            }
                                                         });
                                                         $('body').on('click','.del-item', function (e) {
                                                             e.preventDefault();
-                                                            $(this).parent().hide();
+                                                            $(this).parent().remove();
                                                         });
-                                                        $('#fdadd02').on('click', function (e) {
+                                                        $('#fd02add5').on('click', function (e) {
                                                             e.preventDefault();
                                                             new_id += 1;
-                                                            $(this).siblings('.form-checkbox-list').append(
-                                                                '<div class="form-copy">'+
-                                                                '<div class="form-found-item form-equal-width form-align-start ">'+
-																	'<span>Документ:</span>'+
-																	'<input class="form-input form-document" type="text" id="fd1112' + new_id +'" name = "fd1112'+ new_id+'">'+
+                                                            $(this).siblings('.form-copy').append(
+                                                                '<div class="editional-input dok_list">'+
+                                                                '<div class="form-found-item">'+
+                                                                '<span>Документ:</span>'+
+                                                                '<input class="form-input form-document" type="text" id="fd02a123' + new_id +'" name = "fd02a1123">'+
                                                                 '</div>'+
-                                                                '<div class="form-found-item form-equal-width form-align-start">'+
-                                                                	'<span>Место хранения (кабинет№):</span>'+                                                            																	'<input class="form-input form-place" type="text" id="fd1113'+ new_id + '" name = "fd1113'+ new_id+'">'+
-																'</div>'+
+                                                                '<div class="form-found-item">'+
+                                                                '<span>Место хранения (кабинет№):</span>'+                                                            																	'<input class="form-input form-place" type="text" id="fd02a113'+ new_id + '" name = "fd02a1123">'+
+                                                                '</div>'+
                                                                 '<button class="del-item"></button>' +
-																'</div>');
+                                                                '</div>');
                                                         });
 													</script>
 												</div>
