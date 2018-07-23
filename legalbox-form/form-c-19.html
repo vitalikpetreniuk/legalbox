@@ -274,6 +274,8 @@
 												</div>
 												<script>
                                                     $(document).ready(function() {
+                                                        var value = $(this).val().trim();
+                                                        $(this).val(value);
 
                                                         $('#inn').on('input', function () {
 //											    alert(this.value.length);
@@ -281,7 +283,7 @@
                                                             var settings = {
                                                                 "async": true,
                                                                 "crossDomain": true,
-                                                                "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${$('#inn').val()}`,
+                                                                "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${value}`,
                                                                 "method": "GET",
                                                                 "headers": {
                                                                     "content-type": "application/json",
