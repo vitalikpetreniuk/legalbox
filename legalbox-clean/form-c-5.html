@@ -39,7 +39,9 @@
 				<label for="fc38192747">Нет</label>
 			</div>
 		</div>
-
+		<div class="help-tip">
+			<p>Укажите, имеется ли дополнительная возможность для юридических лиц или индивидуальных предпринимателей заргеитсрироваться в личном кабинете на Вашем сайте  </p>
+		</div>
 
 
 
@@ -68,11 +70,13 @@
 <div class="form-found">
 	<div class="form-checkbox-list">
 		<p  class="text-title">С какого момента настоящий документ становится обязательным для пользователя?</p>
-
+		<div class="help-tip">
+			<p>Укажите момент, с которого пользователь обязуется соблюдать условия использоваения Вашего сайта</p>
+		</div>
 		<div class="form-checkbox-list">
 			<div class="form-checkbox-item">
 				<input type="radio" id="fc33003975" name="zYBTRP">
-				<label for="fc33003975"> С момента подтверждения регистрации личного кабинета пользователя </label>
+				<label for="fc33003975"> С момента подтверждения регистрации личного кабинета пользователя</label>
 
 			</div>
 			<div class="form-checkbox-item">
@@ -87,3 +91,12 @@
 
 	</div>
 </div>
+<script>
+    $('.form-checkbox-list-main input').on('change', function () {
+        if($('#fc0000014').is(':checked')){
+            $('.form-first').removeClass('class = "form-hidden"');
+        }else if($('#fc0000015').is(':checked')) {
+            $('.form-first').addClass('class = "form-hidden"');
+        }
+    });
+</script>

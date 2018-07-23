@@ -485,7 +485,6 @@ select.form-input:not(:last-child) {
   width: 288px;
   letter-spacing: 7px;
   padding-left: 7px; }
-
 .form-site input {
   padding-left: 0;
   letter-spacing: normal;
@@ -1124,10 +1123,14 @@ label > .form-input{
   border-bottom: 2px solid #881A51;
 }
 
+.form-step-cont {
+  position: relative;
+}
 .form-step-cont .additional-fields .text-title{
   height: auto;
   min-height: auto;
   margin-top: 20px;
+
   margin-bottom: 20px;
 }
 
@@ -1191,6 +1194,9 @@ label > .form-input{
   line-height: 24px;
   cursor: help;
   z-index: 1;
+}
+.form-found-list .help-tip {
+  top: -12px;
 }
 .help-tip:before {
   content: "?";

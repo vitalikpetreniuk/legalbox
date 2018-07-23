@@ -1,5 +1,8 @@
 <div class="form-found">
     <p class="text-title">Использование Программы для ЭВМ осуществляется на территории:</p>
+    <div class="help-tip">
+        <p>Укажите в пределах какой территории пользователи имеют право использовать программу для ЭВМ </p>
+    </div>
     <div class="form-checkbox-item">
         <input type="radio" id="fc43019049" name="Pmzd8B"  checked="">
         <label for="fc43019049">Российской Федерации</label>
@@ -32,7 +35,6 @@
             new_id += 1;
             $(this).siblings('.form-checkbox-item.form-double').append(
                 '<div class="form-found form-first editional-input">' +
-                '<p>Добавить территорию</p>' +
                 '<div class="form-inn">' +
                 '<input type="text" class="form-input" id="ra1511111' + new_id + '"  name = "ra1511111' + new_id + '">' +
                 '</div>' +
