@@ -381,15 +381,15 @@
 														<p class="text-title">Передаете ли вы персональные данные сотрудников (гпх) третьим лицам</p>
 														<div class="form-checkbox-list" id="fd04lm0004">
 															<div class="form-checkbox-item">
-																<input type="radio" id="fd11111221" name="fdname17">
+																<input type="checkbox" id="fd11111221" name="fdname17">
 																<label for="fd11111221">Да, в другие организации</label>
 															</div>
 															<div class="form-checkbox-item">
-																<input type="radio" id="fd11111222" name="fdname17">
+																<input type="checkbox" id="fd11111222" name="fdname17">
 																<label for="fd11111222">Да, в государственные органы</label>
 															</div>
 															<div class="form-checkbox-item">
-																<input type="radio" id="fd11111223" name="fdname17">
+																<input type="checkbox" id="fd11111223" name="fdname17">
 																<label for="fd11111223">Не передаю</label>
 															</div>
 														</div>
@@ -415,19 +415,25 @@
                                                         $('#fd04lm0004 input').on('change', function () {
                                                             if($('#fd11111221').is(':checked')){
                                                                 $('#fd11111224').closest('.form-found').removeClass('form-hidden');
-                                                                $('#fd11111225').closest('.form-found').addClass('form-hidden');
-                                                                $('#fd04add2').removeClass('form-hidden');
-                                                            }else if($('#fd11111222').is(':checked')){
-                                                                $('#fd11111224').closest('.form-found').addClass('form-hidden');
+                                                            }
+                                                            if($('#fd11111222').is(':checked')){
                                                                 $('#fd11111225').closest('.form-found').removeClass('form-hidden');
-                                                                $('#fd04add2').addClass('form-hidden');
-                                                                $('#fd11111224').parents('.form-double').find('.editional-input').remove();
-                                                            }else{
+                                                            }
+                                                            if($('#fd11111223').is(':checked')){
                                                                 $('#fd11111224').closest('.form-found').addClass('form-hidden');
                                                                 $('#fd11111225').closest('.form-found').addClass('form-hidden');
-                                                                $('#fd04add2').addClass('form-hidden');
                                                                 $('#fd11111224').parents('.form-double').find('.editional-input').remove();
                                                             }
+                                                        });
+                                                        $('#fd11111223').on('click',function(){
+                                                            $('#fd11111221').attr('checked', false);
+                                                            $('#fd11111222').attr('checked', false);
+                                                        });
+                                                        $('#fd11111221').on('click',function(){
+                                                            $('#fd11111223').attr('checked', false);
+                                                        });
+                                                        $('#fd11111222').on('click',function(){
+                                                            $('#fd11111223').attr('checked', false);
                                                         });
                                                         var new_id = 1;
                                                         $('#fd04add2').on('click', function (e) {
@@ -549,7 +555,7 @@
 													</script>
 													<!-- 45-51 -->
 													<div class="form-found">
-														<p class="text-title">Содержатся ли компьютерных программах компании персональные данные сотрудников (гпх)</p>
+														<p class="text-title">Содержатся ли в компьютерных программах компании персональные данные сотрудников (гпх)</p>
 														<div class="form-checkbox-list" id="fd04lm0008">
 															<div class="form-checkbox-item">
 																<input type="radio" id="fd04111224" name="fd04name20">
@@ -601,11 +607,11 @@
 														<div class="form-checkbox-list">
 															<div class="form-checkbox-item">
 																<input type="radio" id="fd04111231" name="fd04name23">
-																<label for="fd04111231">В собственном сервере</label>
+																<label for="fd04111231">На собственном сервере</label>
 															</div>
 															<div class="form-checkbox-item">
 																<input type="radio" id="fd04111232" name="fd04name23">
-																<label for="fd04111232">В арендованном сервере</label>
+																<label for="fd04111232">На арендованном сервере</label>
 															</div>
 														</div>
 													</div>

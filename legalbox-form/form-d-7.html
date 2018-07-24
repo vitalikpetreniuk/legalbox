@@ -381,15 +381,15 @@
 														<p class="text-title">Передаете ли вы персональные данные работников контрагентов третьим лицам</p>
 														<div class="form-checkbox-list" id="fd07lm0004">
 															<div class="form-checkbox-item">
-																<input type="radio" id="fd07511221" name="fd07name17">
+																<input type="checkbox" id="fd07511221" name="fd07name17">
 																<label for="fd07511221">Да, в другие организации</label>
 															</div>
 															<div class="form-checkbox-item">
-																<input type="radio" id="fd07511222" name="fd07name17">
+																<input type="checkbox" id="fd07511222" name="fd07name17">
 																<label for="fd07511222">Да, в государственные органы</label>
 															</div>
 															<div class="form-checkbox-item">
-																<input type="radio" id="fd07511223" name="fd07name17">
+																<input type="checkbox" id="fd07511223" name="fd07name17">
 																<label for="fd07511223">Не передаю</label>
 															</div>
 														</div>
@@ -415,19 +415,24 @@
                                                         $('#fd07lm0004 input').on('change', function () {
                                                             if($('#fd07511221').is(':checked')){
                                                                 $('#fd07511224').closest('.form-found').removeClass('form-hidden');
-                                                                $('#fd07511225').closest('.form-found').addClass('form-hidden');
-                                                                $('#fd07add2').removeClass('form-hidden');
-                                                            }else if($('#fd07511222').is(':checked')){
-                                                                $('#fd07511224').closest('.form-found').addClass('form-hidden');
-                                                                $('#fd07511225').closest('.form-found').removeClass('form-hidden');
-                                                                $('#fd07add2').addClass('form-hidden');
-                                                                $('#fd07511224').parents('.form-double').find('.editional-input').remove();
-                                                            }else{
-                                                                $('#fd07511224').closest('.form-found').addClass('form-hidden');
-                                                                $('#fd07511225').closest('.form-found').addClass('form-hidden');
-                                                                $('#fd07add2').addClass('form-hidden');
-                                                                $('#fd07511224').parents('.form-double').find('.editional-input').remove();
                                                             }
+                                                            if($('#fd07511222').is(':checked')){
+                                                                $('#fd07511225').closest('.form-found').removeClass('form-hidden');
+                                                            }
+                                                            if($('#fd07511223').is(':checked')){
+                                                                $('#fd07511224').closest('.form-found').addClass('form-hidden');
+                                                                $('#fd07511225').closest('.form-found').addClass('form-hidden');
+                                                                $('#fd07511224').parents('.form-double').find('.editional-input').remove();                                                            }
+                                                        });
+                                                       $('#fd07511223').on('click',function(){
+                                                           $('#fd07511222').attr('checked', false);
+                                                           $('#fd07511221').attr('checked', false);
+                                                        });
+                                                        $('#fd07511222').on('click',function(){
+                                                            $('#fd07511223').attr('checked', false);
+                                                        });
+                                                        $('#fd07511221').on('click',function(){
+                                                            $('#fd07511223').attr('checked', false);
                                                         });
                                                         var new_id = 1;
                                                         $('#fd07add2').on('click', function (e) {
@@ -549,7 +554,7 @@
 													</script>
 													<!-- 45-51 -->
 													<div class="form-found">
-														<p class="text-title">Содержатся ли компьютерных программах компании персональные данные работников контрагентов</p>
+														<p class="text-title">Содержатся ли в компьютерных программах компании персональные данные работников контрагентов</p>
 														<div class="form-checkbox-list" id="fd07lm0008">
 															<div class="form-checkbox-item">
 																<input type="radio" id="fd07111224" name="fd07name20">
@@ -601,11 +606,11 @@
 														<div class="form-checkbox-list">
 															<div class="form-checkbox-item">
 																<input type="radio" id="fd07111231" name="fd07name23">
-																<label for="fd07111231">В собственном сервере</label>
+																<label for="fd07111231">На собственном сервере</label>
 															</div>
 															<div class="form-checkbox-item">
 																<input type="radio" id="fd07111232" name="fd07name23">
-																<label for="fd07111232">В арендованном сервере</label>
+																<label for="fd07111232">На арендованном сервере</label>
 															</div>
 														</div>
 													</div>

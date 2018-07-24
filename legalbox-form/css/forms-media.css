@@ -408,6 +408,9 @@
   }
 }
 @media (max-width: 768px) {
+  .help-tip {
+    top: 0;
+  }
   .pop-up__inner{
     width: 80%;
   }

@@ -304,6 +304,7 @@ section {
   font-size: 32px;
   line-height: 38px;
   font-weight: 700;
+  padding-right: 100px;
   margin: 0 0 14px; }
 .section-form-top-text {
   font-size: 1.6rem;
@@ -1188,7 +1189,7 @@ label > .form-input{
 }
 .help-tip {
   position: absolute;
-  top: 6px;
+  top: 40px;
   right: 0;
   text-align: center;
   background-color: #881a5159;
@@ -1201,9 +1202,10 @@ label > .form-input{
   z-index: 1;
 }
 .help-tip.help-tip--hover {
-  position: relative;
-  top: auto;
-  right: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+  right: 80px;
   left: auto;
 }
 .help-tip.help-tip--hover ul {
