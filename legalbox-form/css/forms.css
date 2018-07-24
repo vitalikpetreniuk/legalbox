@@ -61,7 +61,7 @@ header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 3px 0;
+  padding: 4px 0 5px;
   position: relative;
 }
 
@@ -390,6 +390,11 @@ section {
   min-height: 102px;
   margin: 0 0 30px;
   max-width: 485px; }
+.form-found:not(:first-child)  h2,
+.form-found:not(:first-child)  .text-title,
+.form-found .form-found  .text-title  {
+  min-height: auto;
+}
 .form-step-cont p {
   font-size: 14px;
   line-height: 18px;
@@ -1195,6 +1200,41 @@ label > .form-input{
   cursor: help;
   z-index: 1;
 }
+.help-tip.help-tip--hover {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+}
+.help-tip.help-tip--hover ul {
+  display: none;
+  text-align: left;
+  background-color: #00897b;
+  padding: 10px;
+  width: 270px;
+  position: absolute;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  line-height: 1.2;
+  left: 120%;
+  top: -24px;
+  color: #fff;
+  z-index: 9999999999;
+}
+
+.help-tip.help-tip--hover ul li{
+  position: relative;
+  padding-left: 12px;
+}
+.help-tip.help-tip--hover ul li:after{
+  content: ' • ';
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+.help-tip.help-tip--hover:hover ul {
+  display: block;
+}
 .form-found-list .help-tip {
   top: -12px;
 }
@@ -1230,6 +1270,7 @@ label > .form-input{
 .help-tip.blue p {
   background-color: #0455a4;
 }
+.help-tip.help-tip--hover ul:before,
 .help-tip p:before{
   position: absolute;
   content: "";
