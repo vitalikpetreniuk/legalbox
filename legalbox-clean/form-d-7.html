@@ -5,29 +5,29 @@
 			<input type="radio" id="fd07564436" name="fd070uuS">
 			<label for="fd07564436">Да</label>
 			<script>
-				$('#fd070063 input').on('change', function () {
-					if($('#fd07564436').is(':checked')){
-						$('#contr-of-the-site').removeClass('form-hidden');
-					}
-				});
+                $('#fd070063 input').on('change', function () {
+                    if($('#fd07564436').is(':checked')){
+                        $('#contr-of-the-site').removeClass('form-hidden');
+                    }
+                });
 			</script>
 		</div>
 		<div class="form-checkbox-item">
 			<input type="radio" id="fd54379541" name="fd070uuS">
 			<label for="fd54379541">Нет</label>
 			<script>
-				$('#fd070063 input').on('change', function () {
-					if($('#fd54379541').is(':checked')){
-						$('#contr-of-the-site').addClass('form-hidden');
-					}
-				});
+                $('#fd070063 input').on('change', function () {
+                    if($('#fd54379541').is(':checked')){
+                        $('#contr-of-the-site').addClass('form-hidden');
+                    }
+                });
 			</script>
 		</div>
 	</div>
 </div>
-<div class="form-found-list form-hidden" id="contr-of-the-site" >
+<div class="form-found form-hidden" id="contr-of-the-site" >
 
-	<div class="form-found">
+	<div class="form-found-list">
 		<p class="text-title">Количество работников контрагентов, чьи персональные хранятся у вас (за все время)</p>
 		<div class="form-checkbox-list form-checkbox-list-main">
 			<div class="form-checkbox-item">
@@ -41,7 +41,7 @@
 		</div>
 	</div>
 
-	<div class="form-found">
+	<div class="form-found-list">
 		<p class="text-title">Цели получения персональных данных работников контрагентов</p>
 		<div class="form-checkbox-list form-checkbox-list-main">
 			<div class="form-checkbox-item">
@@ -129,36 +129,36 @@
 
 		</div>
 		<script>
-			$('#fd07001').on('change', function () {
-				$(this).siblings('.add-form.bttn').toggleClass('form-hidden');
-				$(this).find('.goal-input').remove();
-			});
-			$('body').on('click','.goal-input .del-item', function (e) {
-				e.preventDefault();
-				$(this).parent().remove();
-				if($('#fd07001 .goal-input').length < 9){
-					$('#fd07add01').removeClass('form-hidden');
-				}
-			});
-			var new_id = 0;
-			$('#fd07add01').on('click', function (e){
-				e.preventDefault();
-				new_id += 1;
-				if($('#fd07001 .goal-input').length < 9){
-					$(this).siblings('.form-double').append(
-						'<div class="editional-input goal-input">' +
-						'<input id="fd07a115' + new_id + '" class="form-input" type="text"  name = "fd07name5">' +
-						'<button class="del-item"></button>'+
-						'</div>');
-				}
-				if($('#fd07001 .goal-input').length === 9){
-					$(this).addClass('form-hidden');
-				}
-			});
+            $('#fd07001').on('change', function () {
+                $(this).siblings('.add-form.bttn').toggleClass('form-hidden');
+                $(this).find('.goal-input').remove();
+            });
+            $('body').on('click','.goal-input .del-item', function (e) {
+                e.preventDefault();
+                $(this).parent().remove();
+                if($('#fd07001 .goal-input').length < 9){
+                    $('#fd07add01').removeClass('form-hidden');
+                }
+            });
+            var new_id = 0;
+            $('#fd07add01').on('click', function (e){
+                e.preventDefault();
+                new_id += 1;
+                if($('#fd07001 .goal-input').length < 9){
+                    $(this).siblings('.form-double').append(
+                        '<div class="editional-input goal-input">' +
+                        '<input id="fd07a115' + new_id + '" class="form-input" type="text"  name = "fd07name5">' +
+                        '<button class="del-item"></button>'+
+                        '</div>');
+                }
+                if($('#fd07001 .goal-input').length === 9){
+                    $(this).addClass('form-hidden');
+                }
+            });
 		</script>
 	</div>
 
-	<div class="form-found">
+	<div class="form-found-list">
 		<p class="text-title">Виды обрабатываемых персональных данных работников контрагентов</p>
 		<div class="form-checkbox-list form-checkbox-list-main">
 			<div class="form-checkbox-item">
@@ -229,52 +229,52 @@
 			<a href="#" id = "fd07add02" class="add-form bttn form-hidden">Добавить данные</a>
 		</div>
 		<script>
-			$('#fd07002').on('change', function () {
-				$(this).siblings('.add-form.bttn').toggleClass('form-hidden');
-				$(this).find('.goal-input').remove();
-			});
-			$('body').on('click','.goal-input .del-item', function (e) {
-				e.preventDefault();
-				$(this).parent().remove();
-				if($('#fd07002 .goal-input').length < 9){
-					$('#fd07add02').removeClass('form-hidden');
-				}
-			});
-			$('#fd07add02').on('click', function (e){
-				e.preventDefault();
-				new_id += 1;
-				if($('#fd07002 .goal-input').length < 9){
-					$(this).siblings('.form-double').append(
-						'<div class="form-found editional-input goal-input">' +
-						'<input id="fd07a112' + new_id + '" class="form-input" type="text"  name = "fd07name16">' +
-						'<button class="del-item"></button>'+
-						'</div>');
-				}
-				if($('#fd07002 .goal-input').length === 9){
-					$(this).addClass('form-hidden');
-				}
-			});
+            $('#fd07002').on('change', function () {
+                $(this).siblings('.add-form.bttn').toggleClass('form-hidden');
+                $(this).find('.goal-input').remove();
+            });
+            $('body').on('click','.goal-input .del-item', function (e) {
+                e.preventDefault();
+                $(this).parent().remove();
+                if($('#fd07002 .goal-input').length < 9){
+                    $('#fd07add02').removeClass('form-hidden');
+                }
+            });
+            $('#fd07add02').on('click', function (e){
+                e.preventDefault();
+                new_id += 1;
+                if($('#fd07002 .goal-input').length < 9){
+                    $(this).siblings('.form-double').append(
+                        '<div class="form-found-list editional-input goal-input">' +
+                        '<input id="fd07a112' + new_id + '" class="form-input" type="text"  name = "fd07name16">' +
+                        '<button class="del-item"></button>'+
+                        '</div>');
+                }
+                if($('#fd07002 .goal-input').length === 9){
+                    $(this).addClass('form-hidden');
+                }
+            });
 		</script>
 	</div>
 
-	<div class="form-found">
+	<div class="form-found-list">
 		<p class="text-title">Передаете ли вы персональные данные работников контрагентов третьим лицам</p>
 		<div class="form-checkbox-list" id="fd07lm0004">
 			<div class="form-checkbox-item">
-				<input type="radio" id="fd07511221" name="fd07name17">
+				<input type="checkbox" id="fd07511221" name="fd07name17">
 				<label for="fd07511221">Да, в другие организации</label>
 			</div>
 			<div class="form-checkbox-item">
-				<input type="radio" id="fd07511222" name="fd07name17">
+				<input type="checkbox" id="fd07511222" name="fd07name17">
 				<label for="fd07511222">Да, в государственные органы</label>
 			</div>
 			<div class="form-checkbox-item">
-				<input type="radio" id="fd07511223" name="fd07name17">
+				<input type="checkbox" id="fd07511223" name="fd07name17">
 				<label for="fd07511223">Не передаю</label>
 			</div>
 		</div>
 	</div>
-	<div class="form-found form-hidden form-first">
+	<div class="form-found-list form-hidden form-first">
 		<p class="text-title"> Укажите ИНН компании, в которую вы передаете персональные данные</p>
 		<div class="form-checkbox-list form-double">
 			<div class="form-checkbox-item form-inn">
@@ -283,7 +283,7 @@
 		</div>
 		<a href="#" id = "fd07add2" class="add-form bttn">Добавить компанию</a>
 	</div>
-	<div class="form-found form-hidden form-second">
+	<div class="form-found-list form-hidden form-second">
 		<p class="text-title"> Укажите официальное название государственного органа, в который вы передаете персональные данные</p>
 		<div class="form-checkbox-list">
 			<div class="form-checkbox-item form-double">
@@ -292,43 +292,48 @@
 		</div>
 	</div>
 	<script>
-		$('#fd07lm0004 input').on('change', function () {
-			if($('#fd07511221').is(':checked')){
-				$('#fd07511224').closest('.form-found').removeClass('form-hidden');
-				$('#fd07511225').closest('.form-found').addClass('form-hidden');
-				$('#fd07add2').removeClass('form-hidden');
-			}else if($('#fd07511222').is(':checked')){
-				$('#fd07511224').closest('.form-found').addClass('form-hidden');
-				$('#fd07511225').closest('.form-found').removeClass('form-hidden');
-				$('#fd07add2').addClass('form-hidden');
-				$('#fd07511224').parents('.form-double').find('.editional-input').remove();
-			}else{
-				$('#fd07511224').closest('.form-found').addClass('form-hidden');
-				$('#fd07511225').closest('.form-found').addClass('form-hidden');
-				$('#fd07add2').addClass('form-hidden');
-				$('#fd07511224').parents('.form-double').find('.editional-input').remove();
-			}
-		});
-		var new_id = 1;
-		$('#fd07add2').on('click', function (e) {
-			e.preventDefault();
-			new_id += 1;
-			$('#fd07511224').closest('.form-found').find('.form-double')
-				.append('<div class="editional-input">' +
-				'<div class="form-inn">' +
-				'<input id="fd07ia111' + new_id + '" class="form-input form-input-big input-inn" type="text" placeholder="_ _ _ _ _ _ _ _ _ _" name = "inn141111">' +
-				'</div>' +
-				'<button class="del-item"></button>'+
-				'</div>');
+        $('#fd07lm0004 input').on('change', function () {
+            if($('#fd07511221').is(':checked')){
+                $('#fd07511224').closest('.form-found-list').removeClass('form-hidden');
+            }
+            if($('#fd07511222').is(':checked')){
+                $('#fd07511225').closest('.form-found-list').removeClass('form-hidden');
+            }
+            if($('#fd07511223').is(':checked')){
+                $('#fd07511224').closest('.form-found-list').addClass('form-hidden');
+                $('#fd07511225').closest('.form-found-list').addClass('form-hidden');
+                $('#fd07511224').parents('.form-double').find('.editional-input').remove();                                                            }
+        });
+        $('#fd07511223').on('click',function(){
+            $('#fd07511222').attr('checked', false);
+            $('#fd07511221').attr('checked', false);
+        });
+        $('#fd07511222').on('click',function(){
+            $('#fd07511223').attr('checked', false);
+        });
+        $('#fd07511221').on('click',function(){
+            $('#fd07511223').attr('checked', false);
+        });
+        var new_id = 1;
+        $('#fd07add2').on('click', function (e) {
+            e.preventDefault();
+            new_id += 1;
+            $('#fd07511224').closest('.form-found-list').find('.form-double')
+                .append('<div class="editional-input">' +
+                    '<div class="form-inn">' +
+                    '<input id="fd07ia111' + new_id + '" class="form-input form-input-big input-inn" type="text" placeholder="_ _ _ _ _ _ _ _ _ _" name = "inn141111">' +
+                    '</div>' +
+                    '<button class="del-item"></button>'+
+                    '</div>');
 
-		});
-		$('body').on('click','.del-item', function (e) {
-			e.preventDefault();
-			$(this).parent().remove();
-		});
+        });
+        $('body').on('click','.del-item', function (e) {
+            e.preventDefault();
+            $(this).parent().remove();
+        });
 	</script>
 
-	<div class="form-found">
+	<div class="form-found-list">
 		<p class="text-title">Осуществляется ли передача персональных данных работников контрагентов за рубеж</p>
 		<div class="form-checkbox-list" id="fd07lm0005">
 			<div class="form-checkbox-item">
@@ -341,7 +346,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="form-found form-first form-hidden">
+	<div class="form-found-list form-first form-hidden">
 		<p class="text-title">Укажите страну</p>
 		<div class="form-checkbox-list form-double">
 			<div class="form-checkbox-item">
@@ -351,31 +356,31 @@
 	</div>
 	<a href="#" id = "fd07add4" class="add-form bttn form-hidden">Добавить страну</a>
 	<script>
-			$('#fd07lm0005 input').on('change', function () {
-				if($('#fd07111226').is(':checked')){
-					$('#fd07111228').closest('.form-found').removeClass('form-hidden');
-					$('#fd07add4').removeClass('form-hidden');
-				}else if($('#fd07111227').is(':checked')){
-					$('#fd07111228').closest('.form-found').addClass('form-hidden');
-					$('#fd07add4').addClass('form-hidden');
-					$('#fd07111228').parents('.form-double').find('.editional-input').remove();
-				}
-			});
-			var new_id = 1;
-			$('#fd07add4').on('click', function (e) {
-				e.preventDefault();
-				new_id += 1;
-				$('#fd07111228').closest('.form-found').find('.form-checkbox-list')
-					.append('<div class="editional-input">' +
-					'<div class="form-checkbox-item">' +
-					'<input type="text" class="form-input" id="fd07a511' + new_id + '"  name = "fd07n1111"' +
-					'</div>' +
-					'<button class="del-item"></button>'+
-					'</div>');
-			});
-		</script>
+        $('#fd07lm0005 input').on('change', function () {
+            if($('#fd07111226').is(':checked')){
+                $('#fd07111228').closest('.form-found-list').removeClass('form-hidden');
+                $('#fd07add4').removeClass('form-hidden');
+            }else if($('#fd07111227').is(':checked')){
+                $('#fd07111228').closest('.form-found-list').addClass('form-hidden');
+                $('#fd07add4').addClass('form-hidden');
+                $('#fd07111228').parents('.form-double').find('.editional-input').remove();
+            }
+        });
+        var new_id = 1;
+        $('#fd07add4').on('click', function (e) {
+            e.preventDefault();
+            new_id += 1;
+            $('#fd07111228').closest('.form-found-list').find('.form-checkbox-list')
+                .append('<div class="editional-input">' +
+                    '<div class="form-checkbox-item">' +
+                    '<input type="text" class="form-input" id="fd07a511' + new_id + '"  name = "fd07n1111"' +
+                    '</div>' +
+                    '<button class="del-item"></button>'+
+                    '</div>');
+        });
+	</script>
 	<!-- 43.44 -->
-	<div class="form-found">
+	<div class="form-found-list">
 		<p class="text-title">Имеются ли официальные документы компании, в которых содержатся персональные данные работников контрагентов</p>
 		<div class="form-checkbox-list" id="fd07lm0006">
 			<div class="form-checkbox-item">
@@ -403,45 +408,45 @@
 		<a href="#" id = "fd07add5" class="add-form bttn">Добавить документ</a>
 	</div>
 	<script>
-		$('#fd07lm0006 input').on('change', function () {
-			if($('#fd07511229').is(':checked')){
-				$('#fd07lm0007').removeClass('form-hidden');
-			}else{
-				$('#fd07lm0007').addClass('form-hidden');
-				$('#fd07lm0007').find('.editional-input').remove();
-			}
-		});
-		$('#fd07add5').on('click', function (e) {
-			e.preventDefault();
-			new_id += 1;
-			$(this).siblings('.form-copy').append(
-				'<div class="editional-input dok_list">'+
-				'<div class="form-found-item">'+
-				'<span>Документ:</span>'+
-				'<input class="form-input form-document" type="text" id="fd07a112' + new_id +'" name = "fd07a112'+ new_id+'">'+
-				'</div>'+
-				'<div class="form-found-item">'+
-				'<span>Место хранения (кабинет№):</span>'+                                                            																	'<input class="form-input form-place" type="text" id="fd07a113'+ new_id + '" name = "fd07a113'+ new_id+'">'+
-				'</div>'+
-				'<button class="del-item"></button>' +
-				'</div>');
-		});
+        $('#fd07lm0006 input').on('change', function () {
+            if($('#fd07511229').is(':checked')){
+                $('#fd07lm0007').removeClass('form-hidden');
+            }else{
+                $('#fd07lm0007').addClass('form-hidden');
+                $('#fd07lm0007').find('.editional-input').remove();
+            }
+        });
+        $('#fd07add5').on('click', function (e) {
+            e.preventDefault();
+            new_id += 1;
+            $(this).siblings('.form-copy').append(
+                '<div class="editional-input dok_list">'+
+                '<div class="form-found-item">'+
+                '<span>Документ:</span>'+
+                '<input class="form-input form-document" type="text" id="fd07a112' + new_id +'" name = "fd07a112'+ new_id+'">'+
+                '</div>'+
+                '<div class="form-found-item">'+
+                '<span>Место хранения (кабинет№):</span>'+                                                            																	'<input class="form-input form-place" type="text" id="fd07a113'+ new_id + '" name = "fd07a113'+ new_id+'">'+
+                '</div>'+
+                '<button class="del-item"></button>' +
+                '</div>');
+        });
 	</script>
 	<!-- 45-51 -->
-	<div class="form-found">
-		<p class="text-title">Содержатся ли компьютерных программах компании персональные данные работников контрагентов</p>
+	<div class="form-found-list">
+		<p class="text-title">Содержатся ли в компьютерных программах компании персональные данные работников контрагентов</p>
 		<div class="form-checkbox-list" id="fd07lm0008">
 			<div class="form-checkbox-item">
 				<input type="radio" id="fd07111224" name="fd07name20">
-				<label for="fd07511224">Да</label>
+				<label for="fd07111224">Да</label>
 			</div>
 			<div class="form-checkbox-item">
 				<input type="radio" id="fd07111225" name="fd07name20">
-				<label for="fd07511225">Нет</label>
+				<label for="fd07111225">Нет</label>
 			</div>
 		</div>
 	</div>
-	<div class="form-found form-first form-hidden">
+	<div class="form-found-list form-first form-hidden">
 		<p class="text-title">Название программы с указанием версии</p>
 		<div class="form-checkbox-list form-double">
 			<div class="form-checkbox-item">
@@ -450,7 +455,7 @@
 		</div>
 		<a href="#" id = "fd07add6" class="add-form bttn">Добавить программу</a>
 	</div>
-	<div id="fd07lm0009" class="form-found form-hidden form-first " >
+	<div id="fd07lm0009" class="form-found-list form-hidden form-first " >
 		<p class="text-title">Передаются ли данные работников контрагентов по внутренней (локальной) сети компании</p>
 		<div class="form-checkbox-list">
 			<div class="form-checkbox-item">
@@ -463,7 +468,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="fd07lm0010" class="form-found form-hidden form-first">
+	<div id="fd07lm0010" class="form-found-list form-hidden form-first">
 		<p class="text-title">Передаются ли данные работников контрагентов по сети Интернет</p>
 		<div class="form-checkbox-list">
 			<div class="form-checkbox-item">
@@ -476,21 +481,21 @@
 			</div>
 		</div>
 	</div>
-	<div id="fd07lm0011" class="form-found form-hidden form-first">
+	<div id="fd07lm0011" class="form-found-list form-hidden form-first">
 		<p class="text-title">Персональные данные работников контрагентов хранятся</p>
 		<div class="form-checkbox-list">
 			<div class="form-checkbox-item">
 				<input type="radio" id="fd07111231" name="fd07name23">
-				<label for="fd07111231">В собственном сервере</label>
+				<label for="fd07111231">На собственном сервере</label>
 			</div>
 			<div class="form-checkbox-item">
 				<input type="radio" id="fd07111232" name="fd07name23">
-				<label for="fd07111232">В арендованном сервере</label>
+				<label for="fd07111232">На арендованном сервере</label>
 			</div>
 		</div>
 	</div>
 	<div id="fd07lm0012" class="form-first">
-		<div class="form-found form-second form-hidden">
+		<div class="form-found-list form-second form-hidden">
 			<p class="text-title">Укажите адрес местонахождения собственного сервера</p>
 			<div class="form-checkbox-list">
 				<div class="form-checkbox-item">
@@ -498,7 +503,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="form-found form-hidden form-third">
+		<div class="form-found-list form-hidden form-third">
 			<p class="text-title">Укажите ИНН компании, предоставляющей сервер вашей компании</p>
 			<div class="form-inn">
 				<input id="fd07511234" class="form-input form-input-big input-inn" type="text" placeholder="_ _ _ _ _ _ _ _ _ _">
@@ -506,42 +511,42 @@
 		</div>
 	</div>
 	<script>
-		$('#fd07lm0008 input').on('change', function () {
-			if($('#fd07111224').is(':checked')){
-				$('#fd07511226').closest('.form-found').removeClass('form-hidden');
-				$('#fd07lm0009').removeClass('form-hidden');
-				$('#fd07lm0010').removeClass('form-hidden');
-				$('#fd07lm0011').removeClass('form-hidden');
-				$('#fd07lm0012').removeClass('form-hidden');
+        $('#fd07lm0008 input').on('change', function () {
+            if($('#fd07111224').is(':checked')){
+                $('#fd07511226').closest('.form-found-list').removeClass('form-hidden');
+                $('#fd07lm0009').removeClass('form-hidden');
+                $('#fd07lm0010').removeClass('form-hidden');
+                $('#fd07lm0011').removeClass('form-hidden');
+                $('#fd07lm0012').removeClass('form-hidden');
 
-			}else if ($('#fd07111225').is(':checked')) {
-				$('#fd07511226').closest('.form-found').addClass('form-hidden');
-				$('#fd07lm0009').addClass('form-hidden');
-				$('#fd07lm0010').addClass('form-hidden');
-				$('#fd07lm0011').addClass('form-hidden');
-				$('#fd07lm0012').addClass('form-hidden');
+            }else if ($('#fd07111225').is(':checked')) {
+                $('#fd07511226').closest('.form-found-list').addClass('form-hidden');
+                $('#fd07lm0009').addClass('form-hidden');
+                $('#fd07lm0010').addClass('form-hidden');
+                $('#fd07lm0011').addClass('form-hidden');
+                $('#fd07lm0012').addClass('form-hidden');
 
-				$('#fd07511226').closest('.form-found').find('.editional-input').remove();
-			}
-		});
-		$('#fd07lm0011  input').on('change', function () {
-			if($('#fd07111231').is(':checked')){
-				$('#fd07lm0012').find('.form-second').removeClass('form-hidden');
-				$('#fd07lm0012').find('.form-third').addClass('form-hidden');
-			}else if($('#fd07111232').is(':checked')){
-				$('#fd07lm0012').find('.form-second').addClass('form-hidden');
-				$('#fd07lm0012').find('.form-third').removeClass('form-hidden');
-			}
-		});
-		var new_id = 1;
-		$('#fd07add6').on('click', function (e) {
-			e.preventDefault();
-			new_id += 1;
-			$(this).siblings('.form-double').append(
-				'<div class="editional-input">' +
-				'<input id="fd07a711' + new_id + '" class="form-input" type="text" name = "fd07a711' + new_id + '">' +
-				'<button class="del-item"></button>'+
-				'</div>');
-		});
+                $('#fd07511226').closest('.form-found-list').find('.editional-input').remove();
+            }
+        });
+        $('#fd07lm0011  input').on('change', function () {
+            if($('#fd07111231').is(':checked')){
+                $('#fd07lm0012').find('.form-second').removeClass('form-hidden');
+                $('#fd07lm0012').find('.form-third').addClass('form-hidden');
+            }else if($('#fd07111232').is(':checked')){
+                $('#fd07lm0012').find('.form-second').addClass('form-hidden');
+                $('#fd07lm0012').find('.form-third').removeClass('form-hidden');
+            }
+        });
+        var new_id = 1;
+        $('#fd07add6').on('click', function (e) {
+            e.preventDefault();
+            new_id += 1;
+            $(this).siblings('.form-double').append(
+                '<div class="editional-input">' +
+                '<input id="fd07a711' + new_id + '" class="form-input" type="text" name = "fd07a711' + new_id + '">' +
+                '<button class="del-item"></button>'+
+                '</div>');
+        });
 	</script>
 </div>

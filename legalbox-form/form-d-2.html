@@ -140,15 +140,15 @@
 														</div>
 													</div>
 												</div>
-												<div class="form-found-list form-hidden" id="users-of-the-site" >
-													<div class="form-found">
+												<div class="form-found form-hidden" id="users-of-the-site" >
+													<div class="form-found-list">
 														<p class="text-title">Укажите адрес сайта:</p>
 														<input class="form-input" type="text" id="fd02websiteAddress" placeholder="_ _ _ _ _ _">
 														<div class="help-tip">
 															<p>Укажите URL - адрес, на котором будут размещены публичные оферты. Например: http://www.site.com</p>
 														</div>
 													</div>
-													<div class="form-found">
+													<div class="form-found-list">
 														<p class="text-title">Количество пользователей вашего сайта, чьи персональные хранятся у вас (за все время)</p>
 														<div class="form-checkbox-list">
 															<div class="form-checkbox-item">
@@ -161,7 +161,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="form-found">
+													<div class="form-found-list">
 														<p class="text-title">Цели получения персональных данных пользователей</p>
 														<div class="form-checkbox-list">
 															<div class="form-checkbox-item">
@@ -229,7 +229,7 @@
                                                             });
 														</script>
 													</div>
-													<div class="form-found">
+													<div class="form-found-list">
 														<p class="text-title">Пользователь дает свое согласие на обработку его данных следующим путем</p>
 														<div class="form-checkbox-list">
 															<div class="form-checkbox-item">
@@ -289,7 +289,7 @@
                                                             });
 														</script>
 													</div>
-													<div class="form-found">
+													<div class="form-found-list">
 														<p class="text-title">Виды обрабатываемых персональных данных пользователей</p>
 														<div class="form-checkbox-list form-checkbox-list-main">
 															<div class="form-checkbox-item">
@@ -341,7 +341,7 @@
                                                                 new_id += 1;
                                                                 if($('#fd02002 .goal-input').length < 9){
                                                                     $(this).siblings('.form-double').append(
-                                                                        '<div class="form-found editional-input goal-input">' +
+                                                                        '<div class="editional-input goal-input">' +
                                                                         '<input id="fd02a112' + new_id + '" class="form-input" type="text"  name = "fd02name16">' +
                                                                         '<button class="del-item"></button>'+
                                                                         '</div>');
@@ -353,7 +353,7 @@
 														</script>
 													</div>
 
-													<div class="form-found">
+													<div class="form-found-list">
 														<p class="text-title">Осуществляется ли передача персональных данных пользователь за рубеж</p>
 														<div class="form-checkbox-list" id="fd02lm0005">
 															<div class="form-checkbox-item">
@@ -366,7 +366,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="form-found form-first form-hidden">
+													<div class="form-found-list form-first form-hidden">
 														<p class="text-title">Укажите страну</p>
 														<div class="form-checkbox-list form-double">
 															<div class="form-checkbox-item">
@@ -378,10 +378,10 @@
 													<script>
                                                             $('#fd02lm0005 input').on('change', function () {
                                                                 if($('#fd02111226').is(':checked')){
-                                                                    $('#fd02111228').closest('.form-found').removeClass('form-hidden');
+                                                                    $('#fd02111228').closest('.form-found-list').removeClass('form-hidden');
                                                                     $('#fd02add4').removeClass('form-hidden');
                                                                 }else if($('#fd02111227').is(':checked')){
-                                                                    $('#fd02111228').closest('.form-found').addClass('form-hidden');
+                                                                    $('#fd02111228').closest('.form-found-list').addClass('form-hidden');
                                                                     $('#fd02add4').addClass('form-hidden');
                                                                     $('#fd02111228').parents('.form-double').find('.editional-input').remove();
                                                                 }
@@ -390,7 +390,7 @@
                                                             $('#fd02add4').on('click', function (e) {
                                                                 e.preventDefault();
                                                                 new_id += 1;
-                                                                $('#fd02111228').closest('.form-found').find('.form-checkbox-list')
+                                                                $('#fd02111228').closest('.form-found-list').find('.form-checkbox-list')
 																	.append('<div class="editional-input">' +
                                                                     '<div class="form-checkbox-item">' +
                                                                     '<input type="text" class="form-input" id="fd02a511' + new_id + '"  name = "fd02n1111"' +
@@ -400,7 +400,7 @@
                                                             });
 														</script>
 
-													<div id="fd02lm0010" class="form-found form-hidden form-first">
+													<div id="fd02lm0010" class="form-found-list form-hidden form-first">
 														<p class="text-title">Передаются ли данные соискателей по сети Интернет</p>
 														<div class="form-checkbox-list">
 															<div class="form-checkbox-item">
@@ -413,7 +413,7 @@
 															</div>
 														</div>
 													</div>
-													<div id="fd02lm0011" class="form-found form-first">
+													<div id="fd02lm0011" class="form-found-list form-first">
 														<p class="text-title">Персональные данные пользователей хранятся</p>
 														<div class="form-checkbox-list">
 															<div class="form-checkbox-item">
@@ -427,7 +427,7 @@
 														</div>
 													</div>
 													<div id="fd02lm0012" class="form-first">
-														<div class="form-found form-second form-hidden">
+														<div class="form-found-list form-second form-hidden">
 															<p class="text-title">Укажите адрес местонахождения собственного сервера</p>
 															<div class="form-checkbox-list">
 																<div class="form-checkbox-item">
@@ -435,7 +435,7 @@
 																</div>
 															</div>
 														</div>
-														<div class="form-found form-hidden form-third">
+														<div class="form-found-list form-hidden form-third">
 															<p class="text-title">Укажите ИНН компании, предоставляющей сервер вашей компании</p>
 															<div class="form-inn">
 																<input id="fd02511234" class="form-input form-input-big input-inn" type="text" placeholder="_ _ _ _ _ _ _ _ _ _">
@@ -445,20 +445,20 @@
 													<script>
                                                         $('#fd02lm0008 input').on('change', function () {
                                                             if($('#fd02111224').is(':checked')){
-                                                                $('#fd02511226').closest('.form-found').removeClass('form-hidden');
+                                                                $('#fd02511226').closest('.form-found-list').removeClass('form-hidden');
                                                                 $('#fd02lm0009').removeClass('form-hidden');
                                                                 $('#fd02lm0010').removeClass('form-hidden');
                                                                 $('#fd02lm0011').removeClass('form-hidden');
                                                                 $('#fd02lm0012').removeClass('form-hidden');
 
                                                             }else if ($('#fd02111225').is(':checked')) {
-                                                                $('#fd02511226').closest('.form-found').addClass('form-hidden');
+                                                                $('#fd02511226').closest('.form-found-list').addClass('form-hidden');
                                                                 $('#fd02lm0009').addClass('form-hidden');
                                                                 $('#fd02lm0010').addClass('form-hidden');
                                                                 $('#fd02lm0011').addClass('form-hidden');
                                                                 $('#fd02lm0012').addClass('form-hidden');
 
-                                                                $('#fd02511226').closest('.form-found').find('.editional-input').remove();
+                                                                $('#fd02511226').closest('.form-found-list').find('.editional-input').remove();
                                                             }
                                                         });
                                                         $('#fd02lm0011  input').on('change', function () {
@@ -482,7 +482,7 @@
                                                         });
 													</script>
 
-													<div id="fd02lm0009" class="form-found form-first " >
+													<div id="fd02lm0009" class="form-found-list form-first " >
 														<p class="text-title">Передаются ли данные пользователей по внутренней (локальной) сети</p>
 														<div class="form-checkbox-list">
 															<div class="form-checkbox-item">
@@ -495,7 +495,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="form-found">
+													<div class="form-found-list">
 														<p class="text-title">Имеются ли официальные документы компании, в которых содержатся персональные данные пользователей сайта</p>
 														<div class="form-checkbox-list" id="fd02lm0006">
 															<div class="form-checkbox-item">
