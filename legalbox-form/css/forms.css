@@ -311,6 +311,8 @@ section {
   line-height: 20px;
   margin-bottom: 0; }
 .section-form-mid {
+  position: relative;
+  z-index: 0;
   background: #fff;
   margin-top: 60px;
   padding: 38px 0;

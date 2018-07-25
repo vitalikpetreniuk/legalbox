@@ -1,10 +1,11 @@
 <div class="form-found">
 	<p class="text-title">Укажите Ваш ИНН</p>
+	<div class="help-tip">
+		<p>Укажите ИНН Вашей организации либо Ваш собственный ИНН (если Вы являетесь индивидуальным предпринимателем). Узнать ИНН можно на сайте https://egrul.nalog.ru/</p>
+	</div>
 	<div class="form-inn">
 		<input id="inn" class="form-input form-input-big input-inn" type="text" placeholder='' value="">
-		<div class="help-tip">
-			<p>Укажите ИНН Вашей организации либо Ваш собственный ИНН (если Вы являетесь индивидуальным предпринимателем). Узнать ИНН можно на сайте https://egrul.nalog.ru/</p>
-		</div>
+
 	</div>
 </div>
 <div class="form-found form-first form-hidden" id="legal-person">
@@ -126,15 +127,16 @@
 </div>
 <div class="form-found form-first form-hidden" id="rightsowner" >
 	<p class="text-title">Обладателем прав на сайт и размещенный на сайте контент является:</p>
+	<div class="help-tip">
+		<p>Владельцем сайта (обладателем прав на сайт) является лицо, которое самостоятельно создало сайт либо лицо к которому перешли права сайт по договору. Например, по договору на разработку сайта. </p>
+	</div>
 	<div class="form-checkbox-list">
 		<div class="form-checkbox-item form-double">
 			<input  type="radio" id="fc11111456" name="name57">
 			<label for="fc11111456" id="oooOrIp">
 				<input type="text" id="fc11111457" class="form-input">
 			</label>
-			<div class="help-tip">
-				<p>Владельцем сайта (обладателем прав на сайт) является лицо, которое самостоятельно создало сайт либо лицо к которому перешли права сайт по договору. Например, по договору на разработку сайта. </p>
-			</div>
+
 		</div>
 		<div class="form-checkbox-item">
 			<input type="radio" id="fc1715373" name="name57">
@@ -142,101 +144,3 @@
 		</div>
 	</div>
 </div>
-<script>
-    $(document).ready(function() {
-
-        $('#inn').on('input', function() {
-            var value = $(this).val().trim();
-            $(this).val(value);
-
-            //                                              alert(this.value.length);
-            //if (this.value.length==10) alert('Inn litso'); else
-            var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${value}`,
-                "method": "GET",
-                "headers": {
-                    "content-type": "application/json",
-                    "authorization": "Token 849e43c0e60aaf7787190b4edcaa24c8f2892b9e",
-                    "accept": "application/json",
-                    "cache-control": "no-cache",
-                    "postman-token": "b801735a-ec52-89de-c4d4-6231078adbee"
-                },
-                "processData": false,
-                "data": "{ \"query\": \"7719402047\" }"
-            };
-            if (this.value.length == 10) {
-                //open the form , and autofill it
-
-                $.ajax(settings).done(function(response) {
-                    //                                                      alert(response.length);
-                    //                                                      alert(response[0]["value"]);
-                    if (response["suggestions"].length == 0) {
-                        $('#company_name').val("");
-                        $('#ogrn').val("");
-                        $('#kpp').val("");
-                        $('#adress').val("");
-                        $("#fc11111457").val("");
-
-                        alert('Неправильный ИНН');
-                        return;
-                    }
-                    var responseJson = response["suggestions"][0];
-                    $('#company_name').val(responseJson["value"]);
-                    $("#fc11111457").val(responseJson["value"]);
-                    $('#ogrn').val(responseJson["data"]["ogrn"]);
-                    $('#kpp').val(responseJson["data"]["kpp"]);
-                    $('#adress').val(responseJson["data"]["address"]["value"]);
-
-                    console.log(JSON.stringify(response));
-                });
-                $('#legal-person').removeClass('form-hidden');
-                $('#legal-person .form-found-list').removeClass('form-hidden');
-                //$("#oooOrIp").text("ООО");
-                $('#rightsowner').removeClass('form-hidden');
-            } else {
-                //hide form for legal-person
-                $('#legal-person').addClass('form-hidden');
-                $('#legal-person .form-found-list').addClass('form-hidden');
-            }
-            if (this.value.length == 12) {
-
-                //same thing: open form, autofill it for entrepreneur
-
-                $.ajax(settings).done(function(response) {
-                    //                                                      alert(response.length);
-                    //                                                      alert(response[0]["value"]);
-                    if (response["suggestions"].length == 0) {
-                        $('#fio').val("");
-                        $('#ogrnip').val("");
-                        $("#fc11111457").val("");
-                        alert('Неправильный ИНН');
-                        return;
-                    }
-
-                    var responseJson = response["suggestions"][0];
-                    $('#fio').val(responseJson["value"]);
-                    $("#fc11111457").val(responseJson["value"]);
-                    $('#ogrnip').val(responseJson["data"]["ogrn"]);
-
-                });
-                $('#entrepreneur').removeClass('form-hidden');
-                $('#entrepreneur .form-found-list').removeClass('form-hidden');
-                //$("#oooOrIp").text("ИП");
-                $('#rightsowner').removeClass('form-hidden');
-
-            } else {
-                // otherwise we're not dealing with entrepreneur, hide everything
-                $('#entrepreneur').addClass('form-hidden');
-                $('#entrepreneur .form-found-list').addClass('form-hidden');
-
-            }
-
-            if ((this.value.length != 10) && (this.value.length != 12)) {
-                $('#rightsowner').addClass('form-hidden');
-            }
-
-        });
-    });
-</script>
