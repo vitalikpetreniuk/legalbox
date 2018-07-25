@@ -180,6 +180,10 @@
 }
 
 @media (max-width: 767px) {
+  .help-tip.help-tip--hover ul li{
+    font-size: 11px;
+  }
+
   .form-step-cont .help-tip p {
     width: 270px;
     left: auto;

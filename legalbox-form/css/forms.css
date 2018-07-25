@@ -1224,24 +1224,23 @@ label > .form-input{
   top: -24px;
   color: #fff;
   z-index: 9999999999;
+
 }
 
 .help-tip.help-tip--hover ul li{
   position: relative;
   padding-left: 12px;
+  font-size: 14px;
 }
 .help-tip.help-tip--hover ul li:after{
   content: ' • ';
   position: absolute;
   left: 0;
-  top: 0px;
+  top: 0;
 }
 .help-tip.help-tip--hover:hover ul {
   display: block;
 }
-/*.form-found-list .help-tip {*/
-  /*top: -12px;*/
-/*}*/
 .help-tip:before {
   content: "?";
   font-weight: bold;
@@ -1295,10 +1294,6 @@ label > .form-input{
 .help-tip.blue p:before {
    border-right-color: #0455a4;
  }
-/*.help-tip:hover p {*/
-  /*display: block;*/
-/*}*/
-
 #users-of-the-site .form-found-list,
 #aspirant-of-the-site .form-found-list,
 #gph-of-the-site .form-found-list,
