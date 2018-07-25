@@ -117,7 +117,10 @@
 												<div class="form-found">
 													<p class="text-title">Укажите Ваш ИНН</p>
 													<div class="form-inn">
-														<input id="inn" class="form-input form-input-big input-inn" type="text" placeholder='' value="">
+														<input id="fd01inn" class="form-input form-input-big input-inn" type="text" placeholder='' value="">
+														<div class="help-tip help_1">
+															<p>Укажите ИНН Вашей организации либо Ваш собственный ИНН (если Вы являетесь индивидуальным предпринимателем). Узнать ИНН можно на сайте https://egrul.nalog.ru/</p>
+														</div>
 													</div>
 												</div>
 												<div class="form-found form-first form-hidden" id="legal-person">
@@ -140,6 +143,9 @@
 														</div>
 														<div class="form-found-item" id="fd010001">
 															<span>Фактический адрес местонахождения совпадает с юридическим?</span>
+															<div class="help-tip help_2">
+																<p>Если адрес фактического местонахождения Вашей компании отличается от адреса, указанного при ее государственной регистрации в налоговом органе, укажите это.</p>
+															</div>
 															<div class="form-checkbox-list">
 																<div class="form-checkbox-item">
 																	<input type="radio" id="fd0100011" name="fdqT7gE">
@@ -275,16 +281,14 @@
 						<script>
                             $(document).ready(function() {
 
-                                $('#inn').on('input', function() {
-                                    var value = $(this).val().trim();
-                                    $(this).val(value);
+                                $('#fd01inn').on('input', function() {
 
                                     //                                              alert(this.value.length);
                                     //if (this.value.length==10) alert('Inn litso'); else
                                     var settings = {
                                         "async": true,
                                         "crossDomain": true,
-                                        "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${value}`,
+                                        "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${$('#fd01inn').val()}`,
                                         "method": "GET",
                                         "headers": {
                                             "content-type": "application/json",

@@ -199,7 +199,7 @@ function checkForm(div) {
                 input.each(function () {
                     var inputType = $(this).attr('type');
 
-                    if(!$(this).parents('.form-checkbox-item').hasClass('form-double') && (inputType != 'radio' && inputType != 'checkbox')){
+                    if(!$(this).parents('.form-checkbox-item').hasClass('form-double') && (inputType != 'radio' && inputType != 'checkbox') && !$(this).parents('.form-found-list').hasClass('form-hidden')){
                         if(!$(this).hasClass('input-inn')){
                             if($(this).val() != ''){
                                 validate.push(true);

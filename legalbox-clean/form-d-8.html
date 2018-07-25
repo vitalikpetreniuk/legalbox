@@ -41,35 +41,35 @@
 	<a href="#" id = "fd08add1" class="add-form bttn">Добавить средства</a>
 </div>
 <script>
-	$('#fd08lm0001 input').on('change', function () {
-		if($('#fd08111432').is(':checked')){
-			$('#fd08add1').removeClass('form-hidden');
-		}else{
-			$('#fd08add1').addClass('form-hidden');
-			$('#fd08lm0001').find('.editional-input').remove();
-		}
-	});
-	$('body').on('click','.del-item', function (e) {
-		e.preventDefault();
-		$(this).parent().remove();
-		if($('#fd08lm0001 .dok_list').length < 9){
-			$('#fd08add1').removeClass('form-hidden');
-		}
-	});
-	var new_id = 0;
-	$('#fd08add1').on('click', function (e) {
-		e.preventDefault();
-		new_id += 1;
-		console.log('***');
-		if($('#fd08lm0001 .dok_list').length < 9){
-			$(this).siblings('.form-copy').append(
-				'<div class="editional-input dok_list">'+
-				'<input class="form-input form-place" type="text" id="fd08a110'+ new_id + '">'+
-				'<button class="del-item"></button>' +
-				'</div>');
-		}
-		if($('#fd08lm0001 .dok_list').length === 9){
-			$(this).addClass('form-hidden');
-		}
-	});
+    $('#fd08lm0001 input').on('change', function () {
+        if($('#fd08111432').is(':checked')){
+            $('#fd08add1').removeClass('form-hidden');
+        }else{
+            $('#fd08add1').addClass('form-hidden');
+            $('#fd08lm0001').find('.editional-input').remove();
+        }
+    });
+    $('body').on('click','.del-item', function (e) {
+        e.preventDefault();
+        $(this).parent().remove();
+        if($('#fd08lm0001 .dok_list').length < 9){
+            $('#fd08add1').removeClass('form-hidden');
+        }
+    });
+    var new_id = 0;
+    $('#fd08add1').on('click', function (e) {
+        e.preventDefault();
+        new_id += 1;
+        console.log('***');
+        if($('#fd08lm0001 .dok_list').length < 9){
+            $(this).siblings('.form-copy').append(
+                '<div class="editional-input dok_list">'+
+                '<input class="form-input form-place" type="text" id="fd08a110'+ new_id + '">'+
+                '<button class="del-item"></button>' +
+                '</div>');
+        }
+        if($('#fd08lm0001 .dok_list').length === 9){
+            $(this).addClass('form-hidden');
+        }
+    });
 </script>
