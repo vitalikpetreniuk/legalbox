@@ -1239,9 +1239,9 @@ label > .form-input{
 .help-tip.help-tip--hover:hover ul {
   display: block;
 }
-.form-found-list .help-tip {
-  top: -12px;
-}
+/*.form-found-list .help-tip {*/
+  /*top: -12px;*/
+/*}*/
 .help-tip:before {
   content: "?";
   font-weight: bold;
