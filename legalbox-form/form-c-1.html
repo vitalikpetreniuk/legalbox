@@ -303,7 +303,7 @@
                                                 $('#adress').val("");
                                                 $("#fc11111457").val("");
 
-                                                alert('Неправильный ИНН');
+                                                $(".pop-up__validity--inn").addClass('active');
                                                 return;
                                             }
                                             var responseJson = response["suggestions"][0];
@@ -335,7 +335,7 @@
                                                 $('#fio').val("");
                                                 $('#ogrnip').val("");
                                                 $("#fc11111457").val("");
-                                                alert('Неправильный ИНН');
+                                                $(".pop-up__validity--inn").addClass('active');
                                                 return;
                                             }
 
@@ -351,7 +351,7 @@
                                         $('#rightsowner').removeClass('form-hidden');
 
                                     } else {
-                                        // otherwise we're not dealing with entrepreneur, hide everything
+
                                         $('#entrepreneur').addClass('form-hidden');
                                         $('#entrepreneur .form-found-list').addClass('form-hidden');
 
@@ -396,6 +396,16 @@
 			<div class="parallax-s parallax-3"><img src="img/parallax-1.svg" alt="img"></div>
 		</section>
 	</div>
+	<section class="pop-up__validity pop-up__validity--inn">
+		<div class="pop-up__inner">
+			<span class="parallax-7">
+				<img src="img/parallax-2.svg" alt="img">
+			</span>
+			<button class="pop-up__close"></button>
+			<p class="pop-up__all">Неправильный ИНН</p>
+			<p class="pop-up__all">ИНН организации должен иметь вид 5262321353 (10 цифр) <br> ИНН физического лица - 132808730606 (12 цифр)</p>
+		</div>
+	</section>
 	<footer>
 		<div class="container">
 			<div class="footer-in">

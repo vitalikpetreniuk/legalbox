@@ -344,7 +344,8 @@
                                                                     $('#adress').val("");
                                                                     $("#fc11111457").val("");
 
-                                                                    alert('Неправильный ИНН');
+                                                                    $(".pop-up__validity--inn").addClass('active');
+
                                                                     return;
                                                                 }
                                                                 var responseJson = response["suggestions"][0];
@@ -376,7 +377,8 @@
                                                                     $('#fio').val("");
                                                                     $('#ogrnip').val("");
                                                                     $("#fc11111457").val("");
-                                                                    alert('Неправильный ИНН');
+                                                                    $(".pop-up__validity--inn").addClass('active');
+
                                                                     return;
                                                                 }
 

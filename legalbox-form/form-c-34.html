@@ -229,7 +229,7 @@
                                                                             $('#kpp').val("");
                                                                             $('#adress').val("");
 
-                                                                            alert('Неправильный ИНН');
+                                                                            $(".pop-up__validity--inn").addClass('active');
                                                                             return;
                                                                         }
                                                                         var responseJson = response["suggestions"][0];
@@ -255,7 +255,7 @@
                                                                         if (response["suggestions"].length == 0) {
                                                                             $('#fio').val("");
                                                                             $('#ogrnip').val("");
-                                                                            alert('Неправильный ИНН');
+                                                                            $(".pop-up__validity--inn").addClass('active');
                                                                             return;
                                                                         }
 
