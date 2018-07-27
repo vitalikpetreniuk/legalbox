@@ -1,13 +1,17 @@
 <div class="form-found">
-    <p class="text-title">Укажите Ваш ИНН
+    <p class="text-title">Укажите Ваш ИНН</p>
+    <div class="help-tip">
+        <p>Укажите ИНН Вашей организации либо Ваш собственный ИНН (если Вы являетесь индивидуальным предпринимателем). Узнать ИНН можно на сайте https://egrul.nalog.ru/</p>
+    </div>
+
     <div class="form-inn">
         <input id="inn" class="form-input form-input-big input-inn" type="text" placeholder="132808730606">
     </div>
     <br>
     <!-- sample for Entrepreneur - 132808730606 , for legal-person  - 5262321353 -->
 
-    <div class="form-found form-hidden" id="legal-person">
-        <div class="form-found-list form-hidden">
+    <div class="form-found form-hidden" id="legal-person-c34">
+        <div class="form-found-list">
             <div class="form-found-item">
                 <span>Наименование</span>
                 <input class="form-input" id="company_name" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
@@ -26,35 +30,41 @@
             </div>
             <div class="form-found-item">
                 <span>Фактический адрес местонахождения совпадает с юридическим?</span>
+                <div class="help-tip">
+                    <p>Если адрес фактического местонахождения Вашей компании отличается от адреса, указанного при ее государственной регистрации в налоговом органе, укажите это.</p>
+                </div>
                 <div class="form-checkbox-list">
                     <div class="form-checkbox-item">
-                        <input type="radio" id="fc3" name="flqT7gE" >
+                        <input type="radio" id="fc3" name="c34flqT7gE" >
                         <label for="fc3">Да</label>
 
                     </div>
                     <div class="form-checkbox-item">
-                        <input type="radio" id="fc4" name="flqT7gE">
+                        <input type="radio" id="fc4" name="c34flqT7gE">
                         <label for="fc4">Нет</label>
                         <script>
-                            $('input:radio[name=flqT7gE]').change(function() {
 
-                                $('#actual-address-form').toggle('display');
-
+                            $('input:radio[name=c34flqT7gE]').on('change', function () {
+                                if($('#fc3').is(':checked')){
+                                    $('#actual-address-form-c34').addClass('form-hidden');
+                                }else if($('#fc4').is(':checked')){
+                                    $('#actual-address-form-c34').removeClass('form-hidden');
+                                }
                             });
                         </script>
                     </div>
                 </div>
             </div>
-            <div class="form-found-item form-hidden" id="actual-address-form" >
+            <div class="form-found-item form-hidden" id="actual-address-form-c34" >
                 <span>Укажите фактический адрес местонахождения</span>
-                <input class="form-input" id="adressfact" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+                <input class="form-input" id="adressfact-c34" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
             </div>
 
         </div>
     </div>
 
-    <div class="form-found form-hidden" id="entrepreneur" >
-        <div class="form-found-list form-hidden">
+    <div class="form-found form-hidden" id="entrepreneur-c34" >
+        <div class="form-found-list">
             <div class="form-found-item">
                 <span>ФИО</span>
                 <input class="form-input" type="text" id="fio" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
@@ -63,10 +73,6 @@
                 <span>ОГРНИП</span>
                 <input class="form-input" type="text" id="ogrnip" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
             </div>
-            <!--<div class="form-found-item">
-                <span>Укажите адрес осуществления вашей деятельности:</span>
-                <input class="form-input" type="text" id="address" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
-            </div>-->
 
         </div>
 
@@ -77,8 +83,6 @@
             $('#inn').on('input', function() {
                 var value = $(this).val().trim();
                 $(this).val(value);
-                //											    alert(this.value.length);
-                //if (this.value.length==10) alert('Inn litso'); else
                 var settings = {
                     "async": true,
                     "crossDomain": true,
@@ -95,19 +99,13 @@
                     "data": "{ \"query\": \"7719402047\" }"
                 };
                 if (this.value.length == 10) {
-                    //open the form , and autofill it
-
                     $.ajax(settings).done(function(response) {
-                        //													    alert(response.length);
-                        //													    alert(response[0]["value"]);
                         if (response["suggestions"].length == 0) {
                             $('#company_name').val("");
                             $('#ogrn').val("");
                             $('#kpp').val("");
                             $('#adress').val("");
-
                             $(".pop-up__validity--inn").addClass('active');
-
                             return;
                         }
                         var responseJson = response["suggestions"][0];
@@ -118,23 +116,19 @@
 
                         console.log(JSON.stringify(response));
                     });
-                    $('#legal-person').fadeIn();
+                    $('#legal-person-c34').removeClass('form-hidden');
                 } else {
-                    //hide form for legal-person
-                    $('#legal-person').fadeOut();
+                    $('#legal-person-c34').addClass('form-hidden');
                 }
                 if (this.value.length == 12) {
 
                     //same thing: open form, autofill it for entrepreneur
 
                     $.ajax(settings).done(function(response) {
-                        //													    alert(response.length);
-                        //													    alert(response[0]["value"]);
                         if (response["suggestions"].length == 0) {
                             $('#fio').val("");
                             $('#ogrnip').val("");
                             $(".pop-up__validity--inn").addClass('active');
-
                             return;
                         }
 
@@ -143,10 +137,9 @@
                         $('#ogrnip').val(responseJson["data"]["ogrn"]);
 
                     });
-                    $('#entrepreneur').fadeIn();
+                    $('#entrepreneur-c34').removeClass('form-hidden');
                 } else {
-                    // otherwise we're not dealing with entrepreneur, hide everything
-                    $('#entrepreneur').fadeOut();
+                    $('#entrepreneur-c34').addClass('form-hidden');
                 }
 
             });

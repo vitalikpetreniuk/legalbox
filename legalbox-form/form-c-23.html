@@ -127,8 +127,8 @@
 													</div>
 
 												</div>
-												<div class="form-found form-hidden" id="legal-person">
-													<div class="form-found-list form-hidden">
+												<div class="form-found form-hidden" id="legal-person-c23">
+													<div class="form-found-list">
 														<div class="form-found-item">
 															<span>Наименование</span>
 															<input class="form-input" id="company_name" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
@@ -147,26 +147,31 @@
 														</div>
 														<div class="form-found-item">
 															<span>Фактический адрес местонахождения совпадает с юридическим?</span>
-															<div class="form-checkbox-list">
+															<div class="help-tip">
+																<p>Если адрес фактического местонахождения Вашей компании отличается от адреса, указанного при ее государственной регистрации в налоговом органе, укажите это.</p>
+															</div>
+															<div class="form-checkbox-list" id="fc2311103">
 																<div class="form-checkbox-item">
-																	<input type="radio" id="fc3" name="flqT7gE">
-																	<label for="fc3">Да</label>
+																	<input type="radio" id="fc323" name="c23flqT7gE">
+																	<label for="fc323">Да</label>
 
 																</div>
 																<div class="form-checkbox-item">
-																	<input type="radio" id="fc4" name="flqT7gE">
-																	<label for="fc4">Нет</label>
+																	<input type="radio" id="fc423" name="c23flqT7gE">
+																	<label for="fc423">Нет</label>
 																	<script>
-                                                                        $('input:radio[name=flqT7gE]').change(function() {
-
-                                                                            $('#actual-address-form').toggle('display');
-
+                                                                        $('#fc2311103 input').on('change', function () {
+                                                                            if($('#fc323').is(':checked')){
+                                                                                $('#actual-address-form-c23').addClass('form-hidden');
+                                                                            }else if($('#fc423').is(':checked')){
+                                                                                $('#actual-address-form-c23').removeClass('form-hidden');
+                                                                            }
                                                                         });
 																	</script>
 																</div>
 															</div>
 														</div>
-														<div class="form-found-item form hidden" id="actual-address-form" style="display:none">
+														<div class="form-found-item form-hidden" id="actual-address-form-c23">
 															<span>Укажите фактический адрес местонахождения</span>
 															<input class="form-input" id="adressfact" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
 														</div>
@@ -174,8 +179,8 @@
 
 													</div>
 												</div>
-												<div class="form-found form-hidden" id="entrepreneur">
-													<div class="form-found-list form-hidden">
+												<div class="form-found form-hidden" id="entrepreneur-c23">
+													<div class="form-found-list">
 														<div class="form-found-item">
 															<span>ФИО</span>
 															<input class="form-input" type="text" id="fio" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
@@ -188,18 +193,93 @@
 															<span>№ свидетельства о государственной регистрации</span>
 															<input class="form-input" type="text" pattern="\d+" id="gos_reg_number" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
 														</div>
-														<div class="form-found-item">
+														<div class="form-found-item form-found-item-date">
 															<span>Дата государственной регистрации</span>
-															<input class="form-input" type="text" pattern="\d+" id="gos_reg_day" placeholder="_ _">
-															<input class="form-input" type="text" pattern="\d+" id="gos_reg_month" placeholder="_ _">
-															<input class="form-input" type="text" pattern="\d+" id="gos_reg_year" placeholder="_ _">
-
+															<select class="form-input" type="text" id="gos_reg_day" name = "gos_reg_day" >
+																<option>01</option>
+																<option>02</option>
+																<option>03</option>
+																<option>04</option>
+																<option>05</option>
+																<option>06</option>
+																<option>07</option>
+																<option>08</option>
+																<option>09</option>
+																<option>10</option>
+																<option>11</option>
+																<option>12</option>
+																<option>13</option>
+																<option>15</option>
+																<option>16</option>
+																<option>17</option>
+																<option>18</option>
+																<option>19</option>
+																<option>20</option>
+																<option>21</option>
+																<option>22</option>
+																<option>23</option>
+																<option>24</option>
+																<option>25</option>
+																<option>26</option>
+																<option>27</option>
+																<option>28</option>
+																<option>29</option>
+																<option>30</option>
+																<option>31</option>
+															</select>
+															<select class="form-input" type="text" id="gos_reg_month" name = "gos_reg_month" >
+																<option>январь</option>
+																<option>февраль</option>
+																<option>март</option>
+																<option>апрель</option>
+																<option>май</option>
+																<option>июнь</option>
+																<option>июль</option>
+																<option>август</option>
+																<option>сентябрь</option>
+																<option>октябрь</option>
+																<option>ноябрь</option>
+																<option>декабрь</option>
+															</select>
+															<select class="form-input" type="text" id="gos_reg_year" name = "gos_reg_year" >
+																<option>2018</option>
+																<option>2017</option>
+																<option>2016</option>
+																<option>2015</option>
+																<option>2014</option>
+																<option>2013</option>
+																<option>2012</option>
+																<option>2011</option>
+																<option>2010</option>
+																<option>2009</option>
+																<option>2008</option>
+																<option>2007</option>
+																<option>2006</option>
+																<option>2005</option>
+																<option>2004</option>
+																<option>2003</option>
+																<option>2002</option>
+																<option>2001</option>
+																<option>2000</option>
+																<option>1999</option>
+																<option>1998</option>
+																<option>1997</option>
+																<option>1996</option>
+																<option>1995</option>
+																<option>1994</option>
+																<option>1993</option>
+																<option>1992</option>
+																<option>1991</option>
+																<option>1990</option>
+															</select>
 														</div>
-
 													</div>
 												</div>
 												<div class="form-found-list form-hidden">
 													<p class="text-title">Укажите контакты службы клиентской поддержки:</p>
+													<div class="help-tip">
+														<p>Укажите контакную информацию для связи Покупателей с интерент-магазином</p>
+													</div>
 													<div class="form-found-item">
 														<span>Телефон:</span>
 														<input class="form-input" id="support_number" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
@@ -243,7 +323,6 @@
                                                                         $('#ogrn').val("");
                                                                         $('#kpp').val("");
                                                                         $('#adress').val("");
-
                                                                         $(".pop-up__validity--inn").addClass('active');
                                                                         return;
                                                                     }
@@ -255,10 +334,9 @@
 
                                                                     console.log(JSON.stringify(response));
                                                                 });
-                                                                $('#legal-person').fadeIn();
+                                                                $('#legal-person-c23').removeClass('form-hidden');
                                                             } else {
-                                                                //hide form for legal-person
-                                                                $('#legal-person').fadeOut();
+                                                                $('#legal-person-c23').addClass('form-hidden');
                                                             }
                                                             if (this.value.length == 12) {
 
@@ -279,10 +357,9 @@
                                                                     $('#ogrnip').val(responseJson["data"]["ogrn"]);
 
                                                                 });
-                                                                $('#entrepreneur').fadeIn();
+                                                                $('#entrepreneur-c23').removeClass('form-hidden');
                                                             } else {
-                                                                // otherwise we're not dealing with entrepreneur, hide everything
-                                                                $('#entrepreneur').fadeOut();
+                                                                $('#entrepreneur-c23').addClass('form-hidden');
                                                             }
 
                                                         });
@@ -385,6 +462,17 @@
 		</div>
 		<div class="parallax-s parallax-11"><img src="img/parallax-2.svg" alt="img"></div>
 	</footer>
+	<section class="pop-up__validity pop-up__validity--inn">
+		<div class="pop-up__inner">
+			<span class="parallax-7">
+				<img src="img/parallax-2.svg" alt="img">
+			</span>
+			<button class="pop-up__close"></button>
+			<p class="pop-up__all">Неправильный ИНН</p>
+			<p class="pop-up__all">ИНН организации должен иметь вид 5262321353 (10 цифр) <br> ИНН физического лица - 132808730606 (12 цифр)</p>
+		</div>
+	</section>
+
 
 
 	<!-- scripts -->
