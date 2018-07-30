@@ -1308,6 +1308,12 @@ label > .form-input{
 .form-found .form-found .help-tip{
   right: -30px;
 }
+.form-found .form-found-list .help-tip,
+.form-found.form-first .help-tip,
+.form-found.form-second .help-tip,
+.form-found.form-third .help-tip{
+  top: 3px;
+}
 #users-of-the-site .form-found-list,
 #aspirant-of-the-site .form-found-list,
 #gph-of-the-site .form-found-list,
