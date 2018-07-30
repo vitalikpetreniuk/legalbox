@@ -430,6 +430,9 @@
   }
 }
 @media (max-width: 768px) {
+  .form-found .form-found-list .help-tip, .form-found.form-first .help-tip, .form-found.form-second .help-tip, .form-found.form-third .help-tip {
+    top: -3px;
+  }
   .help-tip {
     top: 0;
   }
@@ -444,6 +447,9 @@
   }
 }
 @media (max-width: 420px) {
+  .form-found .form-found-list .help-tip, .form-found.form-first .help-tip, .form-found.form-second .help-tip, .form-found.form-third .help-tip {
+    top: 0;
+  }
   #fd08lm0001 .dok_list .form-input {
     width: 100%;
   }
