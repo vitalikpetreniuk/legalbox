@@ -1305,6 +1305,9 @@ label > .form-input{
 .help-tip.blue p:before {
   border-right-color: #0455a4;
 }
+.form-found .form-found .help-tip{
+  right: -30px;
+}
 #users-of-the-site .form-found-list,
 #aspirant-of-the-site .form-found-list,
 #gph-of-the-site .form-found-list,
