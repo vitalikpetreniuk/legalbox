@@ -708,15 +708,15 @@ select.form-input:not(:last-child) {
 
 .form-copy {
   margin-bottom: 30px;
-    margin-top: 30px;
-    position: relative;
+  margin-top: 30px;
+  position: relative;
 
 }
 .form-copy .del-item {
-    bottom: auto;
-    top: -6px;
-    left: auto;
-    right: 0;
+  bottom: auto;
+  top: -6px;
+  left: auto;
+  right: 0;
 }
 .form-copy:last-child {
   margin-bottom: 0; }
@@ -975,7 +975,7 @@ footer a:hover, footer a:focus {
 .add-form.bttn{
   padding: 6px 30px;
   font-weight: 600;
-    margin-bottom: 22px;
+  margin-bottom: 22px;
 }
 .add-form.bttn + .form-found{
   margin-top: 22px;
@@ -1009,12 +1009,12 @@ label > .form-input{
   width: 300px;
 }
 .form-double .form-input{
-    width: 290px;
+  width: 290px;
 }
 .editional-input{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
 }
 .editional-input.dok_list{
   margin-top: 50px;
@@ -1042,7 +1042,7 @@ label > .form-input{
   transform: translate(-50%, -50%) rotate(45deg);
 }
 .editional-input.dok_list .del-item{
-  right: 26px;
+  right: 0;
   left: auto;
 }
 .pop-up__close{
@@ -1056,6 +1056,7 @@ label > .form-input{
   border: 1px solid #881a51;
 }
 .pop-up__validity{
+  color: #4c636f;
   position: fixed;
   top: 0;
   left: 0;
@@ -1156,6 +1157,8 @@ label > .form-input{
   position: absolute;
   bottom: 180%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   font-size: 10px;
   -webkit-box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.2);
@@ -1174,6 +1177,8 @@ label > .form-input{
   position: absolute;
   top: 100%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .tooltip p{
@@ -1206,6 +1211,8 @@ label > .form-input{
 .help-tip.help-tip--hover {
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-80%);
+  -ms-transform: translateY(-80%);
   transform: translateY(-80%);
   right: 80px;
   left: auto;
@@ -1218,6 +1225,7 @@ label > .form-input{
   width: 270px;
   position: absolute;
   border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   line-height: 1.2;
   left: 120%;
@@ -1247,6 +1255,8 @@ label > .form-input{
   color: #fff;
 }
 .help-tip.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .help-tip p {
@@ -1257,6 +1267,7 @@ label > .form-input{
   width: 270px;
   position: absolute;
   border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   line-height: 1.2;
   left: 120%;
@@ -1292,8 +1303,8 @@ label > .form-input{
   border-right-color: #faa629;
 }
 .help-tip.blue p:before {
-   border-right-color: #0455a4;
- }
+  border-right-color: #0455a4;
+}
 #users-of-the-site .form-found-list,
 #aspirant-of-the-site .form-found-list,
 #gph-of-the-site .form-found-list,

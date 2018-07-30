@@ -29,7 +29,7 @@
 		</div>
 	</div>
 	<div class="form-found-list">
-		<p class="text-title">Количество пользователей вашего сайта, чьи персональные хранятся у вас (за все время)</p>
+		<p class="text-title">Количество пользователей вашего сайта, чьи персональные данные хранятся у вас (за все время)</p>
 		<div class="form-checkbox-list">
 			<div class="form-checkbox-item">
 				<input type="radio" id="fd02111166" name="fd02name13">
@@ -67,6 +67,10 @@
 			<div class="form-checkbox-item">
 				<input type="checkbox" id="fd02511188" name="fd02name15">
 				<label for="fd02511188">Обработка заявок на сайте</label>
+			</div>
+			<div class="form-checkbox-item">
+				<input type="checkbox" id="fd02511288" name="fd02name15">
+				<label for="fd02511288">Публикация на сайте, во внутренних справочниках, адресных книгах организации</label>
 			</div>
 			<div class="form-checkbox-item form-double" id="fd020092">
 				<input type="checkbox" id="fd02511202" name="fd02name15">
@@ -113,72 +117,43 @@
 		<p class="text-title">Пользователь дает свое согласие на обработку его данных следующим путем</p>
 		<div class="form-checkbox-list">
 			<div class="form-checkbox-item">
-				<input type="checkbox" id="fd02711183" name="fd027name15">
+				<input type="radio" id="fd02711183" name="fd027name15">
 				<label for="fd02711183">Проставления «галочки»</label>
 			</div>
 			<div class="form-checkbox-item">
-				<input type="checkbox" id="fd02711184" name="fd027name15">
+				<input type="radio" id="fd02711184" name="fd027name15">
 				<label for="fd02711184">Ввода смс-кода, направленного на мобильный телефон</label>
 			</div>
 			<div class="form-checkbox-item">
-				<input type="checkbox" id="fd02711185" name="fd027name15">
+				<input type="radio" id="fd02711185" name="fd027name15">
 				<label for="fd02711185"> Прохождения по ссылке, направленной на почту </label>
 			</div>
 
 			<div class="form-checkbox-item form-double" id="fd02701">
-				<input type="checkbox" id="fd02711202" name="fd027name15">
+				<input type="radio" id="fd02711202" name="fd027name15">
 				<label for="fd02711202">Другим способом</label>
 				<input type="text" id="fd02711203" class="form-input">
 			</div>
-			<a href="#" id = "fd02add07" class="add-form bttn form-hidden">Добавить способ</a>
-
 		</div>
-		<script>
-
-            $('#fd02701 input').on('change', function () {
-                if($('#fd02711202').is(':checked')){
-                    $('#fd02add07').removeClass('form-hidden');
-                }else {
-                    $('#fd02add07').addClass('form-hidden');
-                    $('#fd02701').find('.editional-input').remove();
-                }
-            });
-            $('body').on('click','.goal-input .del-item', function (e) {
-                e.preventDefault();
-                $(this).parent().remove();
-                if($('#fd02701 .goal-input').length < 9){
-                    $('#fd02add07').removeClass('form-hidden');
-                }
-            });
-
-
-            var new_id = 0;
-            $('#fd02add07').on('click', function (e){
-                e.preventDefault();
-                new_id += 1;
-                if($('#fd02701 .goal-input').length < 9){
-                    $(this).siblings('.form-double').append(
-                        '<div class="editional-input goal-input">' +
-                        '<input id="fd02a116' + new_id + '" class="form-input" type="text"  name = "fd02name5">' +
-                        '<button class="del-item"></button>'+
-                        '</div>');
-                }
-                if($('#fd02701 .goal-input').length === 9){
-                    $(this).addClass('form-hidden');
-                }
-            });
-		</script>
 	</div>
 	<div class="form-found-list">
 		<p class="text-title">Виды обрабатываемых персональных данных пользователей</p>
 		<div class="form-checkbox-list form-checkbox-list-main">
 			<div class="form-checkbox-item">
-				<input type="checkbox" id="fd02511204" name="fd02name16">
-				<label for="fd02511204">Фамилия, имя, отчество</label>
+				<input type="checkbox" id="fd02511604" name="fd02name16">
+				<label for="fd02511604">Фамилия</label>
+			</div>
+			<div class="form-checkbox-item">
+				<input type="checkbox" id="fd02511704" name="fd02name16">
+				<label for="fd02511704">Имя</label>
+			</div>
+			<div class="form-checkbox-item">
+				<input type="checkbox" id="fd02511804" name="fd02name16">
+				<label for="fd02511804">Отчество</label>
 			</div>
 			<div class="form-checkbox-item">
 				<input type="checkbox" id="fd02511205" name="fd02name16">
-				<label for="fd02511205">Год рождения</label>
+				<label for="fd02511205">Дата рождения</label>
 			</div>
 			<div class="form-checkbox-item">
 				<input type="checkbox" id="fd02511206" name="fd02name16">
@@ -191,6 +166,10 @@
 			<div class="form-checkbox-item">
 				<input type="checkbox" id="fd02511208" name="fd02name16">
 				<label for="fd02511208">Адрес электронной почты</label>
+			</div>
+			<div class="form-checkbox-item">
+				<input type="checkbox" id="fd02511908" name="fd02name16">
+				<label for="fd02511908">Идентификатор пользователя, хранимый в cookie</label>
 			</div>
 			<div class="form-checkbox-item form-double" id="fd02002">
 				<input type="checkbox" id="fd02511219" name="fd02name16" class="form-modal-open">
