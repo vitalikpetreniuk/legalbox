@@ -148,7 +148,7 @@
 												<div class="form-found form-hidden" id="client-of-the-site" >
 													<!-- 69 -->
 													<div class="form-found-list">
-														<p class="text-title">Количество клиентов (физических лиц), чьи персональные хранятся у вас (за все время)</p>
+														<p class="text-title">Количество клиентов (физических лиц), чьи персональные данные хранятся у вас (за все время)</p>
 														<div class="form-checkbox-list form-checkbox-list-main">
 															<div class="form-checkbox-item">
 																<input type="radio" id="fd12111166" name="fd06name13">
@@ -249,9 +249,9 @@
 
 														</div>
 														<script>
-                                                            $('#fd06001').on('change', function () {
-                                                                $(this).siblings('.add-form.bttn').toggleClass('form-hidden');
-                                                                $(this).find('.goal-input').remove();
+                                                            $('#fd06511202').on('change', function () {
+                                                                $('#fd06add01').toggleClass('form-hidden');
+                                                                $(this).closest('.form-double').find('.goal-input').remove();
                                                             });
                                                             $('body').on('click','.goal-input .del-item', function (e) {
                                                                 e.preventDefault();
@@ -349,9 +349,9 @@
 															<a href="#" id = "fd06add02" class="add-form bttn form-hidden">Добавить данные</a>
 														</div>
 														<script>
-                                                            $('#fd06002').on('change', function () {
-                                                                $(this).siblings('.add-form.bttn').toggleClass('form-hidden');
-                                                                $(this).find('.goal-input').remove();
+                                                            $('#fd06511219').on('change', function () {
+                                                                $('#fd06add02').toggleClass('form-hidden');
+                                                                $(this).closest('.form-double').find('.goal-input').remove();
                                                             });
                                                             $('body').on('click','.goal-input .del-item', function (e) {
                                                                 e.preventDefault();

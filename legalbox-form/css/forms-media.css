@@ -88,6 +88,9 @@
   }
 }
 @media (max-width: 991px) {
+  .help-tip {
+    top: 0;
+  }
   #fd08lm0001 .dok_list,
   #fd08add1{
     margin-left: 0;

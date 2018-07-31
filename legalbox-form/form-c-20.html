@@ -130,14 +130,20 @@
 															<label for="fc02398130">Нет</label>
 															<script>
                                                                 $('input:radio[name=GcIADu]').change(function() {
-                                                                    $('#ask-country').toggle('display');
-                                                                    $('.add-form').toggleClass('form-hidden');
+                                                                        if($('#fc47078475').is(':checked')){
+                                                                            $('#ask-country').removeClass('form-hidden');
+                                                                            $('#add16').removeClass('form-hidden');
+                                                                        }else  if($('#fc02398130').is(':checked')) {
+                                                                            $('#ask-country').addClass('form-hidden');
+                                                                            $('#ask-country').find('.editional-input').remove();
+                                                                            $('#add16').addClass('form-hidden');
+                                                                        }
                                                                 });
 															</script>
 														</div>
 													</div>
 												</div>
-												<div id = "ask-country" class="form-found form-first">
+												<div id = "ask-country" class="form-found form-first form-hidden">
 													<p class="text-title">Укажите страну(ы)</p>
 													<div class="form-checkbox-list">
 														<div class="form-checkbox-item">
@@ -145,7 +151,7 @@
 														</div>
 													</div>
 												</div>
-												<a href="#" id = "add16" class="add-form bttn">Добавить страну</a>
+												<a href="#" id = "add16" class="add-form bttn form-hidden">Добавить страну</a>
 												<script>
 														var new_id = 1;
 													$('#add16').on('click', function (e) {
