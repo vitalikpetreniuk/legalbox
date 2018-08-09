@@ -323,6 +323,28 @@ function documentsJson(form) {
     return JSON.stringify(documents);
 }
 
+function documentsJson2(form) {
+    var documents = [];
+    var i = 1;
+
+    form.find('.editional-input').each(function () {
+        var document = $(this).find('.form-document').val();
+        var place = $(this).find('.form-place').val();
+
+        var this_doc = new Object();
+
+        this_doc.document = document;
+        this_doc.place = place;
+
+        documents.push(this_doc);
+
+//
+    });
+
+    // alert(JSON.stringify(documents));
+    return JSON.stringify(documents);
+}
+
 function goalsJson(form) {
     var goals = [];
     var i = 1;
