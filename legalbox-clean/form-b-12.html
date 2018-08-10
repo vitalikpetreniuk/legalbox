@@ -74,13 +74,33 @@
 			<label for="fc11111200">Публикация на сайте, во внутренних справочниках, адресных книгах организации</label>
 		</div>
 		<div class="form-checkbox-item">
-			<input type="checkbox" id="fc11111201" name="name15">
-			<label for="fc11111201">Осуществление деятельности в соответствии с учредительными документами</label>
+			<input type="checkbox" id="fc12111201" name="name15">
+			<label for="fc12111201">Осуществление деятельности в соответствии с учредительными документами</label>
 		</div>
 		<div class="form-checkbox-item form-double">
-			<input type="checkbox" id="fc11111202" name="name15">
-			<label for="fc11111202">Иная цель</label>
-			<input type="text" id="fc11111203" class="form-input">
+			<input type="checkbox" id="fc12111202" name="name15">
+			<label for="fc12111202">Иная цель</label>
+			<input type="text" id="fc12111203" class="form-input">
+		</div>
+	</div>
+
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc153295639" name="oU0Eio">
+			<label for="fc153295639">Да</label>
+
+			<script>
+                $(document).ready(function() {
+                    $('input:radio[name=oU0Eio]').change(function () {
+                        $('#confirmation-question').toggle('display');
+                    });
+                });
+			</script>
+
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc28288557" name="oU0Eio" >
+			<label for="fc28288557">Нет</label>
 		</div>
 	</div>
 </div>
