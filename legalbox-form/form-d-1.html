@@ -117,7 +117,7 @@
 												<div class="form-found">
 													<p class="text-title">Укажите Ваш ИНН</p>
 													<div class="form-inn">
-														<input id="inn" class="form-input form-input-big input-inn" type="text" placeholder='' value="">
+														<input id="fd01inn" class="form-input form-input-big input-inn" type="text" placeholder='' value="">
 													</div>
 												</div>
 												<div class="form-found form-first form-hidden" id="legal-person">
@@ -287,7 +287,7 @@
 						<script>
                             $(document).ready(function() {
 
-                                $('#inn').on('input', function() {
+                                $('#fd01inn').on('input', function() {
                                     var value = $(this).val().trim();
                                     $(this).val(value);
 
