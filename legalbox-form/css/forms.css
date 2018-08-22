@@ -1315,6 +1315,8 @@ label > .form-input{
   top: 3px;
 }
 #users-of-the-site .form-found-list,
+#fd11-users-of-the-site .form-found-list,
+#site-dispatch .form-found-list,
 #aspirant-of-the-site .form-found-list,
 #gph-of-the-site .form-found-list,
 #contr-of-the-site .form-found-list,
