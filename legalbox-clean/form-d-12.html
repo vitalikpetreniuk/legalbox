@@ -1,0 +1,89 @@
+<div class="form-found">
+    <p class="text-title">Осуществляется ли рекламная (информационная) рассылка пользователям сайта</p>
+    <div class="form-checkbox-list " id="fd120063">
+        <div class="form-checkbox-item">
+            <input type="radio" id="fd12564436" name="fd120uuS">
+            <label for="fd12564436">Да</label>
+        </div>
+        <div class="form-checkbox-item">
+            <input type="radio" id="fd12379541" name="fd120uuS">
+            <label for="fd12379541">Нет</label>
+            <script>
+                $('#fd120063 input').on('change', function () {
+                    if($('#fd12564436').is(':checked')){
+                        $('#site-dispatch').removeClass('form-hidden');
+                    }else  if($('#fd12379541').is(':checked')){
+                        $('#site-dispatch').addClass('form-hidden');
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</div>
+<div class="form-found form-hidden" id="site-dispatch" >
+    <div class="form-found-list" id="fd120064">
+        <p class="text-title">Имеется ли возможность у пользователя дать предварительное согласие на получение рекламной (информационной) рассылки</p>
+        <div class="form-checkbox-list">
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd12000001" name="fd12name01">
+                <label for="fd12000001">Да</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd12000002" name="fd12name01">
+                <label for="fd12000002">Нет</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-found-list form-hidden" id="fd120065">
+        <p class="text-title">Осуществляется ли подтверждение данного пользователем согласия</p>
+        <div class="form-checkbox-list">
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd12000003" name="fd12name02">
+                <label for="fd12000003">Да</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd12000004" name="fd12name02">
+                <label for="fd12000004">Нет</label>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#fd120064 input').on('change', function () {
+            if($('#fd12000001').is(':checked')){
+                $('#fd120065').removeClass('form-hidden');
+            }else  if($('#fd12000002').is(':checked')){
+                $('#fd120065').addClass('form-hidden');
+            }
+        });
+    </script>
+
+
+
+    <div class="form-found-list">
+        <p class="text-title">Содержит ли текст рекламной (информационной) рассылки сведения об отправителе (Администрации сайта):</p>
+        <div class="form-checkbox-list" id="fd12lm0005">
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd120111226" name="fd12name18">
+                <label for="fd120111226">Да</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd120111227" name="fd12name18">
+                <label for="fd120111227">Нет</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-found-list">
+        <p class="text-title">Имеется ли возможность у пользователя отказаться от рекламной (информационной) рассылки</p>
+        <div class="form-checkbox-list" id="fd12lm0006">
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd12511229" name="fd12name19">
+                <label for="fd12511229">Да</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd12511230" name="fd12name19">
+                <label for="fd12511230">Нет</label>
+            </div>
+        </div>
+    </div>
+</div>

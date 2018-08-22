@@ -1,0 +1,338 @@
+<div class="form-found">
+    <p class="text-title">Обрабатываете ли вы данные  пользователей вашего сайта</p>
+    <div class="form-checkbox-list " id="fd110063">
+        <div class="form-checkbox-item">
+            <input type="radio" id="fd11564436" name="fd110uuS">
+            <label for="fd11564436">Да</label>
+        </div>
+        <div class="form-checkbox-item">
+            <input type="radio" id="fd11379541" name="fd110uuS">
+            <label for="fd11379541">Нет</label>
+            <script>
+                $('#fd110063 input').on('change', function () {
+                    if($('#fd11564436').is(':checked')){
+                        $('#fd11-users-of-the-site').removeClass('form-hidden');
+                    }else  if($('#fd11379541').is(':checked')){
+                        $('#fd11-users-of-the-site').addClass('form-hidden');
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</div>
+<div class="form-found form-hidden" id="fd11-users-of-the-site" >
+    <div class="form-found-list" id="fd110064">
+        <p class="text-title">Может ли пользователь сайта зарегистрировать личный кабинет</p>
+        <div class="form-checkbox-list">
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd11000001" name="fd11name01">
+                <label for="fd11000001">Да</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd11000002" name="fd11name01">
+                <label for="fd11000002">Нет</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-found-list form-hidden" id="fd110065">
+        <p class="text-title">Может ли пользователь зарегистрировать личный кабинет юридического лица/индивидуального предпринимателя</p>
+        <div class="form-checkbox-list">
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd11000003" name="fd11name02">
+                <label for="fd11000003">Да</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd11000004" name="fd11name02">
+                <label for="fd11000004">Нет</label>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#fd110064 input').on('change', function () {
+            if($('#fd11000001').is(':checked')){
+                $('#fd110065').removeClass('form-hidden');
+                $('#fd11511170').parents('.form-checkbox-item').removeClass('form-hidden');
+            }else  if($('#fd11000002').is(':checked')){
+                $('#fd110065').addClass('form-hidden');
+                $('#fd11511170').parents('.form-checkbox-item').addClass('form-hidden');
+            }
+        });
+    </script>
+
+    <div class="form-found-list">
+        <p class="text-title">С какого момента настоящий документ становится обязательным для пользователя</p>
+        <div class="form-checkbox-list">
+            <div class="form-checkbox-item form-hidden">
+                <input type="checkbox" id="fd11511170" name="fd11name03">
+                <label for="fd11511170">С момента подтверждения регистрации личного кабинета пользователя </label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511171" name="fd11name03">
+                <label for="fd11511171">С момента начала фактического использования сайта</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511172" name="fd11name03">
+                <label for="fd11511172">С момента проставления отметки (галочки) о согласии с данным документом</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511173" name="fd11name03">
+                <label for="fd11511173">С момента проставления отметки (галочки) о согласии с данным документом</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511174" name="fd11name03">
+                <label for="fd11511174">Прохождения по ссылке, направленной на мобильный телефон</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511175" name="fd11name03">
+                <label for="fd11511175">С момента прохождения по ссылке, направленной на почту</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-found-list">
+        <p class="text-title">Цели получения персональных данных пользователей</p>
+        <div class="form-checkbox-list">
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511183" name="fd11name04">
+                <label for="fd11511183">Заключение и исполнение договоров</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511184" name="fd11name04">
+                <label for="fd11511184">Информирование о новых товарах, услугах</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511185" name="fd11name04">
+                <label for="fd11511185">Подготовка индивидуальных предложений</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511186" name="fd11name04">
+                <label for="fd11511186">Ведения рекламной деятельности</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511187" name="fd11name04">
+                <label for="fd11511187">Предоставление пользователям доступа к специальной информации</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511405" name="fd11name04">
+                <label for="fd11511405">Обработка заявок на сайте</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511288" name="fd11name04">
+                <label for="fd11511288">Публикация на сайте, во внутренних справочниках, адресных книгах организации</label>
+            </div>
+            <div class="form-checkbox-item form-double" id="fd110092">
+                <input type="checkbox" id="fd11511202" name="fd11name04">
+                <label for="fd11511202">Иная цель</label>
+                <input type="text" id="fd11511203" class="form-input">
+            </div>
+            <a href="#" id = "fd11add09" class="add-form bttn form-hidden">Добавить цель</a>
+
+        </div>
+        <script>
+            $('#fd110092 input').on('change', function () {
+                if($('#fd11511202').is(':checked')){
+                    $('#fd11add09').removeClass('form-hidden');
+                }else {
+                    $('#fd11add09').addClass('form-hidden');
+                    $('#fd110092').find('.editional-input').remove();
+                }
+            });
+            $('body').on('click','.goal-input .del-item', function (e) {
+                e.preventDefault();
+                $(this).parent().remove();
+                if($('#fd110092 .goal-input').length < 9){
+                    $('#fd11add09').removeClass('form-hidden');
+                }
+            });
+            var new_id = 0;
+            $('#fd11add09').on('click', function (e){
+                e.preventDefault();
+                new_id += 1;
+                if($('#fd110092 .goal-input').length < 9){
+                    $(this).siblings('.form-double').append(
+                        '<div class="editional-input goal-input">' +
+                        '<input id="fd11a115' + new_id + '" class="form-input" type="text"  name = "fd11name5">' +
+                        '<button class="del-item"></button>'+
+                        '</div>');
+                }
+                if($('#fd110092 .goal-input').length === 9){
+                    $(this).addClass('form-hidden');
+                }
+            });
+        </script>
+    </div>
+    <div class="form-found-list">
+        <p class="text-title">Виды обрабатываемых персональных данных пользователей</p>
+        <div class="form-checkbox-list form-checkbox-list-main">
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511604" name="fd11name16">
+                <label for="fd11511604">Фамилия</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511704" name="fd11name16">
+                <label for="fd11511704">Имя</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511804" name="fd11name16">
+                <label for="fd11511804">Отчество</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511205" name="fd11name16">
+                <label for="fd11511205">Дата рождения</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511206" name="fd11name16">
+                <label for="fd11511206">Адрес места жительства</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511207" name="fd11name16">
+                <label for="fd11511207">Контактный телефон</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511208" name="fd11name16">
+                <label for="fd11511208">Адрес электронной почты</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511908" name="fd11name16">
+                <label for="fd11511908">Идентификатор пользователя, хранимый в cookie</label>
+            </div>
+
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511209" name="fd11name16">
+                <label for="fd11511209">Религиозные убеждения</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511210" name="fd11name16">
+                <label for="fd11511210">Состояние здоровья</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511211" name="fd11name16">
+                <label for="fd11511211">Национальная принадлежность</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511212" name="fd11name16">
+                <label for="fd11511212">Расовая принадлежность</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511213" name="fd11name16">
+                <label for="fd11511213">Политические взгляды</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511214" name="fd11name16">
+                <label for="fd11511214">Философские убеждения</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511215" name="fd11name16">
+                <label for="fd11511215">Состояние интимной жизни</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511216" name="fd11name16">
+                <label for="fd11511216">Цветное цифровое фотографическое изображение лица владельца заграничного паспорта, содержащееся на электронном носителем информации данного документа</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="checkbox" id="fd11511217" name="fd11name16">
+                <label for="fd11511217">Аудиозапись телефонного разговора</label>
+            </div>
+
+            <div class="form-checkbox-item form-double" id="fd11002">
+                <input type="checkbox" id="fd11511219" name="fd11name16" class="form-modal-open">
+                <label for="fd11511219">Иные ПДн</label>
+                <input type="text" id="fd11511220" class="form-input">
+            </div>
+            <a href="#" id = "fd11add02" class="add-form bttn form-hidden">Добавить данные</a>
+        </div>
+        <script>
+
+            $('#fd11002 input').on('change', function () {
+                if($('#fd11511219').is(':checked')){
+                    $('#fd11add02').removeClass('form-hidden');
+                }else {
+                    $('#fd11add02').addClass('form-hidden');
+                    $('#fd11002').find('.editional-input').remove();
+                }
+            });
+            $('body').on('click','.goal-input .del-item', function (e) {
+                e.preventDefault();
+                $(this).parent().remove();
+                if($('#fd11002 .goal-input').length < 9){
+                    $('#fd11add02').removeClass('form-hidden');
+                }
+            });
+            $('#fd11add02').on('click', function (e){
+                e.preventDefault();
+                new_id += 1;
+                if($('#fd11002 .goal-input').length < 9){
+                    $(this).siblings('.form-double').append(
+                        '<div class="editional-input goal-input">' +
+                        '<input id="fd11a112' + new_id + '" class="form-input" type="text"  name = "fd11name16">' +
+                        '<button class="del-item"></button>'+
+                        '</div>');
+                }
+                if($('#fd11002 .goal-input').length === 9){
+                    $(this).addClass('form-hidden');
+                }
+            });
+        </script>
+    </div>
+
+    <div class="form-found-list">
+        <p class="text-title">Осуществляется ли передача персональных данных пользователь за рубеж</p>
+        <div class="form-checkbox-list" id="fd11lm0005">
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd110111226" name="fd11name18">
+                <label for="fd110111226">Да</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd110111227" name="fd11name18">
+                <label for="fd110111227">Нет</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-found-list form-first form-hidden" id="gj0038">
+        <p class="text-title">Укажите страну</p>
+        <div class="form-checkbox-list form-double">
+            <div class="form-checkbox-item">
+                <input type="text" class="form-input" id="fd110111228" name="fd11n1111">
+            </div>
+        </div>
+    </div>
+    <a href="#" id = "fd11add4" class="add-form bttn form-hidden">Добавить страну</a>
+    <script>
+        $('#fd11lm0005 input').on('change', function () {
+            if($('#fd110111226').is(':checked')){
+                $('#fd110111228').closest('.form-found-list').removeClass('form-hidden');
+                $('#fd11add4').removeClass('form-hidden');
+            }else if($('#fd110111227').is(':checked')){
+                $('#fd110111228').closest('.form-found-list').addClass('form-hidden');
+                $('#fd11add4').addClass('form-hidden');
+                $('#fd110111228').parents('.form-double').find('.editional-input').remove();
+            }
+        });
+        var new_id = 1;
+        $('#fd11add4').on('click', function (e) {
+            e.preventDefault();
+            new_id += 1;
+            $('#fd110111228').closest('.form-found-list').find('.form-checkbox-list')
+                .append('<div class="editional-input">' +
+                    '<div class="form-checkbox-item">' +
+                    '<input type="text" class="form-input" id="fd11a511' + new_id + '"  name = "fd11n1111"' +
+                    '</div>' +
+                    '<button class="del-item"></button>'+
+                    '</div>');
+        });
+    </script>
+
+    <div class="form-found-list">
+        <p class="text-title">Имеются ли официальные документы компании, в которых содержатся персональные данные пользователей сайта</p>
+        <div class="form-checkbox-list" id="fd11lm0006">
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd11511229" name="fd11name19">
+                <label for="fd11511229">Да</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input type="radio" id="fd11511230" name="fd11name19">
+                <label for="fd11511230">Нет</label>
+            </div>
+        </div>
+    </div>
+</div>
