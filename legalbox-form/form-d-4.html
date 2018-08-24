@@ -437,7 +437,7 @@
 													<div class="form-found-list form-hidden form-first" id="gj0020">
 														<p class="text-title"> Укажите данные компании, в которую вы передаете персональные данные</p>
 														<div class="form-copy">
-															<div class="editional-input dok_list">
+															<div class="editional-input dok_list first">
 																<div class="form-found-item">
 																	<span>Наименование:</span>
 																	<input class="form-input form-document" type="text" id="fd41111231">
@@ -474,7 +474,7 @@
                                                             if($('#fd11111223').is(':checked')){
                                                                 $('#fd41111231').closest('.form-found-list').addClass('form-hidden');
                                                                 $('#fd11111225').closest('.form-found-list').addClass('form-hidden');
-                                                                $('#fd41111231').parents('.form-copy').find('.editional-input').remove();
+                                                                $('#fd41111231').parents('.form-copy').find('.editional-input:not(.first)').remove();
                                                             }
                                                         });
                                                         $('#fd11111223').on('click',function(){
@@ -582,7 +582,7 @@
 													<div id="fd04lm0007" class="form-found-list form-first form-hidden" >
 														<p class="text-title">Перечислите такие документы и место их хранения</p>
 														<div class="form-copy">
-															<div class="editional-input dok_list">
+															<div class="editional-input dok_list first">
 																<div class="form-found-item">
 																	<span>Документ:</span>
 																	<input class="form-input form-document" type="text" id="fd11111231">
@@ -601,7 +601,7 @@
                                                                 $('#fd04lm0007').removeClass('form-hidden');
                                                             }else{
                                                                 $('#fd04lm0007').addClass('form-hidden');
-                                                                $('#fd04lm0007').find('.editional-input').remove();
+                                                                $('#fd04lm0007').find('.editional-input:not(.first)').remove();
                                                             }
                                                         });
                                                         $('#fd04add5').on('click', function (e) {
