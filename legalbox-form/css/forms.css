@@ -1326,3 +1326,15 @@ label > .form-input{
   margin-bottom: 32px;
   padding-right: 30px;
 }
+
+
+
+.form-found {
+  padding-right: 0;
+}
+.formd8 .help-tip {
+  top: auto;
+}
+.help-tip.im {
+  top: 40px !important;
+}
