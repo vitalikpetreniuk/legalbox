@@ -86,6 +86,8 @@
             $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
         }else{
             $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-third').addClass('form-hidden');
         }
     });
     $('.form-first input').on('change', function () {
