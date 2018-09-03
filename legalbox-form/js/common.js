@@ -289,7 +289,6 @@ function checkForm(div) {
     return !validate.in_array(false);
 }
 
-
 function documentsJson(form) {
     var documents = [];
     var i = 1;

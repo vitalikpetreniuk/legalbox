@@ -14,6 +14,14 @@
             <input class="form-input" id="company_name" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
         </div>
         <div class="form-found-item">
+            <span>ФИО руководителя</span>
+            <input class="form-input" id="fio_rook" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+        </div>
+        <div class="form-found-item">
+            <span>Должность</span>
+            <input class="form-input" id="dol_rook" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+        </div>
+        <div class="form-found-item">
             <span>ОГРН</span>
             <input class="form-input" id="ogrn" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
         </div>
@@ -173,105 +181,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function() {
-
-        $('#fd01inn').on('input', function() {
-            var value = $(this).val().trim();
-            $(this).val(value);
-
-            //                                              alert(this.value.length);
-            //if (this.value.length==10) alert('Inn litso'); else
-            var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${value}`,
-                "method": "GET",
-                "headers": {
-                    "content-type": "application/json",
-                    "authorization": "Token 849e43c0e60aaf7787190b4edcaa24c8f2892b9e",
-                    "accept": "application/json",
-                    "cache-control": "no-cache",
-                    "postman-token": "b801735a-ec52-89de-c4d4-6231078adbee"
-                },
-                "processData": false,
-                "data": "{ \"query\": \"7719402047\" }"
-            };
-            if (this.value.length == 10) {
-                //open the form , and autofill it
-
-                $.ajax(settings).done(function(response) {
-                    //                                                      alert(response.length);
-                    //                                                      alert(response[0]["value"]);
-                    if (response["suggestions"].length == 0) {
-                        $('#company_name').val("");
-                        $('#ogrn').val("");
-                        $('#kpp').val("");
-                        $('#adress').val("");
-                        $("#fc11111457").val("");
-
-                        $(".pop-up__validity--inn").addClass('active');
-
-                        return;
-                    }
-                    var responseJson = response["suggestions"][0];
-                    $('#company_name').val(responseJson["value"]);
-                    $("#fc11111457").val(responseJson["value"]);
-                    $('#ogrn').val(responseJson["data"]["ogrn"]);
-                    $('#kpp').val(responseJson["data"]["kpp"]);
-                    $('#adress').val(responseJson["data"]["address"]["value"]);
-
-                    console.log(JSON.stringify(response));
-                });
-                $('#legal-person').removeClass('form-hidden');
-                $('#legal-person .form-found-list').removeClass('form-hidden');
-                //$("#oooOrIp").text("ООО");
-                $('#rightsowner').removeClass('form-hidden');
-            } else {
-                //hide form for legal-person
-                $('#legal-person').addClass('form-hidden');
-                $('#legal-person .form-found-list').addClass('form-hidden');
-            }
-            if (this.value.length == 12) {
-
-                //same thing: open form, autofill it for entrepreneur
-
-                $.ajax(settings).done(function(response) {
-                    //                                                      alert(response.length);
-                    //                                                      alert(response[0]["value"]);
-                    if (response["suggestions"].length == 0) {
-                        $('#fio').val("");
-                        $('#ogrnip').val("");
-                        $("#fc11111457").val("");
-                        $(".pop-up__validity--inn").addClass('active');
-
-                        return;
-                    }
-
-                    var responseJson = response["suggestions"][0];
-                    $('#fio').val(responseJson["value"]);
-                    $("#fc11111457").val(responseJson["value"]);
-                    $('#ogrnip').val(responseJson["data"]["ogrn"]);
-
-                });
-                $('#entrepreneur').removeClass('form-hidden');
-                $('#entrepreneur .form-found-list').removeClass('form-hidden');
-                //$("#oooOrIp").text("ИП");
-                $('#rightsowner').removeClass('form-hidden');
-
-            } else {
-                // otherwise we're not dealing with entrepreneur, hide everything
-                $('#entrepreneur').addClass('form-hidden');
-                $('#entrepreneur .form-found-list').addClass('form-hidden');
-
-            }
-
-            if ((this.value.length != 10) && (this.value.length != 12)) {
-                $('#rightsowner').addClass('form-hidden');
-            }
-
-        });
-
-    });
-</script>
