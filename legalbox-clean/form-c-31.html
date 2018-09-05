@@ -1,4 +1,4 @@
-<div class="form-found">
+<div class="form-found" id="fc31001">
     <p class="text-title">Использование Программы для ЭВМ осуществляется на территории:</p>
     <div class="help-tip">
         <p>Укажите в пределах какой территории пользователи имеют право использовать программу для ЭВМ </p>
@@ -18,15 +18,15 @@
     </div>
     <a href="#" id = "add17" class="add-form bttn form-hidden">Добавить территорию</a>
     <script>
-        $('.form-found').on('change', function () {
+        $('#fc31001').on('change', function () {
             if ($('#fc95593445').is(':checked')) {
-                $('.add-form.bttn').removeClass('form-hidden');
+                $(this).find('.add-form.bttn').removeClass('form-hidden');
             } else if ($('#fc10482648').is(':checked')) {
-                $('.add-form.bttn').addClass('form-hidden');
-                $('.editional-input').hide();
+                $(this).find('.add-form.bttn').addClass('form-hidden');
+                $(this).find('.editional-input').hide();
             } else {
-                $('.add-form.bttn').addClass('form-hidden');
-                $('.editional-input').hide();
+                $(this).find('.add-form.bttn').addClass('form-hidden');
+                $(this).find('.editional-input').hide();
             }
         });
         var new_id = 1;
