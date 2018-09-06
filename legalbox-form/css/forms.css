@@ -1329,7 +1329,14 @@ label > .form-input{
 
 
 
-.form-found {
+#users-of-the-site ,
+#fd11-users-of-the-site ,
+#site-dispatch ,
+#aspirant-of-the-site ,
+#gph-of-the-site ,
+#contr-of-the-site ,
+#client-of-the-site ,
+#worker-of-the-site  {
   padding-right: 0;
 }
 .formd8 .help-tip {
