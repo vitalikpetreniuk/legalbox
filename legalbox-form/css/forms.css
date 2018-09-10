@@ -493,6 +493,9 @@ select.form-input:not(:last-child) {
   width: 288px;
   letter-spacing: 7px;
   padding-left: 7px; }
+.editional-input .form-inn .form-input{
+  letter-spacing: 0;
+}
 .form-site input {
   padding-left: 0;
   letter-spacing: normal;
